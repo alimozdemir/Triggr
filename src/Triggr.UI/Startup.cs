@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hangfire;
+using Hangfire.Console;
+using Hangfire.SQLite;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Triggr.UI.Services;
 
 namespace Triggr.UI
 {
@@ -22,6 +26,14 @@ namespace Triggr.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddHangfire(i =>
+            {
+                var options = new SQLiteStorageOptions();
+                i.UseSQLiteStorage("Data Source=app.db;", options);
+                i.UseActivator(new HangfireActivator(services));
+                i.UseConsole();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +56,9 @@ namespace Triggr.UI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseHangfireServer();
+            app.UseHangfireDashboard();
         }
     }
 }
