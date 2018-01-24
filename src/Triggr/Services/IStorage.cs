@@ -4,6 +4,7 @@ namespace Triggr.Services
     {
         void Set(string path);
         void Set(string path, bool environmentPath);
+        string Combine(string path);
         string Path { get; }
     }
 }

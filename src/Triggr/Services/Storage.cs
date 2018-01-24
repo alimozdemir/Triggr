@@ -16,5 +16,9 @@ namespace Triggr.Services
         {
             _path = environmentPath ? System.IO.Path.Combine(Environment.CurrentDirectory, path) : path;
         }
+        public string Combine(string path)
+        {
+            return System.IO.Path.Combine(_path, path);
+        }
     }
 }

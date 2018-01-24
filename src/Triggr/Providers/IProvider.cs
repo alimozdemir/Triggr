@@ -5,7 +5,7 @@ namespace Triggr.Providers
 {
     public interface IProvider
     {
-        Task<bool> CheckForCommitsAsync(Repository repository);
-        Task DownloadAsync(Repository repository);
+        string Update(Repository repository);
+        bool Exist(string url);
     }
 }
