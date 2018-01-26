@@ -6,7 +6,6 @@ namespace Triggr.Providers
 {
     public class ProviderFactory : IProviderFactory
     {
-        private readonly IStorage _storage;
         private readonly IEnumerable<IProvider> _providers;
         public ProviderFactory(IEnumerable<IProvider> providers)
         {

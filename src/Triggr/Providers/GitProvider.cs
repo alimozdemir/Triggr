@@ -11,13 +11,36 @@ namespace Triggr.Providers
 {
     public class GitProvider : IProvider
     {
-        private readonly IStorage _storage;
-        public GitProvider(IStorage storage)
+        private readonly RepositoryStorage _storage;
+        public GitProvider(RepositoryStorage storage)
         {
             _storage = storage;
         }
 
         public string GetProviderType => "Git";
+
+        public string Clone(Data.Repository data)
+        {
+            var path = _storage.Combine(data.Id.ToString());
+
+            var cloneResult = Repository.Clone(data.Url, path);
+
+            return cloneResult;
+        }
+
+        public bool Exist(Data.Repository data)
+        {
+            var path = _storage.Combine(data.Id.ToString());
+
+            // ensure the directory is created
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+                return false;
+            }
+            else
+                return Repository.IsValid(path);
+        }
 
         public bool IsValid(string url)
         {
@@ -33,25 +56,11 @@ namespace Triggr.Providers
 
             var path = _storage.Combine(data.Id.ToString());
 
-            // ensure the directory is created
-            if (!Directory.Exists(path))
-                Directory.CreateDirectory(path);
-
-
-            var isValid = Repository.IsValid(path);
-
-            if (!isValid)
+            using (var repo = new Repository(path))
             {
-                var cloneResult = Repository.Clone(data.Url, path);
-                result = !string.IsNullOrEmpty(cloneResult);
-            }
-            else
-            {
-                var repo = new Repository(path);
-
                 LibGit2Sharp.PullOptions options = new LibGit2Sharp.PullOptions();
                 options.FetchOptions = new FetchOptions();
-                
+
                 Signature author = new Signature("triggr", "triggr@itu.edu.tr", DateTime.Now);
                 var mergeResult = Commands.Pull(repo, author, options);
 

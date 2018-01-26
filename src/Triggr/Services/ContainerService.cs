@@ -14,33 +14,39 @@ namespace Triggr.Services
     {
         private readonly TriggrContext _context;
         private readonly IProviderFactory _providerFactory;
-        public ContainerService(TriggrContext context, IProviderFactory providerFactory)
+        private readonly RepositoryStorage _storage;
+        public ContainerService(TriggrContext context, IProviderFactory providerFactory, RepositoryStorage storage)
         {
             _context = context;
             _providerFactory = providerFactory;
+            _storage = storage;
         }
 
         public async Task<IEnumerable<Container>> CheckAsync()
         {
             var repositories = await _context.Repositories.ToListAsync();
+            
             List<Container> containers = new List<Container>();
             bool anyUpdate = false;
 
             foreach (var repository in repositories)
             {
                 var provider = _providerFactory.GetProvider(repository.Provider);
-                var updatedPath = provider.Update(repository);
-                if (!string.IsNullOrEmpty(updatedPath))
+                string path = string.Empty;
+
+                if (!provider.Exist(repository))
                 {
-                    repository.UpdatedTime = DateTimeOffset.Now;
-
-                    containers.Add(new Container($"Container #{repository.Id}", updatedPath)
-                    {
-                        UpdatedTime = repository.UpdatedTime
-                    });
-
-                    anyUpdate = true;
+                    path = provider.Clone(repository);
                 }
+                else
+                    path =  _storage.Combine(repository.Id.ToString());
+
+                var container = new Container($"Container #{repository.Id}", path, repository)
+                {
+                    UpdatedTime = repository.UpdatedTime
+                };
+
+                containers.Add(container);
             }
 
             if (anyUpdate)

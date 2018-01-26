@@ -4,6 +4,7 @@ using Hangfire.Console;
 using Triggr.Services;
 using System.Linq;
 using System;
+using Hangfire;
 
 namespace Triggr
 {
@@ -21,19 +22,14 @@ namespace Triggr
             {
                 try
                 {
-                    var containers = await _containerService.CheckAsync();
                     hangfireContext.WriteLine("Starting to check.");
+                    var containers = await _containerService.CheckAsync();
 
                     foreach (var container in containers)
                     {
                         hangfireContext.WriteLine(container.Name + " " + container.Folder);
-
-                        var probes = container.CheckForProbes();
-
-                        foreach (var probe in probes)
-                        {
-                            hangfireContext.WriteLine(probe.ProbeType + " " + probe.ObjectType + " " + probe.ObjectPath);
-                        }
+                        BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, container));
+                        hangfireContext.WriteLine("ProbeControl Job is enqueued");
                     }
 
                     hangfireContext.WriteLine($"Total found containers {containers.Count()}.");

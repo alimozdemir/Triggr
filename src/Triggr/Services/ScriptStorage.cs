@@ -2,11 +2,12 @@ using System;
 
 namespace Triggr.Services
 {
-    public class Storage : IStorage
+    // it should be an abstract class
+    public class ScriptStorage : IStorage
     {
         private string _path;
         public string Path => _path;
-        public Storage(string path)
+        public ScriptStorage(string path)
         {
             Set(path);
         }

@@ -13,13 +13,14 @@ namespace Triggr.UI.Services
         private const string TriggrJobId = "triggr";
         public static void AddTriggr(this IServiceCollection services)
         {
-            services.AddSingleton<IStorage, Storage>(i => new Storage("../repositories/"));
+            services.AddSingleton<IStorage, RepositoryStorage>(i => new RepositoryStorage("../repositories/"));
+            services.AddSingleton<IStorage, ScriptStorage>(i => new ScriptStorage("../Scripts/"));
             services.AddScoped<IContainerService, ContainerService>();
             
             services.AddScoped<IProvider, GitProvider>();
-            services.AddScoped<IProvider, TestProvider>();
 
             services.AddScoped<IProviderFactory, ProviderFactory>();
+            services.AddTransient<ProbeControl>();
             services.AddTransient<TController>();
 
         }
@@ -30,18 +31,4 @@ namespace Triggr.UI.Services
         }
     }
 
-    public class TestProvider : IProvider
-    {
-        public string GetProviderType => throw new System.NotImplementedException();
-
-        public bool IsValid(string url)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string Update(Repository repository)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }

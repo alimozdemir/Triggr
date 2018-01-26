@@ -7,12 +7,13 @@ namespace Triggr
 {
     public sealed class Container
     {
-        public Container(string name, string folder)
+        public Container(string name, string folder, Data.Repository repository)
         {
             Name = name;
             Folder = folder;
+            Repository = repository;
         }
-
+        public Data.Repository Repository { get; }
         public string Name { get; }
         public string Folder { get; }
         private string TriggrFolder => Path.Combine(Folder, ConstTriggrFolder);
