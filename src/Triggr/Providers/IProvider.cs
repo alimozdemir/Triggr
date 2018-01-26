@@ -6,6 +6,8 @@ namespace Triggr.Providers
     public interface IProvider
     {
         string Update(Repository repository);
-        bool Exist(string url);
+        //bool Exist(Repository repository);
+        bool IsValid(string url);
+        string GetProviderType { get; }
     }
 }

@@ -6,7 +6,10 @@ namespace Triggr.Services
     {
         private string _path;
         public string Path => _path;
-
+        public Storage(string path)
+        {
+            Set(path);
+        }
         public void Set(string path)
         {
             Set(path, true);

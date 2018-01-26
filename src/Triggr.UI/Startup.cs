@@ -10,14 +10,21 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Triggr.UI.Services;
+using Triggr.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Triggr.UI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -25,15 +32,23 @@ namespace Triggr.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<TriggrContext>(i =>
+            {
+                i.UseSqlite(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Triggr.UI"));
+            });
+
+
             services.AddMvc();
 
             services.AddHangfire(i =>
             {
                 var options = new SQLiteStorageOptions();
-                i.UseSQLiteStorage("Data Source=app.db;", options);
+                i.UseSQLiteStorage(Configuration.GetConnectionString("HangfireConnection"), options);
                 i.UseActivator(new HangfireActivator(services));
                 i.UseConsole();
             });
+
+            services.AddTriggr();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,9 +71,11 @@ namespace Triggr.UI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            app.UseHangfireServer();
+            BackgroundJobServerOptions serverOptions = new BackgroundJobServerOptions();
+            serverOptions.WorkerCount = 1;
+            app.UseHangfireServer(serverOptions);
             app.UseHangfireDashboard();
+            app.UseTriggr();
         }
     }
 }

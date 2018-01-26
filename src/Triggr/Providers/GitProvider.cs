@@ -5,6 +5,7 @@ using Triggr.Services;
 using System.Collections.Generic;
 using LibGit2Sharp;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Triggr.Providers
 {
@@ -16,9 +17,14 @@ namespace Triggr.Providers
             _storage = storage;
         }
 
-        public bool Exist(string url)
+        public string GetProviderType => "Git";
+
+        public bool IsValid(string url)
         {
-            return Repository.IsValid(url);
+            if (string.IsNullOrEmpty(url))
+                return false;
+
+            return Regex.IsMatch(url, @"((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)?");
         }
 
         public string Update(Data.Repository data)
@@ -30,11 +36,11 @@ namespace Triggr.Providers
             // ensure the directory is created
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
-            
 
-            string discover = Repository.Discover(path);
 
-            if (string.IsNullOrEmpty(discover))
+            var isValid = Repository.IsValid(path);
+
+            if (!isValid)
             {
                 var cloneResult = Repository.Clone(data.Url, path);
                 result = !string.IsNullOrEmpty(cloneResult);
@@ -45,8 +51,8 @@ namespace Triggr.Providers
 
                 LibGit2Sharp.PullOptions options = new LibGit2Sharp.PullOptions();
                 options.FetchOptions = new FetchOptions();
-
-                Signature author = new Signature("", "", DateTime.Now);
+                
+                Signature author = new Signature("triggr", "triggr@itu.edu.tr", DateTime.Now);
                 var mergeResult = Commands.Pull(repo, author, options);
 
                 //conflict check requires

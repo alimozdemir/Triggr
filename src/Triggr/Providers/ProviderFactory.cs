@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Triggr.Services;
 
 namespace Triggr.Providers
@@ -5,26 +7,21 @@ namespace Triggr.Providers
     public class ProviderFactory : IProviderFactory
     {
         private readonly IStorage _storage;
-        public ProviderFactory(IStorage storage)
+        private readonly IEnumerable<IProvider> _providers;
+        public ProviderFactory(IEnumerable<IProvider> providers)
         {
-            _storage = storage;
+            _providers = providers;
         }
-        private static string[] _listOfProviders = new string[] { "Github", "Bitbucket" };
         public IProvider GetProvider(string type)
         {
-            switch (type)
-            {
-                case "Git":
-                    return new GitProvider(_storage);
-            }
-            return null;
+            var provider = _providers.FirstOrDefault(i => i.GetProviderType.Equals(type));
+            return provider;
         }
 
         public string GetProviderType(string url)
         {
-            // url identification
-
-            return "Github";
+            var provider = _providers.FirstOrDefault(i => i.IsValid(url));
+            return provider != null ? provider.GetProviderType : string.Empty;
         }
     }
 }

@@ -1,0 +1,111 @@
+@{
+    ViewData["Title"] = "Repositories";
+}
+
+<div id="app">
+    <div class="row" style="margin-top:30px;">
+        <div class="col-md-12">
+            <h2>
+                Repositories
+            </h2>
+            
+        </div>
+    </div>
+    <div class="row">
+<div>
+    <button id="show-modal" v-on:click="showModal = true">Show Modal</button>
+    <!-- use the modal component, pass in the prop -->
+    <modal v-if="showModal" v-on:close="showModal = false">
+        <h3 slot="header">Add repository</h3>
+        <div slot="body">
+            <form>
+                <div class="form-group">
+                    <label>Url <span v-if="model.valid" class="glyphicon glyphicon-ok green"></span></label>
+                    <input type="text" v-bind:class="{'form-control green-border' : model.valid, 'form-control' : !model.valid }" v-on:change="isValid" v-model="model.url"> 
+                </div>
+            </form>
+
+        </div>
+
+        <div slot="footer" class="pull-right">
+            <button v-on:click="addRepository" class="btn btn-success">Add</button>
+            <button v-on:click="showModal = false" class="btn btn-warning">Close</button>
+        </div>
+    </modal>
+    </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Url</th>
+                    <th>Provider</th>
+                    <th>Last Updated Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-if="repositories.count > 0">
+                    <td col-span="4" class="center">No repository</td>
+                </tr>
+                <tr v-for="item in repositories">
+                    <td v-text="item.id"></td>
+                    <td v-text="item.url"></td>
+                    <td v-text="item.provider"></td>
+                    <td v-text="item.updatedTime"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Styles{
+    <style>
+    .green{
+        color:green;
+    }
+    .green-border{
+        border-color:green;
+    }
+    </style>
+    <link type="text/css" rel="stylesheet" href="~/css/modal.css"/>
+}
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="~/js/repository.js"></script>
+
+        <!-- template for the modal component -->
+    <script type="text/x-template" id="modal-template">
+    <transition name="modal">
+        <div class="modal-mask">
+        <div class="modal-wrapper">
+            <div class="modal-container">
+
+            <div class="modal-header">
+                <slot name="header">
+                default header
+                </slot>
+            </div>
+
+            <div class="modal-body">
+                <slot name="body">
+                default body
+                </slot>
+            </div>
+
+            <div class="modal-footer">
+                <slot name="footer">
+                default footer
+
+                <button class="btn btn-success" v-on:click="$emit('close')">
+                    OK
+                </button>
+                </slot>
+            </div>
+            </div>
+        </div>
+        </div>
+    </transition>
+    </script>
+}
+
