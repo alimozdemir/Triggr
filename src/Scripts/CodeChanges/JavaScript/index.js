@@ -23,7 +23,7 @@ fs.readFile(file1, 'utf8', function (err, fileData1) {
         }
 
         console.log(compare(fileData1, fileData2));
-    })
+    });
 });
 
 function search(ast, type, name) {

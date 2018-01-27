@@ -11,9 +11,13 @@ namespace Triggr
     public class ProbeControl
     {
         private readonly IProviderFactory _providerFactory;
-        public ProbeControl(IProviderFactory providerFactory)
+        private readonly ILanguageService _languageService;
+        private readonly IScriptExecutor _scriptExecutor;
+        public ProbeControl(IProviderFactory providerFactory, ILanguageService languageService, IScriptExecutor scriptExecutor)
         {
             _providerFactory = providerFactory;
+            _languageService = languageService;
+            _scriptExecutor = scriptExecutor;
         }
 
         public void Execute(PerformContext hangfireContext, Container container)
@@ -34,7 +38,7 @@ namespace Triggr
                     if (File.Exists(objectPath))
                     {
                         hangfireContext.WriteLine($"Probe {probe.ObjectPath}");
-                        
+
                         File.Copy(objectPath, tempFile, true);
 
                         oldFiles.Add(probe, tempFile);
@@ -53,10 +57,14 @@ namespace Triggr
                     {
                         var tempFile = oldFiles[probe];
                         var objectPath = Path.Combine(container.Folder, probe.ObjectPath);
+                        var language = _languageService.Define(probe.ObjectPath);
 
-
+                        var result = _scriptExecutor.Execute(probe.ProbeType, language, 
+                                        objectPath, tempFile, probe.ObjectType, probe.ObjectName);
+                                        
+                        hangfireContext.WriteLine($"Result of comparision {result}");
                         // for now
-                        var tempData = File.ReadAllText(tempFile);
+                        /*var tempData = File.ReadAllText(tempFile);
                         var objectData = File.ReadAllText(objectPath);
 
                         if (tempData.Equals(objectData))
@@ -66,7 +74,7 @@ namespace Triggr
                         else
                         {
                             hangfireContext.WriteLine($"File is changed {probe.ObjectPath}");
-                        }
+                        }*/
                         // it will changed with executing shell script
                     }
                 }

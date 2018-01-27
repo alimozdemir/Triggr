@@ -16,13 +16,20 @@ namespace Triggr
                     FileName = "/bin/bash",
                     Arguments = $"-c \"{escapedArgs}\"",
                     RedirectStandardOutput = true,
+                    RedirectStandardError = true,
                     UseShellExecute = false,
                     CreateNoWindow = true,
                 }
             };
             process.Start();
             string result = process.StandardOutput.ReadToEnd();
+
+            if (string.IsNullOrEmpty(result))
+                result = process.StandardError.ReadToEnd();
+                
             process.WaitForExit();
+
+
             return result;
         }
     }

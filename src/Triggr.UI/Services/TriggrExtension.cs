@@ -13,8 +13,8 @@ namespace Triggr.UI.Services
         private const string TriggrJobId = "triggr";
         public static void AddTriggr(this IServiceCollection services)
         {
-            services.AddSingleton<IStorage, RepositoryStorage>(i => new RepositoryStorage("../repositories/"));
-            services.AddSingleton<IStorage, ScriptStorage>(i => new ScriptStorage("../Scripts/"));
+            services.AddSingleton<RepositoryStorage>(i => new RepositoryStorage("../repositories/"));
+            services.AddSingleton<ScriptStorage>(i => new ScriptStorage("../Scripts/"));
             services.AddScoped<IContainerService, ContainerService>();
             
             services.AddScoped<IProvider, GitProvider>();
@@ -22,6 +22,8 @@ namespace Triggr.UI.Services
             services.AddScoped<IProviderFactory, ProviderFactory>();
             services.AddTransient<ProbeControl>();
             services.AddTransient<TController>();
+            services.AddTransient<IScriptExecutor, ScriptExecutor>();
+            services.AddSingleton<ILanguageService, LanguageService>();
 
         }
 
