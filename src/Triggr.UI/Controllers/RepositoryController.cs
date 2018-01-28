@@ -40,18 +40,37 @@ namespace Triggr.UI.Controllers
         public async Task<IActionResult> AddRepository([FromBody]Models.AddRepositoryViewModel model)
         {
             bool result = false;
-            if (ModelState.IsValid)
+            var providerType = _providerFactory.GetProviderType(model.Url);
+            if (ModelState.IsValid && !string.IsNullOrEmpty(providerType))
             {
-                var provider = _providerFactory.GetProviderType(model.Url);
-
                 Repository repository = new Repository();
-                repository.Provider = provider;
+                repository.Provider = providerType;
                 repository.UpdatedTime = DateTimeOffset.Now;
                 repository.Url = model.Url;
-
+                await _context.SaveChangesAsync(); 
                 _context.Add(repository);
                 var affected = await _context.SaveChangesAsync();
                 result = affected > 0;
+                //result = true;
+            }
+
+            return Json(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveRepository([FromBody]Models.IdFormViewModel model)
+        {
+            bool result = false;
+
+            if (ModelState.IsValid)
+            {
+                var repo = await _context.Repositories.FindAsync(model.Id);
+                if (repo != null)
+                {
+                    _context.Remove(repo);
+                    var affected = await _context.SaveChangesAsync();
+                    result = affected > 0;
+                }
             }
 
             return Json(result);

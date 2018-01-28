@@ -22,6 +22,9 @@ namespace Triggr
 
         public void Execute(PerformContext hangfireContext, Container container)
         {
+            if(!container.IsTriggrProject())
+                return;
+            
             var probes = container.CheckForProbes();
             hangfireContext.WriteLine($"Executing ProbeControl");
 
