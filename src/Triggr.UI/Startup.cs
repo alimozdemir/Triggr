@@ -71,6 +71,8 @@ namespace Triggr.UI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            
+            // set the workercount because of sqlite
             BackgroundJobServerOptions serverOptions = new BackgroundJobServerOptions();
             serverOptions.WorkerCount = 1;
             app.UseHangfireServer(serverOptions);

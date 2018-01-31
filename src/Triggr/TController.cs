@@ -27,7 +27,7 @@ namespace Triggr
 
                     foreach (var container in containers)
                     {
-                        hangfireContext.WriteLine(container.Name + " " + container.Folder);
+                        hangfireContext.WriteLine($"{container.Name} {container.Folder}");
                         BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, container));
                         hangfireContext.WriteLine("ProbeControl Job is enqueued");
                     }
