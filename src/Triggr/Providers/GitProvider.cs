@@ -12,13 +12,25 @@ namespace Triggr.Providers
     public class GitProvider : IProvider
     {
         private readonly RepositoryStorage _storage;
-        public GitProvider(RepositoryStorage storage)
+        private readonly IScriptExecutor _scriptExecutor;
+
+        public GitProvider(RepositoryStorage storage, IScriptExecutor scriptExecutor)
         {
             _storage = storage;
+            _scriptExecutor = scriptExecutor;
         }
 
         public string GetProviderType => "Git";
 
+        public string LastUpdatedFiles(Data.Repository data)
+        {
+            string result = string.Empty;
+            var path = _storage.Combine(data.Id.ToString());
+
+            result = _scriptExecutor.ExecuteCommon("LastUpdatedFiles", path);
+
+            return result;
+        }
         public string Clone(Data.Repository data)
         {
             var path = _storage.Combine(data.Id.ToString());
@@ -49,6 +61,7 @@ namespace Triggr.Providers
 
             return Regex.IsMatch(url, @"((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)?");
         }
+
 
         public string Update(Data.Repository data)
         {

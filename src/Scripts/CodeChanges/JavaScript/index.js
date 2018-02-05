@@ -39,6 +39,8 @@ function search(ast, type, name) {
                 return search(ast.body[i].body, type, name);
         }
     }
+
+    return null;
 }
 
 function compare(data1, data2) {
@@ -48,10 +50,16 @@ function compare(data1, data2) {
     // search same object on two asts
     var node1 = search(ast1.program, type, name);
     var node2 = search(ast2.program, type, name);
-    // change it back to strings
-    var code1 = recast.print(node1).code;
-    var code2 = recast.print(node2).code;
-    // return the results
-    return code1 === code2 ? "no change" : "changed";
+
+    if (node1 !== null && node2 !== null) {
+
+        // change it back to strings
+        var code1 = recast.print(node1).code;
+        var code2 = recast.print(node2).code;
+        // return the results
+        return code1 === code2 ? "no change" : "changed";
+    }
+    else
+        return "not found";
 }
 

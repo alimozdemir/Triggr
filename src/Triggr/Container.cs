@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Triggr.Providers;
 
 namespace Triggr
 {
@@ -19,6 +20,7 @@ namespace Triggr
         private string TriggrFolder => Path.Combine(Folder, ConstTriggrFolder);
         public string Languages { get; set; }
         public DateTimeOffset UpdatedTime { get; set; }
+
 
         private const string ConstTriggrFolder = ".triggr";
 
@@ -38,6 +40,24 @@ namespace Triggr
                 var probe = JsonConvert.DeserializeObject<Probe>(content);
 
                 result.Add(probe);
+            }
+
+            return result;
+        }
+
+        public bool Update(IProvider provider)
+        {
+            bool result = false;
+
+            var path = provider.Update(this.Repository);
+
+            if (string.IsNullOrEmpty(path)) // no update
+            {
+
+            }
+            else
+            {
+                
             }
 
             return result;

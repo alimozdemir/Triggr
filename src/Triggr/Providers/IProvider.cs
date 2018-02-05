@@ -9,6 +9,12 @@ namespace Triggr.Providers
     public interface IProvider
     {
         /// <summary>
+        /// Return last update's file lists
+        /// </summary>
+        /// <param name="repository"></param>
+        /// <returns>List of files as one string</returns>
+        string LastUpdatedFiles(Data.Repository data);
+        /// <summary>
         /// Updates the repository on local storage
         /// </summary>
         /// <param name="repository"></param>

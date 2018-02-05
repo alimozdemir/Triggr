@@ -22,9 +22,9 @@ namespace Triggr
 
         public void Execute(PerformContext hangfireContext, Container container)
         {
-            if(!container.IsTriggrProject())
+            if (!container.IsTriggrProject())
                 return;
-            
+
             var probes = container.CheckForProbes();
             hangfireContext.WriteLine($"Executing ProbeControl");
 
@@ -62,9 +62,9 @@ namespace Triggr
                         var objectPath = Path.Combine(container.Folder, probe.ObjectPath);
                         var language = _languageService.Define(probe.ObjectPath);
 
-                        var result = _scriptExecutor.Execute(probe.ProbeType, language, 
+                        var result = _scriptExecutor.Execute(probe.ProbeType, language,
                                         objectPath, tempFile, probe.ObjectType, probe.ObjectName);
-                                        
+
                         hangfireContext.WriteLine($"Result of comparision {result}");
                         // for now
                         /*var tempData = File.ReadAllText(tempFile);
