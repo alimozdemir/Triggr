@@ -6,9 +6,12 @@ namespace Triggr.Services
     {
         private string _path;
         public string Path => _path;
-        public RepositoryStorage(string path)
+        public RepositoryStorage(string path) : this(path, true)
         {
-            Set(path);
+        }
+        public RepositoryStorage(string path, bool environmentPath)
+        {
+            Set(path, environmentPath);
         }
         public void Set(string path)
         {
@@ -17,6 +20,11 @@ namespace Triggr.Services
 
         public void Set(string path, bool environmentPath)
         {
+            if (string.IsNullOrEmpty(path))
+            {
+                throw new ArgumentException("Path can't be empty.", nameof(path));
+            }
+            
             _path = environmentPath ? System.IO.Path.Combine(Environment.CurrentDirectory, path) : path;
         }
         public string Combine(string path)

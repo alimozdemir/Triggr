@@ -116,13 +116,13 @@ namespace Triggr
                     if (provider.Restore(repository, probe.Object.Path, true)) // restore to previous file
                     {
                         hangfireContext.WriteLine($"{probe.Object.Path} restored to old.");
-                        
+
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path); // get the file path
 
                         // look for the object
                         var ast1 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
 
-                        hangfireContext.WriteLine($"{probe.Object.Path} old version {ast1}.");
+                        hangfireContext.WriteLine($"{probe.Object.Path} old version is loaded.");
                         var temp1 = WriteToTemp(ast1);
 
                         // restore to original file
@@ -133,8 +133,8 @@ namespace Triggr
 
                             var temp2 = WriteToTemp(ast2);
 
-                            hangfireContext.WriteLine($"{probe.Object.Path} new version {ast2}.");
-                            
+                            hangfireContext.WriteLine($"{probe.Object.Path} new version is loaded.");
+
                             Control(hangfireContext, probe, temp1, temp2);
                         }
                     }
@@ -154,11 +154,17 @@ namespace Triggr
                     {
                         hangfireContext.WriteLine($"{probe.Object.Path} is changed.");
                     }
+                    else
+                        hangfireContext.WriteLine($"{probe.Object.Path} no change.");
 
                     break;
                 case ProbeType.StaticAnalysis:
                     break;
             }
+
+            // delete temporary files
+            File.Delete(temp1);
+            File.Delete(temp2);
         }
 
         private string WriteToTemp(string data)
