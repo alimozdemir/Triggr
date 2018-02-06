@@ -11,7 +11,7 @@ using Triggr.Data;
 namespace Triggr.UI.Migrations
 {
     [DbContext(typeof(TriggrContext))]
-    [Migration("20180124142938_initial")]
+    [Migration("20180206135434_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace Triggr.UI.Migrations
 
             modelBuilder.Entity("Triggr.Data.Repository", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Provider");

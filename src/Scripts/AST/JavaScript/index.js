@@ -4,8 +4,8 @@ var fs = require('fs');
 
 // file1 and file2
 let file1 = process.argv[2];
-let type = process.argv[4];
-let name = process.argv[5];
+let type = process.argv[3];
+let name = process.argv[4];
 
 if (type == 'function')
     type = 'FunctionDeclaration';

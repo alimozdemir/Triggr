@@ -25,7 +25,7 @@ namespace Triggr.Services
         public async Task<IEnumerable<Container>> CheckAsync()
         {
             var repositories = await _context.Repositories.ToListAsync();
-            
+
             List<Container> containers = new List<Container>();
             bool anyUpdate = false;
 
@@ -39,7 +39,7 @@ namespace Triggr.Services
                     path = provider.Clone(repository);
                 }
                 else
-                    path =  _storage.Combine(repository.Id);
+                    path = _storage.Combine(repository.Id);
 
                 var container = new Container($"Container #{repository.Id}", path, repository)
                 {
@@ -55,6 +55,42 @@ namespace Triggr.Services
             }
 
             return containers;
+        }
+
+        public Container GetContainer(string repositoryId)
+        {
+            Container result = null;
+
+            var repository = _context.Repositories.Find(repositoryId);
+
+            if (repository != null)
+            {
+                result = GetContainer(repository);
+            }
+
+            return result;
+        }
+
+        public Container GetContainer(Repository repository)
+        {
+            Container result = null;
+
+            var provider = _providerFactory.GetProvider(repository.Provider);
+            string path = string.Empty;
+
+            if (!provider.Exist(repository))
+            {
+                path = provider.Clone(repository);
+            }
+            else
+                path = _storage.Combine(repository.Id);
+
+            result = new Container($"Container #{repository.Id}", path, repository)
+            {
+                UpdatedTime = repository.UpdatedTime
+            };
+
+            return result;
         }
     }
 }

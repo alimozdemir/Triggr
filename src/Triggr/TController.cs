@@ -51,10 +51,9 @@ namespace Triggr
 
                         foreach (var item in activatedProbes)
                         {
-                            
+                            hangfireContext.WriteLine($"{item.Object.Path} file's probe is activated.");
+                            BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
                         }
-
-                        //BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, container));
                     }
 
                     hangfireContext.WriteLine($"Total found containers {containers.Count()}.");

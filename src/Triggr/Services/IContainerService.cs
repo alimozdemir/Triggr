@@ -7,5 +7,8 @@ namespace Triggr.Services
     public interface IContainerService
     {
          Task<IEnumerable<Container>> CheckAsync();
+
+         Container GetContainer(string repositoryId);
+         Container GetContainer(Data.Repository repository);
     }
 }

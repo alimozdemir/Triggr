@@ -8,6 +8,7 @@ namespace Triggr.Providers
     /// </summary>
     public interface IProvider
     {
+        bool Restore(Data.Repository data, string fileName, bool previousFile);
         /// <summary>
         /// Return last update's file lists
         /// </summary>
@@ -30,7 +31,7 @@ namespace Triggr.Providers
         /// Clones the repository from source control to local storage (e.g. git clone url)
         /// </summary>
         /// <param name="repository"></param>
-        /// <returns></returns>
+        /// <returns>The path of repository</returns>
         string Clone(Repository repository);
         /// <summary>
         /// Checks if given url is valid with that provider

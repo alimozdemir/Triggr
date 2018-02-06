@@ -12,8 +12,7 @@ namespace Triggr.UI.Migrations
                 name: "Repositories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    Id = table.Column<string>(nullable: false),
                     Provider = table.Column<string>(nullable: true),
                     Reference = table.Column<string>(nullable: true),
                     UpdatedTime = table.Column<DateTimeOffset>(nullable: false),

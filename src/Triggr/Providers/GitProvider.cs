@@ -84,6 +84,23 @@ namespace Triggr.Providers
             return result ? path : string.Empty;
         }
 
+        public bool Restore(Data.Repository data, string fileName, bool previousFile)
+        {
+            bool result = false;
+            // HEAD = last commit, HEAD^ = previous commit of last commit
+            var head = previousFile ? "HEAD^" : "HEAD";
+
+            var path = _storage.Combine(data.Id);
+
+            //script returns error messages or empty string.
+            var commandResult = _scriptExecutor.ExecuteCommon("Restore", path, head, fileName);
+
+            // if it is empty, no problem with restore process
+            result = string.IsNullOrEmpty(commandResult);
+
+            return result;
+        }
+
 
         /*
         private (string User, string Repository) Parse(string url)

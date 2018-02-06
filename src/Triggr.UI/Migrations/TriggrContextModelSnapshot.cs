@@ -21,7 +21,7 @@ namespace Triggr.UI.Migrations
 
             modelBuilder.Entity("Triggr.Data.Repository", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Provider");

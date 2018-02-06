@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Hangfire.Console;
 using Hangfire.Server;
+using Triggr.Data;
 using Triggr.Providers;
 using Triggr.Services;
 
@@ -13,11 +14,19 @@ namespace Triggr
         private readonly IProviderFactory _providerFactory;
         private readonly ILanguageService _languageService;
         private readonly IScriptExecutor _scriptExecutor;
-        public ProbeControl(IProviderFactory providerFactory, ILanguageService languageService, IScriptExecutor scriptExecutor)
+        private readonly TriggrContext _dbContext;
+        private readonly IContainerService _containerService;
+
+        public ProbeControl(IProviderFactory providerFactory, ILanguageService languageService,
+                IScriptExecutor scriptExecutor,
+                TriggrContext dbContext,
+                IContainerService containerService)
         {
             _providerFactory = providerFactory;
             _languageService = languageService;
             _scriptExecutor = scriptExecutor;
+            _dbContext = dbContext;
+            _containerService = containerService;
         }
 
         public void Execute(PerformContext hangfireContext, Container container)
@@ -84,6 +93,81 @@ namespace Triggr
             }
             hangfireContext.WriteLine($"Finished ProbeControl");
 
+        }
+
+        public void Execute(PerformContext hangfireContext, string probeId, string repoId)
+        {
+            var repository = _dbContext.Repositories.Find(repoId); // get the repository
+            if (repository != null)
+            {
+                var container = _containerService.GetContainer(repoId); // get the container
+
+                // get all probes and look for probeId
+                var probes = container.CheckForProbes();
+                var probe = probes.FirstOrDefault(i => i.Id.Equals(probeId));
+
+                if (probe != null)
+                {
+
+                    hangfireContext.WriteLine($"{probe.Object.Path} is found.");
+                    var language = _languageService.Define(probe.Object.Path); // define the language
+                    var provider = _providerFactory.GetProvider(repository.Provider); // get the provider
+
+                    if (provider.Restore(repository, probe.Object.Path, true)) // restore to previous file
+                    {
+                        hangfireContext.WriteLine($"{probe.Object.Path} restored to old.");
+                        
+                        var objectPath = Path.Combine(container.Folder, probe.Object.Path); // get the file path
+
+                        // look for the object
+                        var ast1 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
+
+                        hangfireContext.WriteLine($"{probe.Object.Path} old version {ast1}.");
+                        var temp1 = WriteToTemp(ast1);
+
+                        // restore to original file
+                        if (provider.Restore(repository, probe.Object.Path, false))
+                        {
+                            // look for the object
+                            var ast2 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
+
+                            var temp2 = WriteToTemp(ast2);
+
+                            hangfireContext.WriteLine($"{probe.Object.Path} new version {ast2}.");
+                            
+                            Control(hangfireContext, probe, temp1, temp2);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Control(PerformContext hangfireContext, Probe probe, string temp1, string temp2)
+        {
+            switch (probe.ProbeType)
+            {
+                case ProbeType.CodeChanges:
+                    var file1 = File.ReadAllText(temp1);
+                    var file2 = File.ReadAllText(temp2);
+
+                    if (!file1.Equals(file2))
+                    {
+                        hangfireContext.WriteLine($"{probe.Object.Path} is changed.");
+                    }
+
+                    break;
+                case ProbeType.StaticAnalysis:
+                    break;
+            }
+        }
+
+        private string WriteToTemp(string data)
+        {
+            var temp = Path.GetTempFileName();
+
+            File.WriteAllText(temp, data);
+
+            return temp;
         }
     }
 }
