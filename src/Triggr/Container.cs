@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using Triggr.Providers;
 
@@ -45,22 +46,29 @@ namespace Triggr
             return result;
         }
 
-        public bool Update(IProvider provider)
+        public IEnumerable<string> Update(IProvider provider)
         {
-            bool result = false;
-
             var path = provider.Update(this.Repository);
 
             if (string.IsNullOrEmpty(path)) // no update
             {
-
+                return Enumerable.Empty<string>();
             }
             else
             {
-                
-            }
+                List<string> result = new List<string>();
 
-            return result;
+                var files = provider.LastUpdatedFiles(this.Repository);
+
+                var entities = files.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var file in entities)
+                {
+                    result.Add(file);
+                }
+
+                return result;
+            }
         }
     }
 }

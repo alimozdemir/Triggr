@@ -5,15 +5,19 @@ using Triggr.Services;
 using System.Linq;
 using System;
 using Hangfire;
+using Triggr.Providers;
 
 namespace Triggr
 {
     public class TController
     {
         private readonly IContainerService _containerService;
-        public TController(IContainerService containerService)
+        private readonly IProviderFactory _providerFactory;
+
+        public TController(IContainerService containerService, IProviderFactory providerFactory)
         {
             _containerService = containerService;
+            _providerFactory = providerFactory;
         }
 
         public void Tick(PerformContext hangfireContext)
@@ -28,11 +32,29 @@ namespace Triggr
                     foreach (var container in containers)
                     {
                         hangfireContext.WriteLine($"{container.Name} {container.Folder}");
-                        
-                        
+                        var probes = container.CheckForProbes();
+
+                        hangfireContext.WriteLine($"{container.Name} is updating..");
+
+                        var provider = _providerFactory.GetProvider(container.Repository.Provider);
+
+                        var fileList = container.Update(provider);
+
+                        foreach (var item in fileList)
+                        {
+                            hangfireContext.WriteLine($"{container.Name} {item} file updated.");
+                        }
+
+                        hangfireContext.WriteLine($"{container.Name} is updated..");
+
+                        var activatedProbes = probes.Where(i => fileList.Contains(i.Object.Path));
+
+                        foreach (var item in activatedProbes)
+                        {
+                            
+                        }
 
                         //BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, container));
-                        hangfireContext.WriteLine("ProbeControl Job is enqueued");
                     }
 
                     hangfireContext.WriteLine($"Total found containers {containers.Count()}.");

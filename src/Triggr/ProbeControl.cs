@@ -37,10 +37,10 @@ namespace Triggr
                 {
                     var tempFile = Path.GetTempFileName();
 
-                    var objectPath = Path.Combine(container.Folder, probe.ObjectPath);
+                    var objectPath = Path.Combine(container.Folder, probe.Object.Path);
                     if (File.Exists(objectPath))
                     {
-                        hangfireContext.WriteLine($"Probe {probe.ObjectPath}");
+                        hangfireContext.WriteLine($"Probe {probe.Object.Path}");
 
                         File.Copy(objectPath, tempFile, true);
 
@@ -59,11 +59,11 @@ namespace Triggr
                     if (probe.ProbeType == ProbeType.CodeChanges)
                     {
                         var tempFile = oldFiles[probe];
-                        var objectPath = Path.Combine(container.Folder, probe.ObjectPath);
-                        var language = _languageService.Define(probe.ObjectPath);
+                        var objectPath = Path.Combine(container.Folder, probe.Object.Path);
+                        var language = _languageService.Define(probe.Object.Path);
 
                         var result = _scriptExecutor.Execute(probe.ProbeType, language,
-                                        objectPath, tempFile, probe.ObjectType, probe.ObjectName);
+                                        objectPath, tempFile, probe.Object.Type, probe.Object.Name);
 
                         hangfireContext.WriteLine($"Result of comparision {result}");
                         // for now

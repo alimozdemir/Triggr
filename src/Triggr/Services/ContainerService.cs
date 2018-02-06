@@ -39,7 +39,7 @@ namespace Triggr.Services
                     path = provider.Clone(repository);
                 }
                 else
-                    path =  _storage.Combine(repository.Id.ToString());
+                    path =  _storage.Combine(repository.Id);
 
                 var container = new Container($"Container #{repository.Id}", path, repository)
                 {

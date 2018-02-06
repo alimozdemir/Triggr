@@ -25,7 +25,7 @@ namespace Triggr.Providers
         public string LastUpdatedFiles(Data.Repository data)
         {
             string result = string.Empty;
-            var path = _storage.Combine(data.Id.ToString());
+            var path = _storage.Combine(data.Id);
 
             result = _scriptExecutor.ExecuteCommon("LastUpdatedFiles", path);
 
@@ -33,7 +33,7 @@ namespace Triggr.Providers
         }
         public string Clone(Data.Repository data)
         {
-            var path = _storage.Combine(data.Id.ToString());
+            var path = _storage.Combine(data.Id);
 
             var cloneResult = Repository.Clone(data.Url, path);
 
@@ -42,7 +42,7 @@ namespace Triggr.Providers
 
         public bool Exist(Data.Repository data)
         {
-            var path = _storage.Combine(data.Id.ToString());
+            var path = _storage.Combine(data.Id);
 
             // ensure the directory is created
             if (!Directory.Exists(path))
@@ -67,7 +67,7 @@ namespace Triggr.Providers
         {
             bool result = false;
 
-            var path = _storage.Combine(data.Id.ToString());
+            var path = _storage.Combine(data.Id);
 
             using (var repo = new Repository(path))
             {

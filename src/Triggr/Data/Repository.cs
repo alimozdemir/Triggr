@@ -4,7 +4,7 @@ namespace Triggr.Data
 {
     public class Repository
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Provider { get; set; }
         public string Url { get; set; }
         public string Reference { get; set; }
