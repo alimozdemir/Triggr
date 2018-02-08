@@ -135,14 +135,14 @@ namespace Triggr
 
                             hangfireContext.WriteLine($"{probe.Object.Path} new version is loaded.");
 
-                            Control(hangfireContext, probe, temp1, temp2);
+                            Control(hangfireContext, probe, temp1, temp2, language);
                         }
                     }
                 }
             }
         }
 
-        private void Control(PerformContext hangfireContext, Probe probe, string temp1, string temp2)
+        private void Control(PerformContext hangfireContext, Probe probe, string temp1, string temp2, string language)
         {
             switch (probe.ProbeType)
             {
@@ -159,6 +159,31 @@ namespace Triggr
 
                     break;
                 case ProbeType.StaticAnalysis:
+                    List<string> parameters = new List<string>();
+                    var tex = File.ReadAllText(temp1);
+                    hangfireContext.WriteLine(ConsoleTextColor.Blue, tex);
+
+                    parameters.Add(temp1);
+                    parameters.AddRange(probe.Metrics.Arguments.Select(i => $"'{i}'"));
+
+                    var result1 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
+                    parameters[0] = temp2;
+                    var result2 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
+
+
+                    if (probe.Metrics.Strategy == ReportType.All)
+                    {
+                        hangfireContext.WriteLine(result2);
+                    }
+                    else if (probe.Metrics.Strategy == ReportType.Diff)
+                    {
+                        if (!result1.Equals(result2))
+                        {
+                            hangfireContext.WriteLine("There is a difference between results");
+                            hangfireContext.WriteLine(result1);
+                        }   
+                    }
+
                     break;
             }
 

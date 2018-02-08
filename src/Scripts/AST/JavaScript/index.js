@@ -7,6 +7,10 @@ let file1 = process.argv[2];
 let type = process.argv[3];
 let name = process.argv[4];
 
+/*file1 = "../../../repositories/ca754fdc-de3e-4557-8a48-143514cd835c/sum.js";
+type = "function";
+name = "sum";*/
+
 if (type == 'function')
     type = 'FunctionDeclaration';
 
@@ -23,15 +27,16 @@ fs.readFile(file1, 'utf8', function (err, fileData1) {
 
 // a regular tree search
 function search(ast, type, name) {
-
-    for (let i = 0; i < ast.body.length; i++) {
-        if (ast.body[i].type === type && ast.body[i].id.name === name)
-            return ast.body[i];
-        else {
-            if (ast.body[i].body !== undefined)
-                return search(ast.body[i].body, type, name);
-        }
+    if (ast.type && ast.type === type && ast.id.name === name) {
+        return ast;
     }
+
+    if (ast.body)
+        for (let i = 0; i < ast.body.length; i++) {
+            var r = search(ast.body[i], type, name);
+            if (r != null)
+                return r;
+        }
 
     return null;
 }

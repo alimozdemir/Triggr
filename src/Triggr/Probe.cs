@@ -23,8 +23,7 @@ namespace Triggr
     public class Metrics
     {
         public ReportType Strategy { get; set; }
-        public string MaxDepth { get; set; }
-        public string MaxComplexity { get; set; }
+        public List<string> Arguments { get; set; }
     }
 
     public enum ReportType
