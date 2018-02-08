@@ -23,7 +23,7 @@ namespace Triggr.UI.Services
             services.AddTransient<ProbeControl>();
             services.AddTransient<TController>();
             services.AddTransient<IScriptExecutor, ScriptExecutor>();
-            services.AddSingleton<ILanguageService, LanguageService>();
+            services.AddSingleton<ILanguageService, LanguageService>(i => new LanguageService("../config/languages.json"));
 
         }
 

@@ -1,16 +1,34 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Triggr.Services
 {
     public class LanguageService : ILanguageService
     {
-        private static Dictionary<string, string> _languages = new Dictionary<string, string>()
+        public LanguageService(string path)
         {
-            {".js", "JavaScript"},
-            {".cs", "CSharp"}
-        };
+            if (File.Exists(path))
+            {
+                var text = File.ReadAllText(path);
+                try
+                {
+                    _languages = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Unsupported format.", ex);
+                }
+            }
+            else
+            {
+                throw new Exception("File not found.");
+            }
+        }
+
+        private static Dictionary<string, string> _languages;
+
         public string Define(string path)
         {
             var result = string.Empty;
