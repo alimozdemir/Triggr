@@ -6,9 +6,12 @@ namespace Triggr.Services
     public class ScriptExecutor : IScriptExecutor
     {
         private readonly ScriptStorage _storage;
-        public ScriptExecutor(ScriptStorage storage)
+        private readonly IShellExecutor _shellExecutor;
+
+        public ScriptExecutor(ScriptStorage storage, IShellExecutor shellExecutor)
         {
             _storage = storage;
+            _shellExecutor = shellExecutor;
         }
 
         public string Execute(ProbeType probe, string language, params string[] arg)
@@ -35,7 +38,7 @@ namespace Triggr.Services
             }
 
             command = command + " " + string.Join(" ", arg);
-            result = command.Bash();
+            result = _shellExecutor.Execute(command);
 
             return result;
         }

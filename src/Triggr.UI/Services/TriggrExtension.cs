@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Builder.Internal;
@@ -16,14 +17,25 @@ namespace Triggr.UI.Services
             services.AddSingleton<RepositoryStorage>(i => new RepositoryStorage("../repositories/"));
             services.AddSingleton<ScriptStorage>(i => new ScriptStorage("../Scripts/"));
             services.AddScoped<IContainerService, ContainerService>();
-            
+
             services.AddScoped<IProvider, GitProvider>();
 
             services.AddScoped<IProviderFactory, ProviderFactory>();
             services.AddTransient<ProbeControl>();
             services.AddTransient<TController>();
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                services.AddTransient<IShellExecutor, UnixExecutor>();
+            }
+            else
+            {
+                services.AddTransient<IShellExecutor, WindowsExecutor>();
+            }
+            
             services.AddTransient<IScriptExecutor, ScriptExecutor>();
             services.AddSingleton<ILanguageService, LanguageService>(i => new LanguageService("../config/languages.json"));
+
 
         }
 
