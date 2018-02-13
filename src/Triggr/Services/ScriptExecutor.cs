@@ -51,7 +51,7 @@ namespace Triggr.Services
             var command = $"cd {path} && ./{type}.sh";
             command = command + " " + string.Join(" ", arg);
             //todo: more consistent way
-            result = command.Bash();
+            result = _shellExecutor.Execute(command);
 
             return result;
         }
