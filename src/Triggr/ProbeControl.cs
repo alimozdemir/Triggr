@@ -115,7 +115,7 @@ namespace Triggr
 
                     if (provider.Restore(repository, probe.Object.Path, true)) // restore to previous file
                     {
-                        hangfireContext.WriteLine($"{probe.Object.Path} restored to old.");
+                        hangfireContext.WriteLine($"{probe.Object.Path} is restored to old.");
 
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path); // get the file path
 
@@ -161,7 +161,7 @@ namespace Triggr
                 case ProbeType.StaticAnalysis:
                     List<string> parameters = new List<string>();
                     var tex = File.ReadAllText(temp1);
-                    hangfireContext.WriteLine(ConsoleTextColor.Blue, tex);
+                    hangfireContext.WriteLine(tex);
 
                     parameters.Add(temp1);
                     parameters.AddRange(probe.Metrics.Arguments.Select(i => $"'{i}'"));
