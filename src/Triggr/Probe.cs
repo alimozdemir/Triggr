@@ -11,6 +11,7 @@ namespace Triggr
         public string Modifiers { get; set; }
         public DateTimeOffset CreationDate { get; set; }
         public Metrics Metrics { get; set; }
+        public List<Actuator> Actuators { get; set; }
     }
 
     public class ObjectInformation
@@ -24,6 +25,19 @@ namespace Triggr
     {
         public ReportType Strategy { get; set; }
         public List<string> Arguments { get; set; }
+    }
+
+    public class Actuator
+    {
+        public ActuatorType Type { get; set; }
+        public List<string> Emails { get; set; }
+        public string Assign { get; set; }
+    }
+
+    public enum ActuatorType
+    {
+        GitHubIssue,
+        Email
     }
 
     public enum ReportType
