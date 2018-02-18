@@ -4,6 +4,7 @@ using System.Linq;
 using Hangfire.Console;
 using Hangfire.Server;
 using Triggr.Data;
+using Triggr.Infrastructure;
 using Triggr.Providers;
 using Triggr.Services;
 
@@ -110,19 +111,22 @@ namespace Triggr
                 {
 
                     hangfireContext.WriteLine($"{probe.Object.Path} is found.");
-                    var language = _languageService.Define(probe.Object.Path); // define the language
-                    var provider = _providerFactory.GetProvider(repository.Provider); // get the provider
-
-                    if (provider.Restore(repository, probe.Object.Path, true)) // restore to previous file
+                    // define the language
+                    var language = _languageService.Define(probe.Object.Path);
+                    // get the provider
+                    var provider = _providerFactory.GetProvider(repository.Provider); 
+                    // restore to previous file
+                    if (provider.Restore(repository, probe.Object.Path, true)) 
                     {
                         hangfireContext.WriteLine($"{probe.Object.Path} is restored to old.");
-
-                        var objectPath = Path.Combine(container.Folder, probe.Object.Path); // get the file path
+                        // get the file path
+                        var objectPath = Path.Combine(container.Folder, probe.Object.Path); 
 
                         // look for the object
                         var ast1 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
 
                         hangfireContext.WriteLine($"{probe.Object.Path} old version is loaded.");
+
                         var temp1 = WriteToTemp(ast1);
 
                         // restore to original file
@@ -147,8 +151,12 @@ namespace Triggr
             switch (probe.ProbeType)
             {
                 case ProbeType.CodeChanges:
+                    // load file1, and file2 for comparison
                     var file1 = File.ReadAllText(temp1);
                     var file2 = File.ReadAllText(temp2);
+
+                    hangfireContext.WriteLine(file1);
+                    hangfireContext.WriteLine(file2);
 
                     if (!file1.Equals(file2))
                     {
@@ -159,19 +167,26 @@ namespace Triggr
 
                     break;
                 case ProbeType.StaticAnalysis:
+                    // collect the parameters
                     List<string> parameters = new List<string>();
+
+                    // for test
                     var tex = File.ReadAllText(temp1);
                     hangfireContext.WriteLine(tex);
 
+                    // add file path
                     parameters.Add(temp1);
+                    // transform all parameters from a to 'a'
                     parameters.AddRange(probe.Metrics.Arguments.Select(i => $"'{i}'"));
-
+                    // execute static analysis script
                     var result1 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
+                    // change the file path of parameters
                     parameters[0] = temp2;
+                    // execute second static analysis script
                     var result2 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
 
-
-                    if (probe.Metrics.Strategy == ReportType.All)
+                    // report the results upon strategy
+                    if (probe.Metrics.Strategy == ReportType.Always)
                     {
                         hangfireContext.WriteLine(result2);
                     }

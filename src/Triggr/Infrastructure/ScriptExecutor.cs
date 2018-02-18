@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Triggr.Services
+namespace Triggr.Infrastructure
 {
     public class ScriptExecutor : IScriptExecutor
     {

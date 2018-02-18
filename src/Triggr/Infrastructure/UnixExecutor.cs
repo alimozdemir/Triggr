@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace Triggr.Services
+namespace Triggr.Infrastructure
 {
     public class UnixExecutor : IShellExecutor
     {

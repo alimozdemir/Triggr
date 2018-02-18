@@ -1,15 +1,17 @@
 using System;
 
-namespace Triggr.Services
+namespace Triggr.Infrastructure
 {
-    public class RepositoryStorage : IStorage
+    // it should be an abstract class
+    public class ScriptStorage : IStorage
     {
         private string _path;
         public string Path => _path;
-        public RepositoryStorage(string path) : this(path, true)
+        public ScriptStorage(string path) : this(path, true)
         {
         }
-        public RepositoryStorage(string path, bool environmentPath)
+
+        public ScriptStorage(string path, bool environmentPath)
         {
             Set(path, environmentPath);
         }
@@ -31,6 +33,7 @@ namespace Triggr.Services
         {
             return System.IO.Path.Combine(_path, path);
         }
+
         public string Combine(string path1, string path2)
         {
             return System.IO.Path.Combine(_path, path1, path2);

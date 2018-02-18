@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using LibGit2Sharp;
 using System.IO;
 using System.Text.RegularExpressions;
+using Triggr.Infrastructure;
 
 namespace Triggr.Providers
 {

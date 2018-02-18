@@ -1,4 +1,4 @@
-namespace Triggr.Services
+namespace Triggr.Infrastructure
 {
     public class WindowsExecutor : IShellExecutor
     {

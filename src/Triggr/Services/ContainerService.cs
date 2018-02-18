@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Triggr.Data;
 using Triggr.Providers;
 using System;
+using Triggr.Infrastructure;
 
 namespace Triggr.Services
 {

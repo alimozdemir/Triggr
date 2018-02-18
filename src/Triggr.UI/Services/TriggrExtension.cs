@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Builder.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using Triggr.Data;
+using Triggr.Infrastructure;
 using Triggr.Providers;
 using Triggr.Services;
 

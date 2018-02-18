@@ -28,7 +28,7 @@ namespace Triggr
 
     public enum ReportType
     {
-        All,
+        Always,
         Diff
     }
     public enum ProbeType
