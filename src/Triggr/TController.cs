@@ -6,6 +6,7 @@ using System.Linq;
 using System;
 using Hangfire;
 using Triggr.Providers;
+using Triggr.Data;
 
 namespace Triggr
 {
@@ -13,11 +14,13 @@ namespace Triggr
     {
         private readonly IContainerService _containerService;
         private readonly IProviderFactory _providerFactory;
+        private readonly TriggrContext _context;
 
-        public TController(IContainerService containerService, IProviderFactory providerFactory)
+        public TController(IContainerService containerService, IProviderFactory providerFactory, TriggrContext context)
         {
             _containerService = containerService;
             _providerFactory = providerFactory;
+            _context = context;
         }
 
         public void Tick(PerformContext hangfireContext)
@@ -28,6 +31,7 @@ namespace Triggr
                 {
                     hangfireContext.WriteLine("Starting to check.");
                     var containers = await _containerService.CheckAsync();
+                    bool anyUpdate = false;
 
                     foreach (var container in containers)
                     {
@@ -40,20 +44,35 @@ namespace Triggr
 
                         var fileList = container.Update(provider);
 
-                        foreach (var item in fileList)
+                        if (fileList.Count() > 0)
                         {
-                            hangfireContext.WriteLine($"{container.Name} {item} file updated.");
+                            container.Repository.UpdatedTime = DateTime.Now;
+                            anyUpdate = true;
+
+                            foreach (var item in fileList)
+                            {
+                                hangfireContext.WriteLine($"{container.Name} {item} file updated.");
+                            }
+
+                            hangfireContext.WriteLine($"{container.Name} is updated.");
+
+                            var activatedProbes = probes.Where(i => fileList.Contains(i.Object.Path));
+
+                            foreach (var item in activatedProbes)
+                            {
+                                hangfireContext.WriteLine($"{item.Object.Path} file's probe is activated.");
+                                BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
+                            }
                         }
-
-                        hangfireContext.WriteLine($"{container.Name} is updated..");
-
-                        var activatedProbes = probes.Where(i => fileList.Contains(i.Object.Path));
-
-                        foreach (var item in activatedProbes)
+                        else
                         {
-                            hangfireContext.WriteLine($"{item.Object.Path} file's probe is activated.");
-                            BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
+                            hangfireContext.WriteLine($"{container.Name} no new changes.");
                         }
+                    }
+
+                    if (anyUpdate)
+                    {
+                        await _context.SaveChangesAsync();
                     }
 
                     hangfireContext.WriteLine($"Total found containers {containers.Count()}.");

@@ -28,7 +28,6 @@ namespace Triggr.Services
             var repositories = await _context.Repositories.ToListAsync();
 
             List<Container> containers = new List<Container>();
-            bool anyUpdate = false;
 
             foreach (var repository in repositories)
             {
@@ -50,10 +49,6 @@ namespace Triggr.Services
                 containers.Add(container);
             }
 
-            if (anyUpdate)
-            {
-                await _context.SaveChangesAsync();
-            }
 
             return containers;
         }

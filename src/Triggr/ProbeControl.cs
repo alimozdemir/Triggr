@@ -114,13 +114,13 @@ namespace Triggr
                     // define the language
                     var language = _languageService.Define(probe.Object.Path);
                     // get the provider
-                    var provider = _providerFactory.GetProvider(repository.Provider); 
+                    var provider = _providerFactory.GetProvider(repository.Provider);
                     // restore to previous file
-                    if (provider.Restore(repository, probe.Object.Path, true)) 
+                    if (provider.Restore(repository, probe.Object.Path, true))
                     {
                         hangfireContext.WriteLine($"{probe.Object.Path} is restored to old.");
                         // get the file path
-                        var objectPath = Path.Combine(container.Folder, probe.Object.Path); 
+                        var objectPath = Path.Combine(container.Folder, probe.Object.Path);
 
                         // look for the object
                         var ast1 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
@@ -155,15 +155,18 @@ namespace Triggr
                     var file1 = File.ReadAllText(temp1);
                     var file2 = File.ReadAllText(temp2);
 
+                    hangfireContext.WriteLine("Old version");
                     hangfireContext.WriteLine(file1);
+
+                    hangfireContext.WriteLine("New version");
                     hangfireContext.WriteLine(file2);
 
                     if (!file1.Equals(file2))
                     {
-                        hangfireContext.WriteLine($"{probe.Object.Path} is changed.");
+                        hangfireContext.WriteLine($"{probe.Object.Name} is changed.");
                     }
                     else
-                        hangfireContext.WriteLine($"{probe.Object.Path} no change.");
+                        hangfireContext.WriteLine($"{probe.Object.Name} isn't changed.");
 
                     break;
                 case ProbeType.StaticAnalysis:
@@ -188,7 +191,11 @@ namespace Triggr
                     // report the results upon strategy
                     if (probe.Metrics.Strategy == ReportType.Always)
                     {
-                        hangfireContext.WriteLine(result2);
+                        if (string.IsNullOrEmpty(result2))
+                            hangfireContext.WriteLine("No result.");
+                        else
+                            hangfireContext.WriteLine(result2);
+
                     }
                     else if (probe.Metrics.Strategy == ReportType.Diff)
                     {
@@ -196,7 +203,7 @@ namespace Triggr
                         {
                             hangfireContext.WriteLine("There is a difference between results");
                             hangfireContext.WriteLine(result1);
-                        }   
+                        }
                     }
 
                     break;
