@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Triggr.UI.Services;
 using Triggr.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Triggr.UI
 {
@@ -38,7 +39,7 @@ namespace Triggr.UI
             });
 
 
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddHangfire(i =>
             {
@@ -61,8 +62,9 @@ namespace Triggr.UI
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
-
+            
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
@@ -71,7 +73,7 @@ namespace Triggr.UI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            
+
             // set the workercount because of sqlite
             BackgroundJobServerOptions serverOptions = new BackgroundJobServerOptions();
             serverOptions.WorkerCount = 1;

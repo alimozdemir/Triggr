@@ -39,6 +39,9 @@ namespace Triggr.Providers
         /// <param name="url"></param>
         /// <returns></returns>
         bool IsValid(string url);
+
+        bool WebhookRegister();
+        
         string GetProviderType { get; }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Hangfire;
 using Hangfire.Console;
 using Hangfire.Server;
 using Triggr.Data;
@@ -174,7 +175,7 @@ namespace Triggr
                     List<string> parameters = new List<string>();
 
                     // for test
-                    var tex = File.ReadAllText(temp1);
+                    var tex = File.ReadAllText(temp2);
                     hangfireContext.WriteLine(tex);
 
                     // add file path
@@ -204,6 +205,7 @@ namespace Triggr
                             hangfireContext.WriteLine("There is a difference between results");
                             hangfireContext.WriteLine(result1);
                         }
+
                     }
 
                     break;

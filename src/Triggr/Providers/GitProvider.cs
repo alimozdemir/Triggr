@@ -44,7 +44,7 @@ namespace Triggr.Providers
         public bool Exist(Data.Repository data)
         {
             var path = _storage.Combine(data.Id);
-
+            
             // ensure the directory is created
             if (!Directory.Exists(path))
             {
@@ -100,6 +100,11 @@ namespace Triggr.Providers
             result = string.IsNullOrEmpty(commandResult);
 
             return result;
+        }
+
+        public bool WebhookRegister()
+        {
+            throw new NotImplementedException();
         }
 
 
