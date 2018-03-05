@@ -50,17 +50,16 @@ namespace Triggr.UI.Controllers
                 repository.Provider = providerType;
                 repository.UpdatedTime = DateTimeOffset.Now;
                 repository.Url = model.Url;
+                repository.Name = model.Name;
+                repository.OwnerName = model.Owner;
+                repository.Token = model.Token;
 
-
-                _webhookService.AddHookAsync(repository);
-
-
-
-                await _context.SaveChangesAsync();
-                _context.Add(repository);
-                var affected = await _context.SaveChangesAsync();
-                result = affected > 0;
-                //result = true;
+                if (await _webhookService.AddHookAsync(repository))
+                {
+                    _context.Add(repository);
+                    var affected = await _context.SaveChangesAsync();
+                    result = affected > 0;
+                }
             }
 
             return Json(result);

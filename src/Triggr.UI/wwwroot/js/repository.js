@@ -10,7 +10,11 @@ var app = new Vue({
         showModal: false,
         model: {
             url: '',
-            valid: false
+            valid: false,
+            token: '',
+            owner: '',
+            name: '',
+            webhook: false
         },
         message: ''
     },
@@ -18,7 +22,7 @@ var app = new Vue({
         this.get();
     },
     filters: {
-        duration : function(value){
+        duration: function (value) {
             return moment(value).fromNow();
         }
     },
