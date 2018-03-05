@@ -39,7 +39,9 @@ namespace Triggr.UI
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                    .AddGitHubWebHooks();
 
             services.AddHangfire(i =>
             {
@@ -48,7 +50,11 @@ namespace Triggr.UI
                 i.UseActivator(new HangfireActivator(services));
                 i.UseConsole();
             });
+            
+            var config = Configuration.GetSection("TriggrConfig");
 
+            services.Configure<Triggr.TriggrConfig>(config);
+            
             services.AddTriggr();
         }
 

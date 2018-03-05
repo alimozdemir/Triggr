@@ -12,9 +12,10 @@ using Triggr.Data;
 namespace Triggr.UI.Migrations
 {
     [DbContext(typeof(TriggrContext))]
-    partial class TriggrContextModelSnapshot : ModelSnapshot
+    [Migration("20180305152716_webhook_info")]
+    partial class webhook_info
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

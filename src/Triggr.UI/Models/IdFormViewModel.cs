@@ -7,4 +7,10 @@ namespace Triggr.UI.Models
         [Required]
         public int Id { get; set; }
     }
+
+    public class IdStringFormViewModel
+    {
+        [Required]
+        public string Id { get; set; }
+    }
 }

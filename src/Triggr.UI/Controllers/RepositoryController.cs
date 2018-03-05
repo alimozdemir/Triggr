@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Triggr.Data;
 using Triggr.Providers;
+using Triggr.Services;
 
 namespace Triggr.UI.Controllers
 {
@@ -14,11 +15,13 @@ namespace Triggr.UI.Controllers
     {
         private readonly TriggrContext _context;
         private readonly IProviderFactory _providerFactory;
-        public RepositoryController(TriggrContext context, IProviderFactory providerFactory)
+        private readonly IWebhookService _webhookService;
+
+        public RepositoryController(TriggrContext context, IProviderFactory providerFactory, IWebhookService webhookService)
         {
             _context = context;
             _providerFactory = providerFactory;
-
+            _webhookService = webhookService;
         }
         public IActionResult Index()
         {
@@ -47,11 +50,29 @@ namespace Triggr.UI.Controllers
                 repository.Provider = providerType;
                 repository.UpdatedTime = DateTimeOffset.Now;
                 repository.Url = model.Url;
-                await _context.SaveChangesAsync(); 
+
+
+                _webhookService.AddHookAsync(repository);
+
+
+
+                await _context.SaveChangesAsync();
                 _context.Add(repository);
                 var affected = await _context.SaveChangesAsync();
                 result = affected > 0;
                 //result = true;
+            }
+
+            return Json(result);
+        }
+
+        [HttpPost]
+        public IActionResult IsWebhookSupported([FromBody]Models.IdStringFormViewModel model)
+        {
+            bool result = false;
+            if (ModelState.IsValid)
+            {
+                result = _webhookService.IsSupport(model.Id);
             }
 
             return Json(result);

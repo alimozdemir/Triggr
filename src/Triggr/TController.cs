@@ -7,6 +7,7 @@ using System;
 using Hangfire;
 using Triggr.Providers;
 using Triggr.Data;
+using System.Collections.Generic;
 
 namespace Triggr
 {
@@ -87,6 +88,11 @@ namespace Triggr
 
             });
 
+        }
+
+        public void Trigger(PerformContext hangfireContext, string repoName, string owner, List<string> modified)
+        {
+            hangfireContext.WriteLine("Trigger...");
         }
     }
 }

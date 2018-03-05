@@ -33,16 +33,17 @@ namespace Triggr.UI.Services
             {
                 services.AddTransient<IShellExecutor, WindowsExecutor>();
             }
-            
+
             services.AddTransient<IScriptExecutor, ScriptExecutor>();
             services.AddSingleton<ILanguageService, LanguageService>(i => new LanguageService("../config/languages.json"));
 
 
         }
 
-        public static void UseTriggr(this IApplicationBuilder app)
+        public static void UseTriggr(this IApplicationBuilder app, bool webHook = false)
         {
-            RecurringJob.AddOrUpdate<TController>(TriggrJobId, i => i.Tick(null), Cron.Minutely);
+            if (!webHook)
+                RecurringJob.AddOrUpdate<TController>(TriggrJobId, i => i.Tick(null), Cron.Minutely);
         }
     }
 
