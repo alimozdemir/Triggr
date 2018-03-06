@@ -41,10 +41,8 @@ var app = new Vue({
             this.showModal = false;
         },
         async addRepository() {
-            if (this.model.url) {
-                var response = await axios.post('/Repository/AddRepository', {
-                    url: this.model.url
-                });
+            if (this.model.url && this.model.token && this.model.owner && this.model.name) {
+                var response = await axios.post('/Repository/AddRepository', this.model);
 
                 let result = response.data;
 
@@ -59,6 +57,9 @@ var app = new Vue({
                     this.clearMessage();
                     this.message = "There is a problem with adding a repository"
                 }
+            }
+            else {
+
             }
         },
         async removeRepository(id) {
@@ -81,7 +82,7 @@ var app = new Vue({
             }
         },
         async isValid() {
-            var response = await axios.get('/Repository/GetProvider', {
+            var response = await axios.get('/Repository/GetValidation', {
                 params: {
                     url: this.model.url
                 }
@@ -89,10 +90,14 @@ var app = new Vue({
 
             let result = response.data;
 
-            if (result !== "")
-                this.model.valid = true;
-            else
+            if (result !== "") {
+                this.model.valid = result.valid;
+                this.model.webhook = result.webhook;
+            }
+            else {
                 this.model.valid = false;
+                this.model.webhook = false;
+            }
         }
     }
 })

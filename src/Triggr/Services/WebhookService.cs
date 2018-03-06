@@ -53,7 +53,6 @@ namespace Triggr.Services
 
         private async Task<bool> AddHookGithub(Data.Repository repo)
         {
-            bool result = false;
             var github = new GitHubClient(new ProductHeaderValue("Triggr"));
             github.Credentials = new Credentials(repo.Token);
 
@@ -66,7 +65,7 @@ namespace Triggr.Services
             repo.WebHook = createResult.Id != 0;
             repo.WebHookId = createResult.Id.ToString();
 
-            return result;
+            return repo.WebHook;
         }
     }
 }

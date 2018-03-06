@@ -34,9 +34,13 @@ namespace Triggr.UI.Controllers
             return Json(lists);
         }
 
-        public IActionResult GetProvider(string url)
+        public IActionResult GetValidation(string url)
         {
-            return Json(_providerFactory.GetProviderType(url));
+            return Json(new
+            {
+                Valid = _providerFactory.GetProviderType(url),
+                Webhook = _webhookService.IsSupport(url)
+            });
         }
 
         [HttpPost]
@@ -60,18 +64,6 @@ namespace Triggr.UI.Controllers
                     var affected = await _context.SaveChangesAsync();
                     result = affected > 0;
                 }
-            }
-
-            return Json(result);
-        }
-
-        [HttpPost]
-        public IActionResult IsWebhookSupported([FromBody]Models.IdStringFormViewModel model)
-        {
-            bool result = false;
-            if (ModelState.IsValid)
-            {
-                result = _webhookService.IsSupport(model.Id);
             }
 
             return Json(result);
