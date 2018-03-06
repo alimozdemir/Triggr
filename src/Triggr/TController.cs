@@ -92,7 +92,23 @@ namespace Triggr
 
         public void Trigger(PerformContext hangfireContext, string repoName, string owner, List<string> modified)
         {
-            hangfireContext.WriteLine("Trigger...");
+            var repo = _context.Repositories.FirstOrDefault(i => i.Name.Equals(repoName) && i.OwnerName.Equals(repoName));
+
+            if (repo != null)
+            {
+                var container = _containerService.GetContainer(repo);
+
+                var probes = container.CheckForProbes();
+
+                foreach (var probe in probes)
+                {
+                    if (modified.Contains(probe.Object.Path))
+                    {
+                        hangfireContext.WriteLine($"{probe.Object.Path} file's probe is activated.");
+                        BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));
+                    }
+                }
+            }
         }
     }
 }

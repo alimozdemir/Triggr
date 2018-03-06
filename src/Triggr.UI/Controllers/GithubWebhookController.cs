@@ -4,33 +4,16 @@ using Newtonsoft.Json.Linq;
 using Triggr.UI.Models;
 using Microsoft.Extensions.Primitives;
 using System.Linq;
+using Hangfire;
 
 namespace Triggr.UI.Controllers
 {
     public class GithubWebhookController : Controller
     {
-        /*[GitHubWebHook]
-        public IActionResult HandlerForPush(JObject data)
+        public GithubWebhookController()
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            return Ok();
+            
         }
-
-        [GeneralWebHook]
-        public IActionResult HandlerForPush(string receiverName, string id, string eventName, JObject data)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            return Ok();
-        }*/
-
         [HttpPost]
         public IActionResult HandlerForPush([FromBody]GithubPushModel model)
         {
@@ -44,13 +27,15 @@ namespace Triggr.UI.Controllers
 
                         if (eventName.Equals("push"))
                         {
-                            var changedFiles = model
-                                            .Commits
-                                            .SelectMany(c => c.Modified).Distinct();
+                            var changedFiles = model.Commits
+                                            .SelectMany(c => c.Modified)
+                                            .Distinct()
+                                            .ToList();
                                             
                             var owner = model.Repository.Owner.Name;
                             var repoName = model.Repository.Name;
-
+                            BackgroundJob.Enqueue<TController>(i => i.Trigger(null, repoName, owner, changedFiles));
+                            
                             return Ok();
                         }
                     }

@@ -50,20 +50,30 @@ namespace Triggr.UI.Controllers
             var providerType = _providerFactory.GetProviderType(model.Url);
             if (ModelState.IsValid && !string.IsNullOrEmpty(providerType))
             {
-                Repository repository = new Repository();
-                repository.Provider = providerType;
-                repository.UpdatedTime = DateTimeOffset.Now;
-                repository.Url = model.Url;
-                repository.Name = model.Name;
-                repository.OwnerName = model.Owner;
-                repository.Token = model.Token;
+                var dbRecord = _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) && i.OwnerName.Equals(model.Owner));
 
-                if (await _webhookService.AddHookAsync(repository))
+                if (dbRecord == null)
                 {
-                    _context.Add(repository);
-                    var affected = await _context.SaveChangesAsync();
-                    result = affected > 0;
+                    Repository repository = new Repository();
+                    repository.Provider = providerType;
+                    repository.UpdatedTime = DateTimeOffset.Now;
+                    repository.Url = model.Url;
+                    repository.Name = model.Name;
+                    repository.OwnerName = model.Owner;
+                    repository.Token = model.Token;
+
+                    if (await _webhookService.AddHookAsync(repository))
+                    {
+                        _context.Add(repository);
+                        var affected = await _context.SaveChangesAsync();
+                        result = affected > 0;
+                    }
                 }
+                else
+                {
+                    //return already exist
+                }
+
             }
 
             return Json(result);
