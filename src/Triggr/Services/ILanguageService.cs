@@ -1,3 +1,5 @@
+using Triggr.Infrastructure;
+
 namespace Triggr.Services
 {
     public interface ILanguageService
@@ -7,6 +9,6 @@ namespace Triggr.Services
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        string Define(string path);
+        LanguageProperties Define(string path);
     }
 }

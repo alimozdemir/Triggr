@@ -23,7 +23,7 @@ namespace Triggr.Tests
         {
             LanguageService service = new LanguageService("../../../Fixtures/languages.json");
             var result = service.Define("test.js");
-            Assert.Equal(result, "JavaScript");
+            Assert.Equal(result.FolderName, "JavaScript");
         }
 
         [Fact]
@@ -31,7 +31,7 @@ namespace Triggr.Tests
         {
             LanguageService service = new LanguageService("../../../Fixtures/languages.json");
             var result = service.Define("/path/test.js");
-            Assert.Equal(result, "JavaScript");
+            Assert.Equal(result.FolderName, "JavaScript");
         }
 
         [Fact]
@@ -39,7 +39,7 @@ namespace Triggr.Tests
         {
             LanguageService service = new LanguageService("../../../Fixtures/languages.json");
             var result = service.Define("/path/test.cs");
-            Assert.Equal(result, "CSharp");
+            Assert.Equal(result.FolderName, "CSharp");
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace Triggr.Tests
         {
             LanguageService service = new LanguageService("../../../Fixtures/languages.json");
             var result = service.Define("test.cs");
-            Assert.Equal(result, "CSharp");
+            Assert.Equal(result.FolderName, "CSharp");
         }
 
     }

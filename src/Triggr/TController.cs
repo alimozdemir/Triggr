@@ -92,7 +92,7 @@ namespace Triggr
 
         public void Trigger(PerformContext hangfireContext, string repoName, string owner, List<string> modified)
         {
-            var repo = _context.Repositories.FirstOrDefault(i => i.Name.Equals(repoName) && i.OwnerName.Equals(repoName));
+            var repo = _context.Repositories.FirstOrDefault(i => i.Name.Equals(repoName) && i.OwnerName.Equals(owner));
 
             if (repo != null)
             {
@@ -104,6 +104,10 @@ namespace Triggr
                 {
                     if (modified.Contains(probe.Object.Path))
                     {
+                        var provider = _providerFactory.GetProvider(container.Repository.Provider);
+
+                        container.Update(provider);
+                        
                         hangfireContext.WriteLine($"{probe.Object.Path} file's probe is activated.");
                         BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));
                     }

@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Triggr.Infrastructure;
 
 namespace Triggr.Services
 {
     public class LanguageService : ILanguageService
     {
+        private static Dictionary<string, LanguageProperties> _languages;
         public LanguageService(string path)
         {
             if (File.Exists(path))
@@ -14,7 +16,7 @@ namespace Triggr.Services
                 var text = File.ReadAllText(path);
                 try
                 {
-                    _languages = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+                    _languages = JsonConvert.DeserializeObject<Dictionary<string, LanguageProperties>>(text);
                 }
                 catch (Exception ex)
                 {
@@ -27,11 +29,10 @@ namespace Triggr.Services
             }
         }
 
-        private static Dictionary<string, string> _languages;
 
-        public string Define(string path)
+        public LanguageProperties Define(string path)
         {
-            var result = string.Empty;
+            var result = new LanguageProperties();
             FileInfo info = new FileInfo(path);
 
             if (!_languages.TryGetValue(info.Extension, out result))

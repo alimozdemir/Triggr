@@ -1,5 +1,14 @@
 {
-    ".py": "Python",
-    ".js": "JavaScript",
-    ".cs": "CSharp"
+    ".py": {
+        "FolderName": "Python",
+        "FullProject": false
+    },
+    ".js": {
+        "FolderName": "JavaScript",
+        "FullProject": false
+    },
+    ".cs": {
+        "FolderName": "CSharp",
+        "FullProject": true
+    }
 }

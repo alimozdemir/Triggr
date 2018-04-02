@@ -73,7 +73,7 @@ namespace Triggr
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path);
                         var language = _languageService.Define(probe.Object.Path);
 
-                        var result = _scriptExecutor.Execute(probe.ProbeType, language,
+                        var result = _scriptExecutor.Execute(probe.ProbeType, language.FolderName,
                                         objectPath, tempFile, probe.Object.Type, probe.Object.Name);
 
                         hangfireContext.WriteLine($"Result of comparision {result}");
@@ -124,7 +124,7 @@ namespace Triggr
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path);
 
                         // look for the object
-                        var ast1 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
+                        var ast1 = _scriptExecutor.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name);
 
                         hangfireContext.WriteLine($"{probe.Object.Path} old version is loaded.");
 
@@ -134,13 +134,13 @@ namespace Triggr
                         if (provider.Restore(repository, probe.Object.Path, false))
                         {
                             // look for the object
-                            var ast2 = _scriptExecutor.Execute("AST", language, objectPath, probe.Object.Type, probe.Object.Name);
+                            var ast2 = _scriptExecutor.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name);
 
                             var temp2 = WriteToTemp(ast2);
 
                             hangfireContext.WriteLine($"{probe.Object.Path} new version is loaded.");
 
-                            Control(hangfireContext, probe, temp1, temp2, language);
+                            Control(hangfireContext, probe, temp1, temp2, language.FolderName);
                         }
                     }
                 }

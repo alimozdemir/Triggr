@@ -85,7 +85,7 @@ namespace Triggr.UI
             serverOptions.WorkerCount = 1;
             app.UseHangfireServer(serverOptions);
             app.UseHangfireDashboard();
-            app.UseTriggr();
+            app.UseTriggr(true);
         }
     }
 }
