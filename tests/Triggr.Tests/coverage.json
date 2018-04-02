@@ -171,92 +171,92 @@
      "76": 0,
      "77": 0,
      "79": 0,
-     "93": 0,
-     "94": 0,
-     "95": 0,
-     "96": 0,
-     "98": 0
+     "82": 0,
+     "83": 0,
+     "84": 0,
+     "85": 0,
+     "87": 0
     },
     "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,System.String,System.String)": {
+     "90": 0,
+     "91": 0,
+     "92": 0,
+     "93": 0,
+     "94": 0,
+     "97": 0,
+     "98": 0,
+     "100": 0,
      "101": 0,
-     "102": 0,
      "103": 0,
-     "104": 0,
      "105": 0,
-     "108": 0,
+     "107": 0,
      "109": 0,
+     "110": 0,
      "111": 0,
-     "112": 0,
-     "114": 0,
+     "113": 0,
      "116": 0,
      "118": 0,
      "120": 0,
-     "121": 0,
-     "122": 0,
+     "123": 0,
      "124": 0,
-     "127": 0,
-     "129": 0,
-     "131": 0,
+     "126": 0,
+     "128": 0,
+     "130": 0,
+     "132": 0,
+     "133": 0,
      "134": 0,
      "135": 0,
-     "137": 0,
-     "139": 0,
-     "141": 0,
-     "143": 0,
-     "144": 0,
-     "145": 0,
-     "146": 0,
-     "147": 0,
-     "148": 0
+     "136": 0,
+     "137": 0
     },
     "System.Void Triggr.ProbeControl::Control(Hangfire.Server.PerformContext,Triggr.Probe,System.String,System.String,System.String)": {
+     "140": 0,
+     "141": 0,
+     "145": 0,
+     "146": 0,
+     "148": 0,
+     "149": 0,
      "151": 0,
      "152": 0,
+     "154": 0,
+     "155": 0,
      "156": 0,
      "157": 0,
      "159": 0,
-     "160": 0,
-     "162": 0,
-     "163": 0,
-     "165": 0,
-     "166": 0,
+     "161": 0,
+     "164": 0,
      "167": 0,
      "168": 0,
-     "170": 0,
-     "172": 0,
+     "171": 0,
+     "173": 0,
      "175": 0,
-     "178": 0,
+     "177": 0,
      "179": 0,
      "182": 0,
+     "183": 0,
      "184": 0,
-     "186": 0,
-     "188": 0,
+     "185": 0,
+     "187": 0,
+     "189": 0,
      "190": 0,
+     "191": 0,
+     "192": 0,
      "193": 0,
      "194": 0,
      "195": 0,
      "196": 0,
      "198": 0,
      "200": 0,
-     "201": 0,
-     "202": 0,
-     "203": 0,
      "204": 0,
      "205": 0,
-     "206": 0,
-     "207": 0,
-     "209": 0,
-     "211": 0,
-     "215": 0,
-     "216": 0,
-     "217": 0
+     "206": 0
     },
     "System.String Triggr.ProbeControl::WriteToTemp(System.String)": {
-     "220": 0,
-     "221": 0,
-     "223": 0,
-     "225": 0,
-     "226": 0
+     "209": 0,
+     "210": 0,
+     "212": 0,
+     "214": 0,
+     "215": 0
     }
    }
   },
@@ -442,30 +442,30 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/LanguageService.cs": {
    "Triggr.Services.LanguageService": {
     "System.Void Triggr.Services.LanguageService::.ctor(System.String)": {
-     "10": 6,
-     "11": 6,
      "12": 6,
-     "13": 5,
-     "14": 5,
-     "16": 5,
-     "17": 5,
+     "13": 6,
+     "14": 6,
+     "15": 4,
+     "16": 4,
      "18": 4,
-     "19": 1,
-     "20": 1,
-     "21": 1,
-     "23": 4,
-     "25": 1,
-     "26": 1,
-     "28": 4
+     "19": 4,
+     "20": 4,
+     "21": 0,
+     "22": 0,
+     "23": 0,
+     "25": 4,
+     "27": 2,
+     "28": 2,
+     "30": 4
     },
-    "System.String Triggr.Services.LanguageService::Define(System.String)": {
-     "33": 4,
+    "Triggr.Infrastructure.LanguageProperties Triggr.Services.LanguageService::Define(System.String)": {
      "34": 4,
      "35": 4,
-     "37": 4,
-     "38": 0,
-     "40": 4,
-     "41": 4
+     "36": 4,
+     "38": 4,
+     "39": 0,
+     "41": 4,
+     "42": 4
     }
    }
   },
@@ -530,76 +530,95 @@
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Providers/GitProvider.cs": {
    "Triggr.Providers.GitProvider": {
-    "System.Void Triggr.Providers.GitProvider::.ctor(Triggr.Infrastructure.RepositoryStorage,Triggr.Infrastructure.IScriptExecutor)": {
+    "System.Void Triggr.Providers.GitProvider::.ctor(Triggr.Infrastructure.RepositoryStorage,Triggr.Infrastructure.IScriptExecutor,Triggr.Providers.LibGit2SharpWrapper)": {
+     "19": 2,
+     "20": 2,
+     "21": 2,
+     "22": 2,
+     "23": 2,
+     "24": 2
+    },
+    "System.String Triggr.Providers.GitProvider::get_GetProviderType()": {
+     "26": 0
+    },
+    "System.String Triggr.Providers.GitProvider::LastUpdatedFiles(Triggr.Data.Repository)": {
+     "29": 1,
+     "30": 1,
+     "31": 1,
+     "33": 1,
+     "35": 1,
+     "36": 1
+    },
+    "System.String Triggr.Providers.GitProvider::Clone(Triggr.Data.Repository)": {
+     "38": 1,
+     "39": 1,
+     "41": 1,
+     "43": 1,
+     "44": 1
+    },
+    "System.Boolean Triggr.Providers.GitProvider::Exist(Triggr.Data.Repository)": {
+     "47": 0,
+     "48": 0,
+     "51": 0,
+     "52": 0,
+     "53": 0,
+     "54": 0,
+     "57": 0,
+     "58": 0
+    },
+    "System.Boolean Triggr.Providers.GitProvider::IsValid(System.String)": {
+     "61": 0,
+     "62": 0,
+     "63": 0,
+     "65": 0,
+     "66": 0
+    },
+    "System.String Triggr.Providers.GitProvider::Update(Triggr.Data.Repository)": {
+     "70": 0,
+     "71": 0,
+     "73": 0,
+     "75": 0,
+     "77": 0,
+     "78": 0
+    },
+    "System.Boolean Triggr.Providers.GitProvider::Restore(Triggr.Data.Repository,System.String,System.Boolean)": {
+     "81": 0,
+     "82": 0,
+     "84": 0,
+     "86": 0,
+     "89": 0,
+     "92": 0,
+     "94": 0,
+     "95": 0
+    }
+   }
+  },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Providers/LibGit2SharpWrapper.cs": {
+   "Triggr.Providers.LibGit2SharpWrapper": {
+    "System.Void Triggr.Providers.LibGit2SharpWrapper::.ctor()": {
+     "8": 2,
+     "9": 2,
+     "11": 2
+    },
+    "System.String Triggr.Providers.LibGit2SharpWrapper::Clone(System.String,System.String)": {
+     "13": 0
+    },
+    "System.Boolean Triggr.Providers.LibGit2SharpWrapper::IsValid(System.String)": {
+     "14": 0
+    },
+    "System.Boolean Triggr.Providers.LibGit2SharpWrapper::Update(System.String)": {
+     "16": 0,
+     "17": 0,
      "18": 0,
      "19": 0,
      "20": 0,
      "21": 0,
-     "22": 0
-    },
-    "System.String Triggr.Providers.GitProvider::get_GetProviderType()": {
-     "24": 0
-    },
-    "System.String Triggr.Providers.GitProvider::LastUpdatedFiles(Triggr.Data.Repository)": {
+     "23": 0,
+     "24": 0,
      "27": 0,
      "28": 0,
      "29": 0,
-     "31": 0,
-     "33": 0,
-     "34": 0
-    },
-    "System.String Triggr.Providers.GitProvider::Clone(Triggr.Data.Repository)": {
-     "36": 0,
-     "37": 0,
-     "39": 0,
-     "41": 0,
-     "42": 0
-    },
-    "System.Boolean Triggr.Providers.GitProvider::Exist(Triggr.Data.Repository)": {
-     "45": 0,
-     "46": 0,
-     "49": 0,
-     "50": 0,
-     "51": 0,
-     "52": 0,
-     "55": 0,
-     "56": 0
-    },
-    "System.Boolean Triggr.Providers.GitProvider::IsValid(System.String)": {
-     "59": 0,
-     "60": 0,
-     "61": 0,
-     "63": 0,
-     "64": 0
-    },
-    "System.String Triggr.Providers.GitProvider::Update(Triggr.Data.Repository)": {
-     "68": 0,
-     "69": 0,
-     "71": 0,
-     "73": 0,
-     "74": 0,
-     "75": 0,
-     "76": 0,
-     "78": 0,
-     "79": 0,
-     "82": 0,
-     "83": 0,
-     "85": 0,
-     "86": 0
-    },
-    "System.Boolean Triggr.Providers.GitProvider::Restore(Triggr.Data.Repository,System.String,System.Boolean)": {
-     "89": 0,
-     "90": 0,
-     "92": 0,
-     "94": 0,
-     "97": 0,
-     "100": 0,
-     "102": 0,
-     "103": 0
-    },
-    "System.Boolean Triggr.Providers.GitProvider::WebhookRegister()": {
-     "106": 0,
-     "107": 0
+     "30": 0
     }
    }
   },
@@ -625,108 +644,131 @@
     }
    }
   },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/LanguageProperties.cs": {
+   "Triggr.Infrastructure.LanguageProperties": {
+    "System.String Triggr.Infrastructure.LanguageProperties::get_FolderName()": {
+     "5": 16
+    },
+    "System.Boolean Triggr.Infrastructure.LanguageProperties::get_FullProject()": {
+     "6": 12
+    }
+   }
+  },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/RepositoryStorage.cs": {
    "Triggr.Infrastructure.RepositoryStorage": {
     "System.String Triggr.Infrastructure.RepositoryStorage::get_Path()": {
-     "8": 4
+     "8": 11
+    },
+    "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor()": {
+     "9": 2,
+     "10": 2,
+     "12": 2
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor(System.String)": {
-     "9": 2,
-     "10": 1,
-     "11": 1
+     "13": 2,
+     "14": 1,
+     "15": 1
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor(System.String,System.Boolean)": {
-     "12": 10,
-     "13": 10,
-     "14": 10,
-     "15": 9
+     "16": 17,
+     "17": 17,
+     "18": 17,
+     "19": 16
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::Set(System.String)": {
-     "17": 0,
-     "18": 0,
-     "19": 0
+     "21": 0,
+     "22": 0,
+     "23": 0
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::Set(System.String,System.Boolean)": {
-     "22": 13,
-     "23": 13,
-     "24": 2,
-     "25": 2,
-     "28": 11,
-     "29": 11
+     "26": 20,
+     "27": 20,
+     "28": 2,
+     "29": 2,
+     "32": 18,
+     "33": 18
     },
     "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String)": {
-     "31": 1,
-     "32": 1,
-     "33": 1
-    },
-    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String)": {
      "35": 1,
      "36": 1,
      "37": 1
     },
-    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String,System.String)": {
+    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String)": {
      "39": 1,
      "40": 1,
      "41": 1
     },
-    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String,System.String,System.String)": {
+    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String,System.String)": {
      "43": 1,
      "44": 1,
      "45": 1
+    },
+    "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String,System.String,System.String,System.String)": {
+     "47": 1,
+     "48": 1,
+     "49": 1
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/ScriptExecutor.cs": {
    "Triggr.Infrastructure.ScriptExecutor": {
+    "System.Void Triggr.Infrastructure.ScriptExecutor::.ctor()": {
+     "10": 2,
+     "11": 2,
+     "13": 2
+    },
     "System.Void Triggr.Infrastructure.ScriptExecutor::.ctor(Triggr.Infrastructure.ScriptStorage,Triggr.Infrastructure.IShellExecutor)": {
-     "11": 0,
-     "12": 0,
-     "13": 0,
      "14": 0,
-     "15": 0
+     "15": 0,
+     "16": 0,
+     "17": 0,
+     "18": 0
     },
     "System.String Triggr.Infrastructure.ScriptExecutor::Execute(Triggr.ProbeType,System.String,System.String[])": {
-     "18": 0,
-     "19": 0,
-     "20": 0
+     "21": 0,
+     "22": 0,
+     "23": 0
     },
     "System.String Triggr.Infrastructure.ScriptExecutor::Execute(System.String,System.String,System.String[])": {
-     "23": 0,
-     "24": 0,
      "26": 0,
-     "28": 0,
+     "27": 0,
+     "29": 0,
      "30": 0,
-     "33": 0,
+     "31": 0,
+     "32": 0,
      "34": 0,
-     "36": 0,
      "37": 0,
+     "38": 0,
      "40": 0,
      "41": 0,
-     "43": 0,
-     "44": 0
+     "44": 0,
+     "45": 0,
+     "46": 0,
+     "48": 0,
+     "49": 0
     },
     "System.String Triggr.Infrastructure.ScriptExecutor::ExecuteCommon(System.String,System.String[])": {
-     "47": 0,
-     "48": 0,
-     "49": 0,
-     "51": 0,
      "52": 0,
+     "53": 0,
      "54": 0,
      "56": 0,
-     "57": 0
+     "57": 0,
+     "59": 0,
+     "61": 0,
+     "62": 0
     },
     "System.Void Triggr.Infrastructure.ScriptExecutor::ArgumentCheck(System.Int32,System.String[])": {
-     "60": 0,
-     "61": 0,
-     "62": 0,
-     "63": 0
+     "65": 0,
+     "66": 0,
+     "67": 0,
+     "68": 0
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/ScriptStorage.cs": {
    "Triggr.Infrastructure.ScriptStorage": {
     "System.String Triggr.Infrastructure.ScriptStorage::get_Path()": {
-     "9": 0
+     "9": 9
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::.ctor(System.String)": {
      "10": 0,
@@ -734,10 +776,10 @@
      "12": 0
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::.ctor(System.String,System.Boolean)": {
-     "14": 0,
-     "15": 0,
-     "16": 0,
-     "17": 0
+     "14": 14,
+     "15": 14,
+     "16": 14,
+     "17": 14
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::Set(System.String)": {
      "19": 0,
@@ -745,32 +787,32 @@
      "21": 0
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::Set(System.String,System.Boolean)": {
-     "24": 0,
-     "25": 0,
-     "26": 0,
-     "27": 0,
-     "30": 0,
-     "31": 0
+     "24": 17,
+     "25": 17,
+     "26": 1,
+     "27": 1,
+     "30": 16,
+     "31": 16
     },
     "System.String Triggr.Infrastructure.ScriptStorage::Combine(System.String)": {
-     "33": 0,
-     "34": 0,
-     "35": 0
+     "33": 1,
+     "34": 1,
+     "35": 1
     },
     "System.String Triggr.Infrastructure.ScriptStorage::Combine(System.String,System.String)": {
-     "38": 0,
-     "39": 0,
-     "40": 0
+     "38": 1,
+     "39": 1,
+     "40": 1
     },
     "System.String Triggr.Infrastructure.ScriptStorage::Combine(System.String,System.String,System.String)": {
-     "42": 0,
-     "43": 0,
-     "44": 0
+     "42": 1,
+     "43": 1,
+     "44": 1
     },
     "System.String Triggr.Infrastructure.ScriptStorage::Combine(System.String,System.String,System.String,System.String)": {
-     "46": 0,
-     "47": 0,
-     "48": 0
+     "46": 1,
+     "47": 1,
+     "48": 1
     }
    }
   },
@@ -812,7 +854,7 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Data/Repository.cs": {
    "Triggr.Data.Repository": {
     "System.String Triggr.Data.Repository::get_Id()": {
-     "7": 0
+     "7": 10
     },
     "System.String Triggr.Data.Repository::get_Provider()": {
      "8": 0
@@ -821,7 +863,7 @@
      "9": 0
     },
     "System.String Triggr.Data.Repository::get_Url()": {
-     "10": 1
+     "10": 6
     },
     "System.String Triggr.Data.Repository::get_Token()": {
      "11": 1

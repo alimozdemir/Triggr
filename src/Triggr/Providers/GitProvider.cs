@@ -12,11 +12,13 @@ namespace Triggr.Providers
 {
     public class GitProvider : IProvider
     {
+        private readonly LibGit2SharpWrapper _git;
         private readonly RepositoryStorage _storage;
         private readonly IScriptExecutor _scriptExecutor;
 
-        public GitProvider(RepositoryStorage storage, IScriptExecutor scriptExecutor)
+        public GitProvider(RepositoryStorage storage, IScriptExecutor scriptExecutor, LibGit2SharpWrapper git)
         {
+            _git = git;
             _storage = storage;
             _scriptExecutor = scriptExecutor;
         }
@@ -36,7 +38,7 @@ namespace Triggr.Providers
         {
             var path = _storage.Combine(data.Id);
 
-            var cloneResult = Repository.Clone(data.Url, path);
+            var cloneResult = _git.Clone(data.Url, path);
 
             return cloneResult;
         }
@@ -52,7 +54,7 @@ namespace Triggr.Providers
                 return false;
             }
             else
-                return Repository.IsValid(path);
+                return _git.IsValid(path);
         }
 
         public bool IsValid(string url)
@@ -69,18 +71,8 @@ namespace Triggr.Providers
             bool result = false;
 
             var path = _storage.Combine(data.Id);
-
-            using (var repo = new Repository(path))
-            {
-                LibGit2Sharp.PullOptions options = new LibGit2Sharp.PullOptions();
-                options.FetchOptions = new FetchOptions();
-
-                Signature author = new Signature("triggr", "triggr@itu.edu.tr", DateTime.Now);
-                var mergeResult = Commands.Pull(repo, author, options);
-
-                //conflict check requires
-                result = mergeResult.Status != MergeStatus.UpToDate;
-            }
+            
+            result = _git.Update(path);
 
             return result ? path : string.Empty;
         }
@@ -101,21 +93,5 @@ namespace Triggr.Providers
 
             return result;
         }
-
-        public bool WebhookRegister()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        /*
-        private (string User, string Repository) Parse(string url)
-        {
-            var uri = new Uri(url);
-
-            var paths = uri.AbsolutePath.Split('/');
-
-            return (paths[0], paths[1]);
-        } */
     }
 }

@@ -50,6 +50,6 @@ function print(data1) {
         return recast.print(node).code;
     }
     else
-        return "";
+        return "-1";
 }
 

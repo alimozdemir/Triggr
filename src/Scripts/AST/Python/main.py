@@ -33,7 +33,7 @@ r = search(tree)
 if r != None:
     print astor.to_source(r)
 else:
-    print ""
+    print "-1"
 
 
 

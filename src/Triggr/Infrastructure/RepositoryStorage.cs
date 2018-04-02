@@ -6,6 +6,10 @@ namespace Triggr.Infrastructure
     {
         private string _path;
         public string Path => _path;
+        public RepositoryStorage()
+        {
+            
+        }
         public RepositoryStorage(string path) : this(path, true)
         {
         }
@@ -27,19 +31,19 @@ namespace Triggr.Infrastructure
             
             _path = environmentPath ? System.IO.Path.Combine(Environment.CurrentDirectory, path) : path;
         }
-        public string Combine(string path)
+        public virtual string Combine(string path)
         {
             return System.IO.Path.Combine(_path, path);
         }
-        public string Combine(string path1, string path2)
+        public virtual string Combine(string path1, string path2)
         {
             return System.IO.Path.Combine(_path, path1, path2);
         }
-        public string Combine(string path1, string path2, string path3)
+        public virtual string Combine(string path1, string path2, string path3)
         {
             return System.IO.Path.Combine(_path, path1, path2, path3);
         }
-        public string Combine(string path1, string path2, string path3, string path4)
+        public virtual string Combine(string path1, string path2, string path3, string path4)
         {
             return System.IO.Path.Combine(_path, path1, path2, path3, path4);
         }

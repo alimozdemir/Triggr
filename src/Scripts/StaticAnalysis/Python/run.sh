@@ -9,5 +9,5 @@ elif [[ -z "$5" ]]; then
 elif [[ -z "$6" ]]; then
    pylint $1 $2 $3 $4 $5
 else
-    echo "too much parameters" $1 $2 $3 $4 $5
+    echo "-1"
 fi

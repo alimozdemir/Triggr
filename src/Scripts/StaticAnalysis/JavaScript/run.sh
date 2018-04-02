@@ -7,5 +7,5 @@ elif [[ -z "$5" ]]; then
 elif [[ -z "$6" ]]; then
    eslint $1 --rule "$2" --rule "$3" --rule "$4" --rule "$5"
 else
-    echo "too much parameters " $1 $2 $3 $4 $5
+    echo "-1"
 fi

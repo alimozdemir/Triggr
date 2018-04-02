@@ -9,7 +9,7 @@ namespace Triggr.Tests
         [Fact]
         public void FileNotFoundThrowException()
         {
-            Action act = () => new LanguageService("../../../Fixtures/languages_format_error.json");
+            Action act = () => new LanguageService("../../Fixtures/languages_format_error.json");
             Assert.ThrowsAny<Exception>(act);
         }
         [Fact]

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Triggr.Infrastructure;
 using Triggr.Services;
@@ -6,6 +7,22 @@ using Xunit;
 
 namespace Triggr.Tests
 {
+
+    public class StorageConfig
+    {
+        public static IEnumerable<object[]> TestCases
+        {
+            get
+            {
+                var items = new List<object[]>();
+
+                items.Add(new object[] { new RepositoryStorage("fakepath", false) });
+                items.Add(new object[] { new ScriptStorage("fakepath", false) });
+
+                return items;
+            }
+        }
+    }
     public class RepositoryStorageTests
     {
         [Fact]
@@ -29,65 +46,61 @@ namespace Triggr.Tests
             Assert.ThrowsAny<ArgumentException>(cons);
         }
 
-        [Fact]
-        public void SetPath_RelativePath()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void SetPath_RelativePath(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", false);
             storage.Set("fakepath2", false);
             Assert.Equal(storage.Path, "fakepath2");
         }
 
-        [Fact]
-        public void SetPath_AbsolutePath()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void SetPath_AbsolutePath(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", true);
             storage.Set("fakepath2", true);
             Assert.Equal(storage.Path, Path.Combine(Environment.CurrentDirectory, "fakepath2"));
         }
 
-        [Fact]
-        public void SetPath_EmptyString()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void SetPath_EmptyString(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", true);
 
             Action act = () => storage.Set("", true);
             Assert.ThrowsAny<ArgumentException>(act);
         }
 
-        [Fact]
-        public void Combine_OnePath()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void Combine_OnePath(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", false);
-            
             var path = storage.Combine("s1");
 
             Assert.Equal(path, Path.Combine("fakepath", "s1"));
         }
-        [Fact]
-        public void Combine_TwoPath()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void Combine_TwoPath(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", false);
-            
             var path = storage.Combine("s1", "s2");
 
             Assert.Equal(path, Path.Combine("fakepath", "s1", "s2"));
         }
 
-        [Fact]
-        public void Combine_ThreePath()
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void Combine_ThreePath(IStorage storage)
         {
-            var storage = new RepositoryStorage("fakepath", false);
-            
             var path = storage.Combine("s1", "s2", "s3");
 
             Assert.Equal(path, Path.Combine("fakepath", "s1", "s2", "s3"));
         }
 
-        [Fact]
-        public void Combine_FourPath()
-        {
-            var storage = new RepositoryStorage("fakepath", false);
-            
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void Combine_FourPath(IStorage storage)
+        {   
             var path = storage.Combine("s1", "s2", "s3", "s4");
 
             Assert.Equal(path, Path.Combine("fakepath", "s1", "s2", "s3", "s4"));

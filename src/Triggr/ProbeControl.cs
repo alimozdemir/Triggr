@@ -77,18 +77,7 @@ namespace Triggr
                                         objectPath, tempFile, probe.Object.Type, probe.Object.Name);
 
                         hangfireContext.WriteLine($"Result of comparision {result}");
-                        // for now
-                        /*var tempData = File.ReadAllText(tempFile);
-                        var objectData = File.ReadAllText(objectPath);
 
-                        if (tempData.Equals(objectData))
-                        {
-                            hangfireContext.WriteLine($"File does not changed {probe.ObjectPath}");
-                        }
-                        else
-                        {
-                            hangfireContext.WriteLine($"File is changed {probe.ObjectPath}");
-                        }*/
                         // it will changed with executing shell script
                     }
                 }

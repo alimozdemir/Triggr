@@ -7,7 +7,10 @@ namespace Triggr.Infrastructure
     {
         private readonly ScriptStorage _storage;
         private readonly IShellExecutor _shellExecutor;
-
+        public ScriptExecutor()
+        {
+            
+        }
         public ScriptExecutor(ScriptStorage storage, IShellExecutor shellExecutor)
         {
             _storage = storage;
@@ -19,35 +22,37 @@ namespace Triggr.Infrastructure
             return Execute(probe.ToString(), language, arg);
         }
 
-        public string Execute(string folder, string language, params string[] arg)
+        public virtual string Execute(string folder, string language, params string[] arg)
         {
-            string result = string.Empty;
+            string result = "-1";
 
             var path = _storage.Combine(folder, language);
-
-            var command = $"cd {path} && ./run.sh";
-
-            switch (folder)
+            if (File.Exists(Path.Combine(path, "run.sh")))
             {
-                case "CodeChanges":
-                    ArgumentCheck(4, arg);
-                    break;
-                case "AST":
-                    ArgumentCheck(3, arg);
-                    break;
+                var command = $"cd {path} && ./run.sh";
+
+                switch (folder)
+                {
+                    case "CodeChanges":
+                        ArgumentCheck(4, arg);
+                        break;
+                    case "AST":
+                        ArgumentCheck(3, arg);
+                        break;
+                }
+
+                command = command + " " + string.Join(" ", arg);
+                result = _shellExecutor.Execute(command);
             }
-
-            command = command + " " + string.Join(" ", arg);
-            result = _shellExecutor.Execute(command);
-
+            
             return result;
         }
 
-        public string ExecuteCommon(string type, params string[] arg)
+        public virtual string ExecuteCommon(string type, params string[] arg)
         {
             string result = string.Empty;
             var path = _storage.Combine("Common");
-            
+
             var command = $"cd {path} && ./{type}.sh";
             command = command + " " + string.Join(" ", arg);
             //todo: more consistent way
