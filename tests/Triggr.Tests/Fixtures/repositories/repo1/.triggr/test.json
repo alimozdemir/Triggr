@@ -1,0 +1,18 @@
+{
+    "Id": "4fd9390d-0cae-41e1-95c3-85a1b1e94e69",
+    "ProbeType": "StaticAnalysis",
+    "Object": {
+      "Name": "metricTest",
+      "Path": "sum.js",
+      "Type": "function"
+    },
+    "Modifiers": null,
+    "CreationDate": "2018-02-07T01:03:07.334765+03:00",
+    "Metrics": {
+      "Strategy": "Always",
+      "Arguments": [
+        "max-depth: [\"error\", 2]",
+        "complexity: [\"error\", 2]"
+      ]
+    }
+  }

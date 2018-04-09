@@ -1,0 +1,11 @@
+{
+    "Id": "0dcd85f4-d7be-456d-867b-a5ee8c823264",
+    "ProbeType": "CodeChanges",
+    "Object": {
+      "Name": "sum",
+      "Path": "sum.js",
+      "Type": "function"
+    },
+    "Modifiers": null,
+    "CreationDate": "2018-02-06T11:15:44.086141+03:00"
+  }

@@ -19,9 +19,7 @@ namespace Triggr
         public string Name { get; }
         public string Folder { get; }
         private string TriggrFolder => Path.Combine(Folder, ConstTriggrFolder);
-        public string Languages { get; set; }
         public DateTimeOffset UpdatedTime { get; set; }
-
 
         private const string ConstTriggrFolder = ".triggr";
 
@@ -38,9 +36,13 @@ namespace Triggr
             foreach (var path in probeFiles)
             {
                 var content = File.ReadAllText(path);
-                var probe = JsonConvert.DeserializeObject<Probe>(content);
 
-                result.Add(probe);
+                var probe = JsonConvert.DeserializeObject<Probe>(content);
+                if (!string.IsNullOrEmpty(probe.Id) && probe.Object != null)
+                {
+                    result.Add(probe);
+                }
+
             }
 
             return result;

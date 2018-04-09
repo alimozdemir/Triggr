@@ -45,13 +45,20 @@ namespace Triggr.Tests
             Action cons = () => new RepositoryStorage(string.Empty);
             Assert.ThrowsAny<ArgumentException>(cons);
         }
-
         [Theory]
         [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
         public void SetPath_RelativePath(IStorage storage)
         {
             storage.Set("fakepath2", false);
             Assert.Equal(storage.Path, "fakepath2");
+        }
+
+        [Theory]
+        [MemberData(nameof(StorageConfig.TestCases), MemberType = typeof(StorageConfig))]
+        public void SetPath_RelativePathNoBool(IStorage storage)
+        {
+            storage.Set("fakepath2");
+            Assert.Equal(storage.Path, Path.Combine(Environment.CurrentDirectory, "fakepath2"));
         }
 
         [Theory]

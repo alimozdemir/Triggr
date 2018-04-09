@@ -3,87 +3,87 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Container.cs": {
    "Triggr.Container": {
     "System.Void Triggr.Container::.ctor(System.String,System.String,Triggr.Data.Repository)": {
-     "12": 0,
-     "13": 0,
-     "14": 0,
-     "15": 0,
-     "16": 0,
-     "17": 0
+     "12": 9,
+     "13": 9,
+     "14": 9,
+     "15": 9,
+     "16": 9,
+     "17": 9
     },
     "Triggr.Data.Repository Triggr.Container::get_Repository()": {
-     "18": 0
+     "18": 3
     },
     "System.String Triggr.Container::get_Name()": {
-     "19": 0
+     "19": 1
     },
     "System.String Triggr.Container::get_Folder()": {
-     "20": 0
+     "20": 7
     },
     "System.String Triggr.Container::get_TriggrFolder()": {
-     "21": 0
-    },
-    "System.String Triggr.Container::get_Languages()": {
-     "22": 0
+     "21": 7
     },
     "System.DateTimeOffset Triggr.Container::get_UpdatedTime()": {
-     "23": 0
+     "22": 0
     },
     "System.Boolean Triggr.Container::IsTriggrProject()": {
-     "29": 0,
-     "30": 0,
-     "31": 0
+     "27": 2,
+     "28": 2,
+     "29": 2
     },
     "System.Collections.Generic.List`1<Triggr.Probe> Triggr.Container::CheckForProbes()": {
-     "34": 0,
-     "35": 0,
-     "36": 0,
-     "38": 0,
-     "39": 0,
-     "40": 0,
-     "41": 0,
-     "43": 0,
-     "44": 0,
-     "46": 0,
-     "47": 0
+     "32": 5,
+     "33": 5,
+     "34": 5,
+     "36": 18,
+     "37": 3,
+     "38": 3,
+     "40": 3,
+     "41": 3,
+     "42": 2,
+     "43": 2,
+     "44": 2,
+     "46": 3,
+     "48": 4,
+     "49": 4
     },
     "System.Collections.Generic.IEnumerable`1<System.String> Triggr.Container::Update(Triggr.Providers.IProvider)": {
-     "50": 0,
-     "51": 0,
-     "53": 0,
-     "54": 0,
-     "55": 0,
-     "58": 0,
-     "59": 0,
-     "61": 0,
-     "63": 0,
-     "65": 0,
-     "66": 0,
-     "67": 0,
-     "68": 0,
-     "70": 0,
-     "72": 0
+     "52": 2,
+     "53": 2,
+     "55": 2,
+     "56": 1,
+     "57": 1,
+     "60": 1,
+     "61": 1,
+     "63": 1,
+     "65": 1,
+     "67": 7,
+     "68": 2,
+     "69": 2,
+     "70": 2,
+     "72": 1,
+     "74": 2
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Probe.cs": {
    "Triggr.Probe": {
     "System.String Triggr.Probe::get_Id()": {
-     "8": 0
+     "8": 7
     },
     "Triggr.ProbeType Triggr.Probe::get_ProbeType()": {
-     "9": 0
+     "9": 4
     },
     "Triggr.ObjectInformation Triggr.Probe::get_Object()": {
-     "10": 0
+     "10": 8
     },
     "System.String Triggr.Probe::get_Modifiers()": {
-     "11": 0
+     "11": 2
     },
     "System.DateTimeOffset Triggr.Probe::get_CreationDate()": {
-     "12": 0
+     "12": 2
     },
     "Triggr.Metrics Triggr.Probe::get_Metrics()": {
-     "13": 0
+     "13": 3
     },
     "System.Collections.Generic.List`1<Triggr.Actuator> Triggr.Probe::get_Actuators()": {
      "14": 0
@@ -91,21 +91,21 @@
    },
    "Triggr.ObjectInformation": {
     "System.String Triggr.ObjectInformation::get_Name()": {
-     "19": 0
+     "19": 2
     },
     "System.String Triggr.ObjectInformation::get_Path()": {
-     "20": 0
+     "20": 2
     },
     "System.String Triggr.ObjectInformation::get_Type()": {
-     "21": 0
+     "21": 2
     }
    },
    "Triggr.Metrics": {
     "Triggr.ReportType Triggr.Metrics::get_Strategy()": {
-     "26": 0
+     "26": 1
     },
     "System.Collections.Generic.List`1<System.String> Triggr.Metrics::get_Arguments()": {
-     "27": 0
+     "27": 2
     }
    },
    "Triggr.Actuator": {
@@ -360,10 +360,35 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/TriggrConfig.cs": {
    "Triggr.TriggrConfig": {
     "System.String Triggr.TriggrConfig::get_Url()": {
-     "5": 4
+     "5": 18
     },
     "System.Boolean Triggr.TriggrConfig::get_Webhook()": {
-     "6": 4
+     "6": 9
+    }
+   }
+  },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Wrappers/GithubWrapper.cs": {
+   "Triggr.Wrappers.GithubWrapper": {
+    "System.Void Triggr.Wrappers.GithubWrapper::.ctor()": {
+     "11": 1,
+     "12": 1,
+     "14": 1
+    },
+    "System.Void Triggr.Wrappers.GithubWrapper::.ctor(Octokit.GitHubClient)": {
+     "15": 0,
+     "16": 0,
+     "17": 0,
+     "18": 0
+    },
+    "System.Threading.Tasks.Task`1<Octokit.RepositoryHook> Triggr.Wrappers.GithubWrapper::CreateWebhook(System.String,System.String,System.String,System.String)": {
+     "21": 0,
+     "22": 0,
+     "24": 0,
+     "25": 0,
+     "26": 0,
+     "28": 0,
+     "29": 0,
+     "30": 0
     }
    }
   },
@@ -469,62 +494,78 @@
     }
    }
   },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/WebhookFactory.cs": {
+   "Triggr.Services.WebhookFactory": {
+    "System.Void Triggr.Services.WebhookFactory::.ctor(System.Collections.Generic.IEnumerable`1<Triggr.Services.IWebhookService>)": {
+     "11": 0,
+     "12": 0,
+     "13": 0,
+     "14": 0
+    },
+    "Triggr.Services.IWebhookService Triggr.Services.WebhookFactory::GetService(System.String)": {
+     "16": 0,
+     "17": 0,
+     "19": 0,
+     "20": 0
+    },
+    "System.Boolean Triggr.Services.WebhookFactory::IsSupported(System.String)": {
+     "23": 0,
+     "24": 0,
+     "25": 0
+    }
+   }
+  },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/WebhookService.cs": {
    "Triggr.Services.WebhookService": {
-    "System.Void Triggr.Services.WebhookService::.ctor(Triggr.Providers.IProviderFactory,Microsoft.Extensions.Options.IOptions`1<Triggr.TriggrConfig>)": {
-     "15": 4,
-     "16": 4,
-     "17": 4,
-     "18": 4,
-     "19": 4
+    "System.Void Triggr.Services.WebhookService::.ctor(Triggr.Providers.IProviderFactory,Microsoft.Extensions.Options.IOptions`1<Triggr.TriggrConfig>,Triggr.Wrappers.GithubWrapper)": {
+     "17": 9,
+     "18": 9,
+     "19": 9,
+     "20": 9,
+     "21": 9,
+     "22": 9
     },
     "System.Boolean Triggr.Services.WebhookService::IsSupport(System.String)": {
-     "34": 3,
-     "35": 3,
-     "36": 3,
+     "37": 3,
      "38": 3,
-     "39": 2,
-     "40": 2,
-     "41": 2,
-     "43": 3,
-     "44": 3
+     "39": 3,
+     "41": 3,
+     "42": 2,
+     "43": 2,
+     "44": 2,
+     "46": 3,
+     "47": 3
     },
     "System.String Triggr.Services.WebhookService::WebhookUrl()": {
-     "47": 0,
-     "48": 0,
-     "49": 0,
-     "50": 0,
-     "51": 0,
-     "52": 0
+     "50": 5,
+     "51": 5,
+     "52": 4,
+     "53": 4,
+     "54": 4,
+     "55": 4
     }
    },
-   "Triggr.Services.WebhookService/<AddHookAsync>d__3": {
-    "System.Void Triggr.Services.WebhookService/<AddHookAsync>d__3::MoveNext()": {
-     "21": 0,
-     "22": 0,
-     "23": 0,
-     "25": 0,
-     "26": 0,
-     "27": 0,
-     "28": 0,
-     "30": 0,
-     "31": 0
+   "Triggr.Services.WebhookService/<AddHookAsync>d__4": {
+    "System.Void Triggr.Services.WebhookService/<AddHookAsync>d__4::MoveNext()": {
+     "24": 2,
+     "25": 2,
+     "26": 2,
+     "28": 2,
+     "29": 1,
+     "30": 1,
+     "31": 1,
+     "33": 2,
+     "34": 2
     }
    },
-   "Triggr.Services.WebhookService/<AddHookGithub>d__6": {
-    "System.Void Triggr.Services.WebhookService/<AddHookGithub>d__6::MoveNext()": {
-     "55": 0,
-     "56": 0,
-     "57": 0,
-     "59": 0,
-     "60": 0,
-     "61": 0,
-     "63": 0,
-     "64": 0,
-     "65": 0,
-     "66": 0,
-     "68": 0,
-     "69": 0
+   "Triggr.Services.WebhookService/<AddHookGithub>d__7": {
+    "System.Void Triggr.Services.WebhookService/<AddHookGithub>d__7::MoveNext()": {
+     "58": 1,
+     "59": 1,
+     "61": 1,
+     "62": 1,
+     "64": 1,
+     "65": 1
     }
    }
   },
@@ -657,7 +698,7 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/RepositoryStorage.cs": {
    "Triggr.Infrastructure.RepositoryStorage": {
     "System.String Triggr.Infrastructure.RepositoryStorage::get_Path()": {
-     "8": 11
+     "8": 13
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor()": {
      "9": 2,
@@ -670,23 +711,23 @@
      "15": 1
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor(System.String,System.Boolean)": {
-     "16": 17,
-     "17": 17,
-     "18": 17,
-     "19": 16
+     "16": 19,
+     "17": 19,
+     "18": 19,
+     "19": 18
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::Set(System.String)": {
-     "21": 0,
-     "22": 0,
-     "23": 0
+     "21": 1,
+     "22": 1,
+     "23": 1
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::Set(System.String,System.Boolean)": {
-     "26": 20,
-     "27": 20,
+     "26": 23,
+     "27": 23,
      "28": 2,
      "29": 2,
-     "32": 18,
-     "33": 18
+     "32": 21,
+     "33": 21
     },
     "System.String Triggr.Infrastructure.RepositoryStorage::Combine(System.String)": {
      "35": 1,
@@ -768,7 +809,7 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/ScriptStorage.cs": {
    "Triggr.Infrastructure.ScriptStorage": {
     "System.String Triggr.Infrastructure.ScriptStorage::get_Path()": {
-     "9": 9
+     "9": 11
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::.ctor(System.String)": {
      "10": 0,
@@ -776,23 +817,23 @@
      "12": 0
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::.ctor(System.String,System.Boolean)": {
-     "14": 14,
-     "15": 14,
-     "16": 14,
-     "17": 14
+     "14": 16,
+     "15": 16,
+     "16": 16,
+     "17": 16
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::Set(System.String)": {
-     "19": 0,
-     "20": 0,
-     "21": 0
+     "19": 1,
+     "20": 1,
+     "21": 1
     },
     "System.Void Triggr.Infrastructure.ScriptStorage::Set(System.String,System.Boolean)": {
-     "24": 17,
-     "25": 17,
+     "24": 20,
+     "25": 20,
      "26": 1,
      "27": 1,
-     "30": 16,
-     "31": 16
+     "30": 19,
+     "31": 19
     },
     "System.String Triggr.Infrastructure.ScriptStorage::Combine(System.String)": {
      "33": 1,
@@ -863,22 +904,22 @@
      "9": 0
     },
     "System.String Triggr.Data.Repository::get_Url()": {
-     "10": 6
+     "10": 9
     },
     "System.String Triggr.Data.Repository::get_Token()": {
-     "11": 1
+     "11": 3
     },
     "System.String Triggr.Data.Repository::get_OwnerName()": {
-     "12": 0
+     "12": 4
     },
     "System.String Triggr.Data.Repository::get_Name()": {
-     "13": 0
+     "13": 4
     },
     "System.Boolean Triggr.Data.Repository::get_WebHook()": {
-     "14": 0
+     "14": 3
     },
     "System.String Triggr.Data.Repository::get_WebHookId()": {
-     "15": 0
+     "15": 2
     },
     "System.DateTimeOffset Triggr.Data.Repository::get_UpdatedTime()": {
      "16": 0
