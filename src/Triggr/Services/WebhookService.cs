@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using Octokit;
 using Triggr.Providers;
+using Triggr.Wrappers;
 
 namespace Triggr.Services
 {
@@ -11,11 +12,13 @@ namespace Triggr.Services
     {
         private readonly IProviderFactory _providerFactory;
         private readonly TriggrConfig _config;
+        private readonly GithubWrapper _client;
 
-        public WebhookService(IProviderFactory providerFactory, IOptions<TriggrConfig> config)
+        public WebhookService(IProviderFactory providerFactory, IOptions<TriggrConfig> config, GithubWrapper client)
         {
             _providerFactory = providerFactory;
             _config = config.Value;
+            _client = client;
         }
         public async Task<bool> AddHookAsync(Data.Repository repo)
         {
@@ -53,15 +56,8 @@ namespace Triggr.Services
 
         private async Task<bool> AddHookGithub(Data.Repository repo)
         {
-            var github = new GitHubClient(new ProductHeaderValue("Triggr"));
-            github.Credentials = new Credentials(repo.Token);
-
-            Dictionary<string, string> cfg = new Dictionary<string, string>();
-            cfg.Add("url", WebhookUrl());
-            cfg.Add("content_type", "json");
-
-            var info = new NewRepositoryHook("web", cfg);
-            var createResult = await github.Repository.Hooks.Create(repo.OwnerName, repo.Name, info);
+            var createResult = await _client.CreateWebhook(repo.OwnerName, repo.Name, WebhookUrl(), repo.Token);
+            
             repo.WebHook = createResult.Id != 0;
             repo.WebHookId = createResult.Id.ToString();
 

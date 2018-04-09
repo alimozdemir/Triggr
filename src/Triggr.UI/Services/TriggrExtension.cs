@@ -3,6 +3,7 @@ using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Builder.Internal;
 using Microsoft.Extensions.DependencyInjection;
+using Octokit;
 using Triggr.Data;
 using Triggr.Infrastructure;
 using Triggr.Providers;
@@ -40,6 +41,9 @@ namespace Triggr.UI.Services
             services.AddScoped<IWebhookService, WebhookService>();
 
             services.AddScoped<IWebhookFactory, WebhookFactory>();
+
+            //Octokit github client
+            services.AddTransient<GitHubClient>(i => new GitHubClient(new ProductHeaderValue("Triggr")));
 
         }
 
