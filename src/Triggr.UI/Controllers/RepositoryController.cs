@@ -15,13 +15,13 @@ namespace Triggr.UI.Controllers
     {
         private readonly TriggrContext _context;
         private readonly IProviderFactory _providerFactory;
-        private readonly IWebhookService _webhookService;
+        private readonly IWebhookFactory _webhookFactory;
 
-        public RepositoryController(TriggrContext context, IProviderFactory providerFactory, IWebhookService webhookService)
+        public RepositoryController(TriggrContext context, IProviderFactory providerFactory, IWebhookFactory webhookFactory)
         {
             _context = context;
             _providerFactory = providerFactory;
-            _webhookService = webhookService;
+            _webhookFactory = webhookFactory;
         }
         public IActionResult Index()
         {
@@ -39,7 +39,7 @@ namespace Triggr.UI.Controllers
             return Json(new
             {
                 Valid = _providerFactory.GetProviderType(url),
-                Webhook = _webhookService.IsSupport(url)
+                Webhook = _webhookFactory.IsSupported(url)
             });
         }
 
@@ -50,30 +50,33 @@ namespace Triggr.UI.Controllers
             var providerType = _providerFactory.GetProviderType(model.Url);
             if (ModelState.IsValid && !string.IsNullOrEmpty(providerType))
             {
-                var dbRecord = _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) && i.OwnerName.Equals(model.Owner));
-
-                if (dbRecord == null)
+                var service = _webhookFactory.GetService(model.Url);
+                if (service != null)
                 {
-                    Repository repository = new Repository();
-                    repository.Provider = providerType;
-                    repository.UpdatedTime = DateTimeOffset.Now;
-                    repository.Url = model.Url;
-                    repository.Name = model.Name;
-                    repository.OwnerName = model.Owner;
-                    repository.Token = model.Token;
+                    var dbRecord = _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) && i.OwnerName.Equals(model.Owner));
 
-                    if (await _webhookService.AddHookAsync(repository))
+                    if (dbRecord == null)
                     {
-                        _context.Add(repository);
-                        var affected = await _context.SaveChangesAsync();
-                        result = affected > 0;
+                        Repository repository = new Repository();
+                        repository.Provider = providerType;
+                        repository.UpdatedTime = DateTimeOffset.Now;
+                        repository.Url = model.Url;
+                        repository.Name = model.Name;
+                        repository.OwnerName = model.Owner;
+                        repository.Token = model.Token;
+
+                        if (await service.AddHookAsync(repository))
+                        {
+                            _context.Add(repository);
+                            var affected = await _context.SaveChangesAsync();
+                            result = affected > 0;
+                        }
+                    }
+                    else
+                    {
+                        //return already exist
                     }
                 }
-                else
-                {
-                    //return already exist
-                }
-
             }
 
             return Json(result);

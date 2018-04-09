@@ -36,7 +36,10 @@ namespace Triggr.UI.Services
 
             services.AddTransient<IScriptExecutor, ScriptExecutor>();
             services.AddSingleton<ILanguageService, LanguageService>(i => new LanguageService("../config/languages.json"));
+
             services.AddScoped<IWebhookService, WebhookService>();
+
+            services.AddScoped<IWebhookFactory, WebhookFactory>();
 
         }
 
