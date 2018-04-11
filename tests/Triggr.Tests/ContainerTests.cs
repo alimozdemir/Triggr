@@ -10,7 +10,7 @@ namespace Triggr.Tests
     public class ContainerTests
     {
         private string GetPath(string sub) => Path.Combine("../../../Fixtures/repositories", sub);
-
+        // Setup TODO
         [Fact]
         public void IsTriggrProjectValidPath()
         {

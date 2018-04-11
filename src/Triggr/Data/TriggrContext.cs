@@ -4,12 +4,16 @@ namespace Triggr.Data
 {
     public class TriggrContext : DbContext
     {
+        public TriggrContext()
+        {
+            
+        }
         public TriggrContext(DbContextOptions<TriggrContext> options)
             : base(options)
         {
             
         }
 
-        public DbSet<Repository> Repositories { get; set; }
+        public virtual DbSet<Repository> Repositories { get; set; }
     }
 }
