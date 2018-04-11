@@ -45,6 +45,9 @@ namespace Triggr.UI.Services
             //Octokit github client
             services.AddTransient<GitHubClient>(i => new GitHubClient(new ProductHeaderValue("Triggr")));
 
+            services.AddSingleton<IBackgroundJobClient, BackgroundJobClient>();
+            services.AddSingleton<Wrappers.GithubWrapper>();
+            services.AddSingleton<LibGit2SharpWrapper>();
         }
 
         public static void UseTriggr(this IApplicationBuilder app, bool webHook = false)

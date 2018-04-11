@@ -10,10 +10,13 @@ namespace Triggr.UI.Controllers
 {
     public class GithubWebhookController : Controller
     {
-        public GithubWebhookController()
+        private readonly IBackgroundJobClient _jobClient;
+
+        public GithubWebhookController(IBackgroundJobClient jobClient)
         {
-            
+            _jobClient = jobClient;
         }
+
         [HttpPost]
         public IActionResult HandlerForPush([FromBody]GithubPushModel model)
         {
@@ -34,7 +37,7 @@ namespace Triggr.UI.Controllers
                                             
                             var owner = model.Repository.Owner.Name;
                             var repoName = model.Repository.Name;
-                            BackgroundJob.Enqueue<TController>(i => i.Trigger(null, repoName, owner, changedFiles));
+                            _jobClient.Enqueue<TController>(i => i.Trigger(null, repoName, owner, changedFiles));
                             
                             return Ok();
                         }

@@ -16,12 +16,14 @@ namespace Triggr
         private readonly IContainerService _containerService;
         private readonly IProviderFactory _providerFactory;
         private readonly TriggrContext _context;
+        private readonly IBackgroundJobClient _jobClient;
 
-        public TController(IContainerService containerService, IProviderFactory providerFactory, TriggrContext context)
+        public TController(IContainerService containerService, IProviderFactory providerFactory, TriggrContext context, IBackgroundJobClient jobClient)
         {
             _containerService = containerService;
             _providerFactory = providerFactory;
             _context = context;
+            _jobClient = jobClient;
         }
 
         public void Tick(PerformContext hangfireContext)
@@ -62,7 +64,8 @@ namespace Triggr
                             foreach (var item in activatedProbes)
                             {
                                 hangfireContext.WriteLine($"{item.Object.Path} file's probe is activated.");
-                                BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
+                                _jobClient.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
+                                //BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, item.Id, container.Repository.Id));
                             }
                         }
                         else
@@ -109,7 +112,8 @@ namespace Triggr
                         container.Update(provider);
                         
                         hangfireContext.WriteLine($"{probe.Object.Path} file's probe is activated.");
-                        BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));
+                        _jobClient.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));
+                        //BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));
                     }
                 }
             }

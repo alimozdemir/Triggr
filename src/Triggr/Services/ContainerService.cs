@@ -31,21 +31,7 @@ namespace Triggr.Services
 
             foreach (var repository in repositories)
             {
-                var provider = _providerFactory.GetProvider(repository.Provider);
-                string path = string.Empty;
-
-                if (!provider.Exist(repository))
-                {
-                    path = provider.Clone(repository);
-                }
-                else
-                    path = _storage.Combine(repository.Id);
-
-                var container = new Container($"Container #{repository.Id}", path, repository)
-                {
-                    UpdatedTime = repository.UpdatedTime
-                };
-
+                var container = GetContainer(repository);
                 containers.Add(container);
             }
 

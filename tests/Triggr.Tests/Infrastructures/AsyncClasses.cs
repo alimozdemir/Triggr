@@ -7,7 +7,7 @@ using System;
 
 namespace Triggr.Tests.Infrastructures
 {
-
+    // ref = https://stackoverflow.com/a/43594599
     public class AsyncEnumerable<T> : EnumerableQuery<T>, IAsyncEnumerable<T>, IQueryable<T>
     {
         public AsyncEnumerable(Expression expression)
