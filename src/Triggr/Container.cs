@@ -7,8 +7,12 @@ using Triggr.Providers;
 
 namespace Triggr
 {
-    public sealed class Container
+    public class Container
     {
+        public Container()
+        {
+            
+        }
         public Container(string name, string folder, Data.Repository repository)
         {
             Name = name;
@@ -28,7 +32,7 @@ namespace Triggr
             return Directory.Exists(TriggrFolder);
         }
 
-        public List<Probe> CheckForProbes()
+        public virtual List<Probe> CheckForProbes()
         {
             List<Probe> result = new List<Probe>();
             var probeFiles = Directory.GetFiles(TriggrFolder, "*.json");
@@ -48,7 +52,7 @@ namespace Triggr
             return result;
         }
 
-        public IEnumerable<string> Update(IProvider provider)
+        public virtual IEnumerable<string> Update(IProvider provider)
         {
             var path = provider.Update(this.Repository);
 
