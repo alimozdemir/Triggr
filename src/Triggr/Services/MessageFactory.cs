@@ -10,6 +10,9 @@ namespace Triggr.Services
 
         public MessageFactory(IEnumerable<IMessageService> services)
         {
+            if (services == null)
+                throw new ArgumentNullException(nameof(services));
+
             _services = services;
         }
 
@@ -18,7 +21,7 @@ namespace Triggr.Services
             var service = _services.FirstOrDefault(i => i.MessageType.Equals(type));
 
             if (service == null)
-                throw new ArgumentNullException($"No service type registered for {type}");
+                throw new ArgumentNullException(nameof(type));
 
             return service;
         }

@@ -31,7 +31,7 @@ namespace Triggr
             _containerService = containerService;
         }
 
-        public void Execute(PerformContext hangfireContext, Container container)
+        /*public void Execute(PerformContext hangfireContext, Container container)
         {
             if (!container.IsTriggrProject())
                 return;
@@ -85,7 +85,7 @@ namespace Triggr
             hangfireContext.WriteLine($"Finished ProbeControl");
 
         }
-
+        */
         public void Execute(PerformContext hangfireContext, string probeId, string repoId)
         {
             var repository = _dbContext.Repositories.Find(repoId); // get the repository

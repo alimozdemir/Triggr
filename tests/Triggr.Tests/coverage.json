@@ -140,48 +140,6 @@
      "31": 1,
      "32": 1
     },
-    "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,Triggr.Container)": {
-     "35": 0,
-     "36": 0,
-     "37": 0,
-     "39": 0,
-     "40": 0,
-     "42": 0,
-     "44": 0,
-     "45": 0,
-     "46": 0,
-     "47": 0,
-     "48": 0,
-     "49": 0,
-     "51": 0,
-     "52": 0,
-     "53": 0,
-     "54": 0,
-     "56": 0,
-     "58": 0,
-     "59": 0,
-     "60": 0,
-     "61": 0,
-     "63": 0,
-     "64": 0,
-     "66": 0,
-     "67": 0,
-     "68": 0,
-     "69": 0,
-     "70": 0,
-     "71": 0,
-     "72": 0,
-     "73": 0,
-     "74": 0,
-     "76": 0,
-     "77": 0,
-     "79": 0,
-     "82": 0,
-     "83": 0,
-     "84": 0,
-     "85": 0,
-     "87": 0
-    },
     "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,System.String,System.String)": {
      "90": 1,
      "91": 1,
@@ -275,72 +233,6 @@
      "25": 4,
      "26": 4,
      "27": 4
-    },
-    "System.Void Triggr.TController::Tick(Hangfire.Server.PerformContext)": {
-     "30": 0,
-     "31": 0,
-     "32": 0,
-     "33": 0,
-     "34": 0,
-     "35": 0,
-     "36": 0,
-     "37": 0,
-     "38": 0,
-     "39": 0,
-     "40": 0,
-     "41": 0,
-     "42": 0,
-     "43": 0,
-     "44": 0,
-     "45": 0,
-     "46": 0,
-     "47": 0,
-     "48": 0,
-     "49": 0,
-     "50": 0,
-     "51": 0,
-     "52": 0,
-     "53": 0,
-     "54": 0,
-     "55": 0,
-     "56": 0,
-     "57": 0,
-     "58": 0,
-     "59": 0,
-     "60": 0,
-     "61": 0,
-     "62": 0,
-     "63": 0,
-     "64": 0,
-     "65": 0,
-     "66": 0,
-     "67": 0,
-     "68": 0,
-     "69": 0,
-     "70": 0,
-     "71": 0,
-     "72": 0,
-     "73": 0,
-     "74": 0,
-     "75": 0,
-     "76": 0,
-     "77": 0,
-     "78": 0,
-     "79": 0,
-     "80": 0,
-     "81": 0,
-     "82": 0,
-     "83": 0,
-     "84": 0,
-     "85": 0,
-     "86": 0,
-     "87": 0,
-     "88": 0,
-     "89": 0,
-     "90": 0,
-     "91": 0,
-     "92": 0,
-     "94": 0
     },
     "System.Void Triggr.TController::Trigger(Hangfire.Server.PerformContext,System.String,System.String,System.Collections.Generic.List`1<System.String>)": {
      "97": 4,
@@ -455,39 +347,62 @@
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/EmailService.cs": {
    "Triggr.Services.EmailService": {
+    "Triggr.ActuatorType Triggr.Services.EmailService::get_MessageType()": {
+     "5": 4
+    },
     "System.Void Triggr.Services.EmailService::Send(System.String,System.String)": {
-     "6": 0,
-     "7": 0
+     "8": 0,
+     "10": 0
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/LanguageService.cs": {
    "Triggr.Services.LanguageService": {
     "System.Void Triggr.Services.LanguageService::.ctor(System.String)": {
-     "12": 6,
      "13": 6,
      "14": 6,
-     "15": 4,
-     "16": 4,
-     "18": 4,
-     "19": 4,
-     "20": 4,
-     "21": 0,
-     "22": 0,
-     "23": 0,
-     "25": 4,
-     "27": 2,
-     "28": 2,
-     "30": 4
+     "15": 6,
+     "16": 5,
+     "17": 5,
+     "19": 5,
+     "21": 5,
+     "22": 5,
+     "23": 10,
+     "24": 1,
+     "25": 1,
+     "28": 4,
+     "30": 1,
+     "31": 1,
+     "33": 4
     },
     "Triggr.Infrastructure.LanguageProperties Triggr.Services.LanguageService::Define(System.String)": {
-     "34": 4,
-     "35": 4,
-     "36": 4,
+     "37": 4,
      "38": 4,
-     "39": 0,
+     "39": 4,
      "41": 4,
-     "42": 4
+     "42": 0,
+     "44": 4,
+     "45": 4
+    }
+   }
+  },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/MessageFactory.cs": {
+   "Triggr.Services.MessageFactory": {
+    "System.Void Triggr.Services.MessageFactory::.ctor(System.Collections.Generic.IEnumerable`1<Triggr.Services.IMessageService>)": {
+     "11": 3,
+     "12": 3,
+     "13": 3,
+     "14": 1,
+     "16": 2,
+     "17": 2
+    },
+    "Triggr.Services.IMessageService Triggr.Services.MessageFactory::GetMessageService(Triggr.ActuatorType)": {
+     "20": 2,
+     "21": 4,
+     "23": 2,
+     "24": 1,
+     "26": 1,
+     "27": 1
     }
    }
   },
@@ -568,66 +483,71 @@
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Providers/GitProvider.cs": {
    "Triggr.Providers.GitProvider": {
+    "System.Void Triggr.Providers.GitProvider::.ctor()": {
+     "19": 4,
+     "20": 4,
+     "22": 4
+    },
     "System.Void Triggr.Providers.GitProvider::.ctor(Triggr.Infrastructure.RepositoryStorage,Triggr.Infrastructure.IScriptExecutor,Triggr.Providers.LibGit2SharpWrapper)": {
-     "19": 2,
-     "20": 2,
-     "21": 2,
-     "22": 2,
      "23": 2,
-     "24": 2
+     "24": 2,
+     "25": 2,
+     "26": 2,
+     "27": 2,
+     "28": 2
     },
     "System.String Triggr.Providers.GitProvider::get_GetProviderType()": {
-     "26": 0
+     "30": 4
     },
     "System.String Triggr.Providers.GitProvider::LastUpdatedFiles(Triggr.Data.Repository)": {
-     "29": 1,
-     "30": 1,
-     "31": 1,
      "33": 1,
+     "34": 1,
      "35": 1,
-     "36": 1
+     "37": 1,
+     "39": 1,
+     "40": 1
     },
     "System.String Triggr.Providers.GitProvider::Clone(Triggr.Data.Repository)": {
-     "38": 1,
-     "39": 1,
-     "41": 1,
+     "42": 1,
      "43": 1,
-     "44": 1
+     "45": 1,
+     "47": 1,
+     "48": 1
     },
     "System.Boolean Triggr.Providers.GitProvider::Exist(Triggr.Data.Repository)": {
-     "47": 0,
-     "48": 0,
      "51": 0,
      "52": 0,
-     "53": 0,
-     "54": 0,
+     "55": 0,
+     "56": 0,
      "57": 0,
-     "58": 0
+     "58": 0,
+     "61": 0,
+     "62": 0
     },
     "System.Boolean Triggr.Providers.GitProvider::IsValid(System.String)": {
-     "61": 0,
-     "62": 0,
-     "63": 0,
      "65": 0,
-     "66": 0
+     "66": 0,
+     "67": 0,
+     "69": 0,
+     "70": 0
     },
     "System.String Triggr.Providers.GitProvider::Update(Triggr.Data.Repository)": {
-     "70": 0,
-     "71": 0,
-     "73": 0,
+     "74": 0,
      "75": 0,
      "77": 0,
-     "78": 0
+     "79": 0,
+     "81": 0,
+     "82": 0
     },
     "System.Boolean Triggr.Providers.GitProvider::Restore(Triggr.Data.Repository,System.String,System.Boolean)": {
-     "81": 0,
-     "82": 0,
-     "84": 0,
+     "85": 0,
      "86": 0,
-     "89": 0,
-     "92": 0,
-     "94": 0,
-     "95": 0
+     "88": 0,
+     "90": 0,
+     "93": 0,
+     "96": 0,
+     "98": 0,
+     "99": 0
     }
    }
   },
@@ -663,29 +583,33 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Providers/ProviderFactory.cs": {
    "Triggr.Providers.ProviderFactory": {
     "System.Void Triggr.Providers.ProviderFactory::.ctor(System.Collections.Generic.IEnumerable`1<Triggr.Providers.IProvider>)": {
-     "10": 0,
-     "11": 0,
-     "12": 0,
-     "13": 0
+     "11": 5,
+     "12": 5,
+     "13": 5,
+     "14": 1,
+     "16": 4,
+     "17": 4
     },
     "Triggr.Providers.IProvider Triggr.Providers.ProviderFactory::GetProvider(System.String)": {
-     "15": 0,
-     "16": 0,
-     "17": 0,
-     "18": 0
+     "19": 2,
+     "20": 4,
+     "22": 2,
+     "23": 1,
+     "25": 1,
+     "26": 1
     },
     "System.String Triggr.Providers.ProviderFactory::GetProviderType(System.String)": {
-     "21": 0,
-     "22": 0,
-     "23": 0,
-     "24": 0
+     "29": 2,
+     "30": 4,
+     "31": 2,
+     "32": 2
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/LanguageProperties.cs": {
    "Triggr.Infrastructure.LanguageProperties": {
     "System.String Triggr.Infrastructure.LanguageProperties::get_FolderName()": {
-     "5": 17
+     "5": 22
     },
     "System.Boolean Triggr.Infrastructure.LanguageProperties::get_FullProject()": {
      "6": 13

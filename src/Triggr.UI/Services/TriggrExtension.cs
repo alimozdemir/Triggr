@@ -52,8 +52,8 @@ namespace Triggr.UI.Services
 
         public static void UseTriggr(this IApplicationBuilder app, bool webHook = false)
         {
-            if (!webHook)
-                RecurringJob.AddOrUpdate<TController>(TriggrJobId, i => i.Tick(null), Cron.Minutely);
+            /*if (!webHook)
+                RecurringJob.AddOrUpdate<TController>(TriggrJobId, i => i.Tick(null), Cron.Minutely);*/
         }
     }
 

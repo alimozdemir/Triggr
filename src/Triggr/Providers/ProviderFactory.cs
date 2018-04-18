@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Triggr.Services;
+using System;
 
 namespace Triggr.Providers
 {
@@ -9,11 +10,18 @@ namespace Triggr.Providers
         private readonly IEnumerable<IProvider> _providers;
         public ProviderFactory(IEnumerable<IProvider> providers)
         {
+            if (providers == null)
+                throw new ArgumentNullException(nameof(providers));
+
             _providers = providers;
         }
         public IProvider GetProvider(string type)
         {
             var provider = _providers.FirstOrDefault(i => i.GetProviderType.Equals(type));
+
+            if (provider == null)
+                throw new ArgumentNullException(nameof(type));
+
             return provider;
         }
 

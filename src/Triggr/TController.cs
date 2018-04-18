@@ -26,7 +26,7 @@ namespace Triggr
             _jobClient = jobClient;
         }
 
-        public void Tick(PerformContext hangfireContext)
+        /*public void Tick(PerformContext hangfireContext)
         {
             Task.Run(async () =>
             {
@@ -91,7 +91,7 @@ namespace Triggr
 
             });
 
-        }
+        }*/
 
         public void Trigger(PerformContext hangfireContext, string repoName, string owner, List<string> modified)
         {

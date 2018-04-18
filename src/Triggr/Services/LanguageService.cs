@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Triggr.Infrastructure;
@@ -14,14 +15,16 @@ namespace Triggr.Services
             if (File.Exists(path))
             {
                 var text = File.ReadAllText(path);
-                try
+
+                _languages = JsonConvert.DeserializeObject<Dictionary<string, LanguageProperties>>(text);
+                
+                if (_languages == null 
+                    || _languages.Count == 0 
+                    || _languages.All(i => i.Value == null || (i.Value != null && string.IsNullOrEmpty(i.Value.FolderName))))
                 {
-                    _languages = JsonConvert.DeserializeObject<Dictionary<string, LanguageProperties>>(text);
+                    throw new Exception("No language found.");
                 }
-                catch (Exception ex)
-                {
-                    throw new Exception("Unsupported format.", ex);
-                }
+
             }
             else
             {

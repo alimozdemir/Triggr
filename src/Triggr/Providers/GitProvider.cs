@@ -16,6 +16,10 @@ namespace Triggr.Providers
         private readonly RepositoryStorage _storage;
         private readonly IScriptExecutor _scriptExecutor;
 
+        public GitProvider()
+        {
+            
+        }
         public GitProvider(RepositoryStorage storage, IScriptExecutor scriptExecutor, LibGit2SharpWrapper git)
         {
             _git = git;
@@ -57,7 +61,7 @@ namespace Triggr.Providers
                 return _git.IsValid(path);
         }
 
-        public bool IsValid(string url)
+        public virtual bool IsValid(string url)
         {
             if (string.IsNullOrEmpty(url))
                 return false;
