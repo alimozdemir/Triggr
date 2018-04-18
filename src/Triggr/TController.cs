@@ -102,15 +102,15 @@ namespace Triggr
                 var container = _containerService.GetContainer(repo);
 
                 var probes = container.CheckForProbes();
-
+                
+                var provider = _providerFactory.GetProvider(repo.Provider);
+                
+                container.Update(provider);
+                
                 foreach (var probe in probes)
                 {
                     if (modified.Contains(probe.Object.Path))
                     {
-                        var provider = _providerFactory.GetProvider(repo.Provider);
-
-                        container.Update(provider);
-                        
                         hangfireContext?.WriteLine($"{probe.Object.Path} file's probe is activated.");
                         _jobClient.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, repo.Id));
                         //BackgroundJob.Enqueue<ProbeControl>(i => i.Execute(null, probe.Id, container.Repository.Id));

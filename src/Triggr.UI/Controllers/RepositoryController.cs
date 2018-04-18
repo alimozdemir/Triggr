@@ -54,7 +54,8 @@ namespace Triggr.UI.Controllers
                 var service = _webhookFactory.GetService(model.Url);
                 if (service != null)
                 {
-                    var dbRecord = _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) && i.OwnerName.Equals(model.Owner));
+                    var dbRecord = _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) 
+                        && i.OwnerName.Equals(model.Owner));
 
                     if (dbRecord == null)
                     {

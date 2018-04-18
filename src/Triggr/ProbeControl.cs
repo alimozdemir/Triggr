@@ -100,7 +100,7 @@ namespace Triggr
                 if (probe != null)
                 {
 
-                    hangfireContext.WriteLine($"{probe.Object.Path} is found.");
+                    hangfireContext?.WriteLine($"{probe.Object.Path} is found.");
                     // define the language
                     var language = _languageService.Define(probe.Object.Path);
                     // get the provider
@@ -108,14 +108,14 @@ namespace Triggr
                     // restore to previous file
                     if (provider.Restore(repository, probe.Object.Path, true))
                     {
-                        hangfireContext.WriteLine($"{probe.Object.Path} is restored to old.");
+                        hangfireContext?.WriteLine($"{probe.Object.Path} is restored to old.");
                         // get the file path
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path);
 
                         // look for the object
                         var ast1 = _scriptExecutor.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name);
 
-                        hangfireContext.WriteLine($"{probe.Object.Path} old version is loaded.");
+                        hangfireContext?.WriteLine($"{probe.Object.Path} old version is loaded.");
 
                         var temp1 = WriteToTemp(ast1);
 
@@ -127,7 +127,7 @@ namespace Triggr
 
                             var temp2 = WriteToTemp(ast2);
 
-                            hangfireContext.WriteLine($"{probe.Object.Path} new version is loaded.");
+                            hangfireContext?.WriteLine($"{probe.Object.Path} new version is loaded.");
 
                             Control(hangfireContext, probe, temp1, temp2, language.FolderName);
                         }
@@ -145,18 +145,18 @@ namespace Triggr
                     var file1 = File.ReadAllText(temp1);
                     var file2 = File.ReadAllText(temp2);
 
-                    hangfireContext.WriteLine("Old version");
-                    hangfireContext.WriteLine(file1);
+                    hangfireContext?.WriteLine("Old version");
+                    hangfireContext?.WriteLine(file1);
 
-                    hangfireContext.WriteLine("New version");
-                    hangfireContext.WriteLine(file2);
+                    hangfireContext?.WriteLine("New version");
+                    hangfireContext?.WriteLine(file2);
 
                     if (!file1.Equals(file2))
                     {
-                        hangfireContext.WriteLine($"{probe.Object.Name} is changed.");
+                        hangfireContext?.WriteLine($"{probe.Object.Name} is changed.");
                     }
                     else
-                        hangfireContext.WriteLine($"{probe.Object.Name} isn't changed.");
+                        hangfireContext?.WriteLine($"{probe.Object.Name} isn't changed.");
 
                     break;
                 case ProbeType.StaticAnalysis:
@@ -165,7 +165,7 @@ namespace Triggr
 
                     // for test
                     var tex = File.ReadAllText(temp2);
-                    hangfireContext.WriteLine(tex);
+                    hangfireContext?.WriteLine(tex);
 
                     // add file path
                     parameters.Add(temp1);
@@ -182,17 +182,17 @@ namespace Triggr
                     if (probe.Metrics.Strategy == ReportType.Always)
                     {
                         if (string.IsNullOrEmpty(result2))
-                            hangfireContext.WriteLine("No result.");
+                            hangfireContext?.WriteLine("No result.");
                         else
-                            hangfireContext.WriteLine(result2);
+                            hangfireContext?.WriteLine(result2);
 
                     }
                     else if (probe.Metrics.Strategy == ReportType.Diff)
                     {
                         if (!result1.Equals(result2))
                         {
-                            hangfireContext.WriteLine("There is a difference between results");
-                            hangfireContext.WriteLine(result1);
+                            hangfireContext?.WriteLine("There is a difference between results");
+                            hangfireContext?.WriteLine(result1);
                         }
 
                     }

@@ -2,79 +2,84 @@
  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/tests/Triggr.Tests/bin/Debug/netcoreapp2.0/Triggr.dll": {
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Container.cs": {
    "Triggr.Container": {
+    "System.Void Triggr.Container::.ctor()": {
+     "12": 5,
+     "13": 5,
+     "15": 5
+    },
     "System.Void Triggr.Container::.ctor(System.String,System.String,Triggr.Data.Repository)": {
-     "12": 15,
-     "13": 15,
-     "14": 15,
-     "15": 15,
      "16": 15,
-     "17": 15
+     "17": 15,
+     "18": 15,
+     "19": 15,
+     "20": 15,
+     "21": 15
     },
     "Triggr.Data.Repository Triggr.Container::get_Repository()": {
-     "18": 9
+     "22": 9
     },
     "System.String Triggr.Container::get_Name()": {
-     "19": 5
+     "23": 5
     },
     "System.String Triggr.Container::get_Folder()": {
-     "20": 9
+     "24": 9
     },
     "System.String Triggr.Container::get_TriggrFolder()": {
-     "21": 7
+     "25": 7
     },
     "System.DateTimeOffset Triggr.Container::get_UpdatedTime()": {
-     "22": 8
+     "26": 8
     },
     "System.Boolean Triggr.Container::IsTriggrProject()": {
-     "27": 2,
-     "28": 2,
-     "29": 2
+     "31": 2,
+     "32": 2,
+     "33": 2
     },
     "System.Collections.Generic.List`1<Triggr.Probe> Triggr.Container::CheckForProbes()": {
-     "32": 5,
-     "33": 5,
-     "34": 5,
-     "36": 18,
-     "37": 3,
-     "38": 3,
-     "40": 3,
+     "36": 5,
+     "37": 5,
+     "38": 5,
+     "40": 18,
      "41": 3,
-     "42": 2,
-     "43": 2,
-     "44": 2,
-     "46": 3,
-     "48": 4,
-     "49": 4
+     "42": 3,
+     "44": 3,
+     "45": 3,
+     "46": 2,
+     "47": 2,
+     "48": 2,
+     "50": 3,
+     "52": 4,
+     "53": 4
     },
     "System.Collections.Generic.IEnumerable`1<System.String> Triggr.Container::Update(Triggr.Providers.IProvider)": {
-     "52": 2,
-     "53": 2,
-     "55": 2,
-     "56": 1,
-     "57": 1,
+     "56": 2,
+     "57": 2,
+     "59": 2,
      "60": 1,
      "61": 1,
-     "63": 1,
+     "64": 1,
      "65": 1,
-     "67": 7,
-     "68": 2,
-     "69": 2,
-     "70": 2,
-     "72": 1,
-     "74": 2
+     "67": 1,
+     "69": 1,
+     "71": 7,
+     "72": 2,
+     "73": 2,
+     "74": 2,
+     "76": 1,
+     "78": 2
     }
    }
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Probe.cs": {
    "Triggr.Probe": {
     "System.String Triggr.Probe::get_Id()": {
-     "8": 7
+     "8": 15
     },
     "Triggr.ProbeType Triggr.Probe::get_ProbeType()": {
      "9": 4
     },
     "Triggr.ObjectInformation Triggr.Probe::get_Object()": {
-     "10": 8
+     "10": 17
     },
     "System.String Triggr.Probe::get_Modifiers()": {
      "11": 2
@@ -94,7 +99,7 @@
      "19": 2
     },
     "System.String Triggr.ObjectInformation::get_Path()": {
-     "20": 2
+     "20": 11
     },
     "System.String Triggr.ObjectInformation::get_Type()": {
      "21": 2
@@ -123,17 +128,17 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/ProbeControl.cs": {
    "Triggr.ProbeControl": {
     "System.Void Triggr.ProbeControl::.ctor(Triggr.Providers.IProviderFactory,Triggr.Services.ILanguageService,Triggr.Infrastructure.IScriptExecutor,Triggr.Data.TriggrContext,Triggr.Services.IContainerService)": {
-     "22": 0,
-     "23": 0,
-     "24": 0,
-     "25": 0,
-     "26": 0,
-     "27": 0,
-     "28": 0,
-     "29": 0,
-     "30": 0,
-     "31": 0,
-     "32": 0
+     "22": 1,
+     "23": 1,
+     "24": 1,
+     "25": 1,
+     "26": 1,
+     "27": 1,
+     "28": 1,
+     "29": 1,
+     "30": 1,
+     "31": 1,
+     "32": 1
     },
     "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,Triggr.Container)": {
      "35": 0,
@@ -178,9 +183,9 @@
      "87": 0
     },
     "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,System.String,System.String)": {
-     "90": 0,
-     "91": 0,
-     "92": 0,
+     "90": 1,
+     "91": 1,
+     "92": 1,
      "93": 0,
      "94": 0,
      "97": 0,
@@ -207,7 +212,7 @@
      "134": 0,
      "135": 0,
      "136": 0,
-     "137": 0
+     "137": 1
     },
     "System.Void Triggr.ProbeControl::Control(Hangfire.Server.PerformContext,Triggr.Probe,System.String,System.String,System.String)": {
      "140": 0,
@@ -262,17 +267,16 @@
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/TController.cs": {
    "Triggr.TController": {
-    "System.Void Triggr.TController::.ctor(Triggr.Services.IContainerService,Triggr.Providers.IProviderFactory,Triggr.Data.TriggrContext)": {
-     "20": 0,
-     "21": 0,
-     "22": 0,
-     "23": 0,
-     "24": 0,
-     "25": 0
+    "System.Void Triggr.TController::.ctor(Triggr.Services.IContainerService,Triggr.Providers.IProviderFactory,Triggr.Data.TriggrContext,Hangfire.IBackgroundJobClient)": {
+     "21": 4,
+     "22": 4,
+     "23": 4,
+     "24": 4,
+     "25": 4,
+     "26": 4,
+     "27": 4
     },
     "System.Void Triggr.TController::Tick(Hangfire.Server.PerformContext)": {
-     "28": 0,
-     "29": 0,
      "30": 0,
      "31": 0,
      "32": 0,
@@ -333,27 +337,30 @@
      "87": 0,
      "88": 0,
      "89": 0,
-     "91": 0
+     "90": 0,
+     "91": 0,
+     "92": 0,
+     "94": 0
     },
     "System.Void Triggr.TController::Trigger(Hangfire.Server.PerformContext,System.String,System.String,System.Collections.Generic.List`1<System.String>)": {
-     "94": 0,
-     "95": 0,
-     "97": 0,
-     "98": 0,
-     "99": 0,
-     "101": 0,
-     "103": 0,
-     "104": 0,
-     "105": 0,
-     "106": 0,
-     "107": 0,
-     "109": 0,
-     "111": 0,
-     "112": 0,
-     "113": 0,
-     "114": 0,
-     "115": 0,
-     "116": 0
+     "97": 4,
+     "98": 4,
+     "100": 4,
+     "101": 3,
+     "102": 3,
+     "104": 3,
+     "106": 3,
+     "108": 3,
+     "110": 15,
+     "111": 3,
+     "112": 3,
+     "113": 3,
+     "114": 3,
+     "115": 3,
+     "117": 3,
+     "118": 3,
+     "119": 3,
+     "120": 4
     }
    }
   },
@@ -395,23 +402,23 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/ContainerService.cs": {
    "Triggr.Services.ContainerService": {
     "System.Void Triggr.Services.ContainerService::.ctor(Triggr.Data.TriggrContext,Triggr.Providers.IProviderFactory,Triggr.Infrastructure.RepositoryStorage)": {
-     "19": 5,
-     "20": 5,
-     "21": 5,
-     "22": 5,
-     "23": 5,
-     "24": 5
+     "19": 6,
+     "20": 6,
+     "21": 6,
+     "22": 6,
+     "23": 6,
+     "24": 6
     },
     "Triggr.Container Triggr.Services.ContainerService::GetContainer(System.String)": {
-     "43": 2,
-     "44": 2,
-     "46": 2,
-     "48": 2,
+     "43": 3,
+     "44": 3,
+     "46": 3,
+     "48": 3,
      "49": 2,
      "50": 2,
      "51": 2,
-     "53": 2,
-     "54": 2
+     "53": 3,
+     "54": 3
     },
     "Triggr.Container Triggr.Services.ContainerService::GetContainer(Triggr.Data.Repository)": {
      "57": 6,
@@ -678,10 +685,10 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Infrastructure/LanguageProperties.cs": {
    "Triggr.Infrastructure.LanguageProperties": {
     "System.String Triggr.Infrastructure.LanguageProperties::get_FolderName()": {
-     "5": 16
+     "5": 17
     },
     "System.Boolean Triggr.Infrastructure.LanguageProperties::get_FullProject()": {
-     "6": 12
+     "6": 13
     }
    }
   },
@@ -691,9 +698,9 @@
      "8": 13
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor()": {
-     "9": 7,
-     "10": 7,
-     "12": 7
+     "9": 8,
+     "10": 8,
+     "12": 8
     },
     "System.Void Triggr.Infrastructure.RepositoryStorage::.ctor(System.String)": {
      "13": 2,
@@ -885,10 +892,10 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Data/Repository.cs": {
    "Triggr.Data.Repository": {
     "System.String Triggr.Data.Repository::get_Id()": {
-     "7": 37
+     "7": 45
     },
     "System.String Triggr.Data.Repository::get_Provider()": {
-     "8": 16
+     "8": 34
     },
     "System.String Triggr.Data.Repository::get_Reference()": {
      "9": 0
@@ -900,10 +907,10 @@
      "11": 3
     },
     "System.String Triggr.Data.Repository::get_OwnerName()": {
-     "12": 4
+     "12": 12
     },
     "System.String Triggr.Data.Repository::get_Name()": {
-     "13": 10
+     "13": 19
     },
     "System.Boolean Triggr.Data.Repository::get_WebHook()": {
      "14": 3
@@ -919,9 +926,9 @@
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Data/TriggrContext.cs": {
    "Triggr.Data.TriggrContext": {
     "System.Void Triggr.Data.TriggrContext::.ctor()": {
-     "7": 5,
-     "8": 5,
-     "10": 5
+     "7": 11,
+     "8": 11,
+     "10": 11
     },
     "System.Void Triggr.Data.TriggrContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Triggr.Data.TriggrContext>)": {
      "12": 0,
