@@ -75,6 +75,8 @@ namespace Triggr.Tests
             mockJobClient.Verify(x => x.Create(
                     It.Is<Job>(i => i.Method.Name == "Execute"),
                     It.IsAny<EnqueuedState>()));
+
+                    // ML from normal distribution derivation
         }
 
         [Fact]

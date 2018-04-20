@@ -17,7 +17,7 @@ namespace Triggr.Infrastructure
             _shellExecutor = shellExecutor;
         }
 
-        public string Execute(ProbeType probe, string language, params string[] arg)
+        public virtual string Execute(ProbeType probe, string language, params string[] arg)
         {
             return Execute(probe.ToString(), language, arg);
         }
@@ -31,16 +31,9 @@ namespace Triggr.Infrastructure
             {
                 var command = $"cd {path} && ./run.sh";
 
-                switch (folder)
-                {
-                    case "CodeChanges":
-                        ArgumentCheck(4, arg);
-                        break;
-                    case "AST":
-                        ArgumentCheck(3, arg);
-                        break;
-                }
-
+                if(folder.Equals("AST"))
+                    ArgumentCheck(3, arg);
+               
                 command = command + " " + string.Join(" ", arg);
                 result = _shellExecutor.Execute(command);
             }
@@ -50,7 +43,7 @@ namespace Triggr.Infrastructure
 
         public virtual string ExecuteCommon(string type, params string[] arg)
         {
-            string result = string.Empty;
+            string result = "-1";
             var path = _storage.Combine("Common");
 
             var command = $"cd {path} && ./{type}.sh";

@@ -21,7 +21,7 @@ namespace Triggr
         }
         public Data.Repository Repository { get; }
         public string Name { get; }
-        public string Folder { get; }
+        public virtual string Folder { get; }
         private string TriggrFolder => Path.Combine(Folder, ConstTriggrFolder);
         public DateTimeOffset UpdatedTime { get; set; }
 

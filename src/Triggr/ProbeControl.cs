@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,17 +19,20 @@ namespace Triggr
         private readonly IScriptExecutor _scriptExecutor;
         private readonly TriggrContext _dbContext;
         private readonly IContainerService _containerService;
+        private readonly IMessageFactory _messageFactory;
 
         public ProbeControl(IProviderFactory providerFactory, ILanguageService languageService,
                 IScriptExecutor scriptExecutor,
                 TriggrContext dbContext,
-                IContainerService containerService)
+                IContainerService containerService,
+                IMessageFactory messageFactory)
         {
             _providerFactory = providerFactory;
             _languageService = languageService;
             _scriptExecutor = scriptExecutor;
             _dbContext = dbContext;
             _containerService = containerService;
+            _messageFactory = messageFactory;
         }
 
         /*public void Execute(PerformContext hangfireContext, Container container)
@@ -154,6 +158,12 @@ namespace Triggr
                     if (!file1.Equals(file2))
                     {
                         hangfireContext?.WriteLine($"{probe.Object.Name} is changed.");
+                        foreach (var act in probe.Actuators)
+                        {
+                            var service = _messageFactory.GetMessageService(act.Type);
+                            service.Send(probe, $"{probe.Object.Name} is changed.");
+                        }
+
                     }
                     else
                         hangfireContext?.WriteLine($"{probe.Object.Name} isn't changed.");
@@ -184,7 +194,14 @@ namespace Triggr
                         if (string.IsNullOrEmpty(result2))
                             hangfireContext?.WriteLine("No result.");
                         else
+                        {
+                            foreach (var act in probe.Actuators)
+                            {
+                                var service = _messageFactory.GetMessageService(act.Type);
+                                service.Send(probe, $"{probe.Object.Name} static analysis results. {result2}");
+                            }
                             hangfireContext?.WriteLine(result2);
+                        }
 
                     }
                     else if (probe.Metrics.Strategy == ReportType.Diff)
@@ -193,8 +210,15 @@ namespace Triggr
                         {
                             hangfireContext?.WriteLine("There is a difference between results");
                             hangfireContext?.WriteLine(result1);
-                        }
 
+                            foreach (var act in probe.Actuators)
+                            {
+                                var service = _messageFactory.GetMessageService(act.Type);
+                                service.Send(probe, $"{probe.Object.Name} has different static analysis results between two commits." +
+                                "Old" + Environment.NewLine +
+                                      result1 + Environment.NewLine + "**************" + Environment.NewLine + result2);
+                            }
+                        }
                     }
 
                     break;

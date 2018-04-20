@@ -4,7 +4,7 @@ namespace Triggr.Services
     {
         public ActuatorType MessageType => ActuatorType.Email;
 
-        public void Send(string to, string message)
+        public void Send(Probe probe, string message)
         {
             
         }

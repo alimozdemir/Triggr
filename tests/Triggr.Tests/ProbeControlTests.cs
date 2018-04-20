@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Moq;
@@ -32,6 +33,26 @@ namespace Triggr.Tests
         public void TestName()
         {
             var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
+
+            var language = new LanguageProperties()
+            {
+                FolderName = "JavaScript",
+                FullProject = false
+            };
+            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var actuators = new List<Actuator>()
+            {
+                act1
+            };
+
+            var probe = new Probe()
+            {
+                Id = "1",
+                ProbeType = ProbeType.CodeChanges,
+                Object = new ObjectInformation() { Path = "test.js" },
+                Actuators = actuators
+            };
+
             var data = new List<Repository>()
             {
                 repo
@@ -39,9 +60,10 @@ namespace Triggr.Tests
 
             var mockDb = GetDatabaseMocks(data);
             mockDb.mockContext.Setup(i => i.Repositories).Returns(mockDb.mockSet.Object);
+            mockDb.mockSet.Setup(i => i.Find("1")).Returns(repo);
 
             var probes = new List<Probe>(){
-                new Probe() { Id = "1", Object = new ObjectInformation() { Path = "test.js" } }
+                probe
             };
 
             var mockProviderFactory = new Mock<IProviderFactory>();
@@ -50,14 +72,15 @@ namespace Triggr.Tests
             var mockContainerService = new Mock<IContainerService>();
             var mockContainer = new Mock<Container>();
             var mockProvider = new Mock<IProvider>();
+            var mockMessageFactory = new Mock<IMessageFactory>();
+            var mockMessageService = new Mock<IMessageService>();
 
-            var language = new LanguageProperties()
-            {
-                FolderName = "JavaScript",
-                FullProject = false
-            };
 
-            mockContainer.Setup(i => i.CheckForProbes()).Returns(probes);
+            mockContainer.Setup(i => i.CheckForProbes())
+                         .Returns(probes);
+            
+            mockContainer.SetupGet(i => i.Folder)
+                         .Returns("Test");
 
             mockContainerService.Setup(i => i.GetContainer("1"))
                                 .Returns(mockContainer.Object);
@@ -67,16 +90,35 @@ namespace Triggr.Tests
 
             mockProviderFactory.Setup(i => i.GetProvider(repo.Provider))
                                 .Returns(mockProvider.Object);
+            
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, true))
+                                .Returns(true);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, false))
+                                .Returns(true);
+            
+            var objectPath = Path.Combine(mockContainer.Object.Folder, probe.Object.Path);
+
+            mockScriptExecutor.SetupSequence(i => i.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name))
+                              .Returns("ast1")
+                              .Returns("ast2");
+
+            mockMessageFactory.Setup(i => i.GetMessageService(act1.Type))
+                              .Returns(mockMessageService.Object);
+                              
 
             var control = new ProbeControl(mockProviderFactory.Object,
                                             mockLanguageService.Object,
                                             mockScriptExecutor.Object,
                                             mockDb.mockContext.Object,
-                                            mockContainerService.Object);
+                                            mockContainerService.Object,
+                                            mockMessageFactory.Object);
 
 
 
             control.Execute(null, "1", "1");
+
+            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} is changed."));
 
         }
     }
