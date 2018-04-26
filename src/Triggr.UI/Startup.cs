@@ -23,6 +23,7 @@ namespace Triggr.UI
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("emailsettings.json", optional: true, reloadOnChange: true)
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
@@ -52,8 +53,11 @@ namespace Triggr.UI
             });
             
             var config = Configuration.GetSection("TriggrConfig");
+            var email = Configuration.GetSection("EmailConfig");
 
             services.Configure<Triggr.TriggrConfig>(config);
+
+            services.Configure<Triggr.EmailConfig>(email);
             
             services.AddTriggr();
         }

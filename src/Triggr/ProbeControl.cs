@@ -161,7 +161,7 @@ namespace Triggr
                         foreach (var act in probe.Actuators)
                         {
                             var service = _messageFactory.GetMessageService(act.Type);
-                            service.Send(probe, $"{probe.Object.Name} is changed.");
+                            service.Send(act, $"{probe.Object.Name} is changed.");
                         }
 
                     }
@@ -198,7 +198,7 @@ namespace Triggr
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
-                                service.Send(probe, $"{probe.Object.Name} static analysis results. {result2}");
+                                service.Send(act, $"{probe.Object.Name} static analysis results. {result2}");
                             }
                             hangfireContext?.WriteLine(result2);
                         }
@@ -214,7 +214,7 @@ namespace Triggr
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
-                                service.Send(probe, $"{probe.Object.Name} has different static analysis results between two commits." +
+                                service.Send(act, $"{probe.Object.Name} has different static analysis results between two commits." +
                                 "Old" + Environment.NewLine +
                                       result1 + Environment.NewLine + "**************" + Environment.NewLine + result2);
                             }

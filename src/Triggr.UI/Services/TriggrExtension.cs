@@ -48,6 +48,9 @@ namespace Triggr.UI.Services
             services.AddSingleton<IBackgroundJobClient, BackgroundJobClient>();
             services.AddSingleton<Wrappers.GithubWrapper>();
             services.AddSingleton<LibGit2SharpWrapper>();
+
+            services.AddScoped<IMessageFactory, MessageFactory>();
+            services.AddScoped<IMessageService, EmailService>();
         }
 
         public static void UseTriggr(this IApplicationBuilder app, bool webHook = false)

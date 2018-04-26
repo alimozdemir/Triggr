@@ -117,7 +117,7 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} is changed."));
+            mockMessageService.Verify(i => i.Send(act1, $"{probe.Object.Name} is changed."));
 
 
         }
@@ -212,7 +212,7 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} is changed."), Times.Exactly(2));
+            mockMessageService.Verify(i => i.Send(It.IsAny<Actuator>(), $"{probe.Object.Name} is changed."), Times.Exactly(2));
 
 
         }
@@ -304,10 +304,10 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(It.IsAny<Probe>(), It.IsAny<string>()), Times.Never());
+            mockMessageService.Verify(i => i.Send(It.IsAny<Actuator>(), It.IsAny<string>()), Times.Never());
         }
 
-        [Fact]
+        /*[Fact]
         public void StaticAnalysisAlwaysWithOneActuator()
         {
             var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
@@ -403,9 +403,9 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} static analysis results. result2"));
+            mockMessageService.Verify(i => i.Send(act1, $"{probe.Object.Name} static analysis results. result2"));
 
 
-        }
+        }*/
     }
 }

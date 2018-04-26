@@ -43,8 +43,9 @@ namespace Triggr.Providers
             var path = _storage.Combine(data.Id);
 
             var cloneResult = _git.Clone(data.Url, path);
-
-            return cloneResult;
+            // hotfix: it was returning a path with .git (e.g. 'repositories/1/.git')
+            // but we need absolute path of the repository, so I changed it to path from cloneResult
+            return path;
         }
 
         public bool Exist(Data.Repository data)

@@ -1,28 +1,39 @@
 using System.Net;
 using System.Net.Mail;
+using Microsoft.Extensions.Options;
 
 namespace Triggr.Services
 {
     public class EmailService : IMessageService
     {
-        public EmailService()
+        private readonly EmailConfig _emailConfig;
+
+        public EmailService(IOptions<EmailConfig> config)
         {
-            
+            _emailConfig = config.Value;
         }
-        
+
         public ActuatorType MessageType => ActuatorType.Email;
 
-        public void Send(Probe probe, string message)
+        public void Send(Actuator act, string message)
         {
-            SmtpClient client = new SmtpClient("mysmtpserver");
+            SmtpClient client = new SmtpClient(_emailConfig.SmtpServer, _emailConfig.Port);
+
             client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential("username", "password");
+            client.Credentials = new NetworkCredential(_emailConfig.Username, _emailConfig.Password);
+
+            if (_emailConfig.Ssl)
+                client.EnableSsl = true;
 
             MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("whoever@me.com");
-            mailMessage.To.Add("receiver@me.com");
-            mailMessage.Body = "body";
-            mailMessage.Subject = "subject";
+            mailMessage.From = new MailAddress(_emailConfig.From);
+
+            foreach (var to in act.Emails)
+                mailMessage.To.Add(to);
+
+            mailMessage.Body = message;
+            mailMessage.Subject = "Triggr Notification";
+
             client.Send(mailMessage);
         }
     }

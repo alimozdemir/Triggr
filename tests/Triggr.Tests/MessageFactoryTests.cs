@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Options;
+using Moq;
 using Triggr.Services;
 using Xunit;
 
@@ -17,7 +19,7 @@ namespace Triggr.Tests
         [Fact]
         public void GetProviderWithValidType()
         {
-            var emailService = new EmailService();
+            var emailService = new EmailService(null);
             var list = new List<IMessageService>(){
                 emailService
             };
@@ -33,7 +35,7 @@ namespace Triggr.Tests
         [Fact]
         public void GetProviderWithInvalidType()
         {
-            var emailService = new EmailService();
+            var emailService = new EmailService(null);
             var list = new List<IMessageService>(){
                 emailService
             };
@@ -43,5 +45,6 @@ namespace Triggr.Tests
             Action service = () => factory.GetMessageService(ActuatorType.GitHubIssue);
             Assert.ThrowsAny<ArgumentNullException>(service);
         }
+
     }
 }
