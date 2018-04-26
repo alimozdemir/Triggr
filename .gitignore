@@ -290,3 +290,5 @@ __pycache__/
 .DS_Store
 
 src/repositories/
+
+src/Triggr.UI/emailsettings.json

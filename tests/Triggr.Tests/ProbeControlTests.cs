@@ -29,8 +29,9 @@ namespace Triggr.Tests
 
             return (context, set);
         }
+
         [Fact]
-        public void TestName()
+        public void CodeChangesDetectionWithOneActuator()
         {
             var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
 
@@ -78,7 +79,7 @@ namespace Triggr.Tests
 
             mockContainer.Setup(i => i.CheckForProbes())
                          .Returns(probes);
-            
+
             mockContainer.SetupGet(i => i.Folder)
                          .Returns("Test");
 
@@ -90,13 +91,13 @@ namespace Triggr.Tests
 
             mockProviderFactory.Setup(i => i.GetProvider(repo.Provider))
                                 .Returns(mockProvider.Object);
-            
+
             mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, true))
                                 .Returns(true);
 
             mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, false))
                                 .Returns(true);
-            
+
             var objectPath = Path.Combine(mockContainer.Object.Folder, probe.Object.Path);
 
             mockScriptExecutor.SetupSequence(i => i.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name))
@@ -105,7 +106,7 @@ namespace Triggr.Tests
 
             mockMessageFactory.Setup(i => i.GetMessageService(act1.Type))
                               .Returns(mockMessageService.Object);
-                              
+
 
             var control = new ProbeControl(mockProviderFactory.Object,
                                             mockLanguageService.Object,
@@ -114,11 +115,296 @@ namespace Triggr.Tests
                                             mockContainerService.Object,
                                             mockMessageFactory.Object);
 
-
-
             control.Execute(null, "1", "1");
 
             mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} is changed."));
+
+
+        }
+
+        [Fact]
+        public void CodeChangesDetectionWithTwoActuators()
+        {
+            var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
+
+            var language = new LanguageProperties()
+            {
+                FolderName = "JavaScript",
+                FullProject = false
+            };
+            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var act2 = new Actuator() { Type = ActuatorType.GitHubIssue };
+            var actuators = new List<Actuator>()
+            {
+                act1, act2
+            };
+
+            var probe = new Probe()
+            {
+                Id = "1",
+                ProbeType = ProbeType.CodeChanges,
+                Object = new ObjectInformation() { Path = "test.js" },
+                Actuators = actuators
+            };
+
+            var data = new List<Repository>()
+            {
+                repo
+            }.AsQueryable();
+
+            var mockDb = GetDatabaseMocks(data);
+            mockDb.mockContext.Setup(i => i.Repositories).Returns(mockDb.mockSet.Object);
+            mockDb.mockSet.Setup(i => i.Find("1")).Returns(repo);
+
+            var probes = new List<Probe>(){
+                probe
+            };
+
+            var mockProviderFactory = new Mock<IProviderFactory>();
+            var mockLanguageService = new Mock<ILanguageService>();
+            var mockScriptExecutor = new Mock<IScriptExecutor>();
+            var mockContainerService = new Mock<IContainerService>();
+            var mockContainer = new Mock<Container>();
+            var mockProvider = new Mock<IProvider>();
+            var mockMessageFactory = new Mock<IMessageFactory>();
+            var mockMessageService = new Mock<IMessageService>();
+
+
+            mockContainer.Setup(i => i.CheckForProbes())
+                         .Returns(probes);
+
+            mockContainer.SetupGet(i => i.Folder)
+                         .Returns("Test");
+
+            mockContainerService.Setup(i => i.GetContainer("1"))
+                                .Returns(mockContainer.Object);
+
+            mockLanguageService.Setup(i => i.Define("test.js"))
+                               .Returns(language);
+
+            mockProviderFactory.Setup(i => i.GetProvider(repo.Provider))
+                                .Returns(mockProvider.Object);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, true))
+                                .Returns(true);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, false))
+                                .Returns(true);
+
+            var objectPath = Path.Combine(mockContainer.Object.Folder, probe.Object.Path);
+
+            mockScriptExecutor.SetupSequence(i => i.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name))
+                              .Returns("ast1")
+                              .Returns("ast2");
+
+            mockMessageFactory.Setup(i => i.GetMessageService(act1.Type))
+                              .Returns(mockMessageService.Object);
+
+            mockMessageFactory.Setup(i => i.GetMessageService(act2.Type))
+                              .Returns(mockMessageService.Object);
+
+            var control = new ProbeControl(mockProviderFactory.Object,
+                                            mockLanguageService.Object,
+                                            mockScriptExecutor.Object,
+                                            mockDb.mockContext.Object,
+                                            mockContainerService.Object,
+                                            mockMessageFactory.Object);
+
+            control.Execute(null, "1", "1");
+
+            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} is changed."), Times.Exactly(2));
+
+
+        }
+
+        [Fact]
+        public void CodeChangesNoDetectionWithOneActuator()
+        {
+            var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
+
+            var language = new LanguageProperties()
+            {
+                FolderName = "JavaScript",
+                FullProject = false
+            };
+            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var actuators = new List<Actuator>()
+            {
+                act1
+            };
+
+            var probe = new Probe()
+            {
+                Id = "1",
+                ProbeType = ProbeType.CodeChanges,
+                Object = new ObjectInformation() { Path = "test.js" },
+                Actuators = actuators
+            };
+
+            var data = new List<Repository>()
+            {
+                repo
+            }.AsQueryable();
+
+            var mockDb = GetDatabaseMocks(data);
+            mockDb.mockContext.Setup(i => i.Repositories).Returns(mockDb.mockSet.Object);
+            mockDb.mockSet.Setup(i => i.Find("1")).Returns(repo);
+
+            var probes = new List<Probe>(){
+                probe
+            };
+
+            var mockProviderFactory = new Mock<IProviderFactory>();
+            var mockLanguageService = new Mock<ILanguageService>();
+            var mockScriptExecutor = new Mock<IScriptExecutor>();
+            var mockContainerService = new Mock<IContainerService>();
+            var mockContainer = new Mock<Container>();
+            var mockProvider = new Mock<IProvider>();
+            var mockMessageFactory = new Mock<IMessageFactory>();
+            var mockMessageService = new Mock<IMessageService>();
+
+
+            mockContainer.Setup(i => i.CheckForProbes())
+                         .Returns(probes);
+
+            mockContainer.SetupGet(i => i.Folder)
+                         .Returns("Test");
+
+            mockContainerService.Setup(i => i.GetContainer("1"))
+                                .Returns(mockContainer.Object);
+
+            mockLanguageService.Setup(i => i.Define("test.js"))
+                               .Returns(language);
+
+            mockProviderFactory.Setup(i => i.GetProvider(repo.Provider))
+                                .Returns(mockProvider.Object);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, true))
+                                .Returns(true);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, false))
+                                .Returns(true);
+
+            var objectPath = Path.Combine(mockContainer.Object.Folder, probe.Object.Path);
+
+            mockScriptExecutor.SetupSequence(i => i.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name))
+                              .Returns("ast1")
+                              .Returns("ast1");
+
+            mockMessageFactory.Setup(i => i.GetMessageService(act1.Type))
+                              .Returns(mockMessageService.Object);
+
+
+            var control = new ProbeControl(mockProviderFactory.Object,
+                                            mockLanguageService.Object,
+                                            mockScriptExecutor.Object,
+                                            mockDb.mockContext.Object,
+                                            mockContainerService.Object,
+                                            mockMessageFactory.Object);
+
+            control.Execute(null, "1", "1");
+
+            mockMessageService.Verify(i => i.Send(It.IsAny<Probe>(), It.IsAny<string>()), Times.Never());
+        }
+
+        [Fact]
+        public void StaticAnalysisAlwaysWithOneActuator()
+        {
+            var repo = new Repository() { Name = "Test1", Id = "1", OwnerName = "Test", Provider = "Git" };
+
+            var language = new LanguageProperties()
+            {
+                FolderName = "JavaScript",
+                FullProject = false
+            };
+            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var actuators = new List<Actuator>()
+            {
+                act1
+            };
+
+            var probe = new Probe()
+            {
+                Id = "1",
+                ProbeType = ProbeType.StaticAnalysis,
+                Object = new ObjectInformation() { Path = "test.js" },
+                Actuators = actuators,
+                Metrics = new Metrics()
+                {
+                    Strategy = ReportType.Always,
+                    Arguments = new List<string>() { "arg1" }
+                }
+            };
+
+            var data = new List<Repository>()
+            {
+                repo
+            }.AsQueryable();
+
+            var mockDb = GetDatabaseMocks(data);
+            mockDb.mockContext.Setup(i => i.Repositories).Returns(mockDb.mockSet.Object);
+            mockDb.mockSet.Setup(i => i.Find("1")).Returns(repo);
+
+            var probes = new List<Probe>(){
+                probe
+            };
+
+            var mockProviderFactory = new Mock<IProviderFactory>();
+            var mockLanguageService = new Mock<ILanguageService>();
+            var mockScriptExecutor = new Mock<IScriptExecutor>();
+            var mockContainerService = new Mock<IContainerService>();
+            var mockContainer = new Mock<Container>();
+            var mockProvider = new Mock<IProvider>();
+            var mockMessageFactory = new Mock<IMessageFactory>();
+            var mockMessageService = new Mock<IMessageService>();
+
+
+            mockContainer.Setup(i => i.CheckForProbes())
+                         .Returns(probes);
+
+            mockContainer.SetupGet(i => i.Folder)
+                         .Returns("Test");
+
+            mockContainerService.Setup(i => i.GetContainer("1"))
+                                .Returns(mockContainer.Object);
+
+            mockLanguageService.Setup(i => i.Define("test.js"))
+                               .Returns(language);
+
+            mockProviderFactory.Setup(i => i.GetProvider(repo.Provider))
+                                .Returns(mockProvider.Object);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, true))
+                                .Returns(true);
+
+            mockProvider.Setup(i => i.Restore(repo, probe.Object.Path, false))
+                                .Returns(true);
+
+            var objectPath = Path.Combine(mockContainer.Object.Folder, probe.Object.Path);
+            var parameters = new List<string>();
+            
+            parameters.Add(It.IsAny<string>());
+            parameters.AddRange(probe.Metrics.Arguments.Select(i => $"'{i}'"));
+
+            mockScriptExecutor.SetupSequence(i => i.Execute(probe.ProbeType, language.FolderName, parameters.ToArray()))
+                              .Returns("result1")
+                              .Returns("result2");
+
+            mockMessageFactory.Setup(i => i.GetMessageService(act1.Type))
+                              .Returns(mockMessageService.Object);
+
+
+            var control = new ProbeControl(mockProviderFactory.Object,
+                                            mockLanguageService.Object,
+                                            mockScriptExecutor.Object,
+                                            mockDb.mockContext.Object,
+                                            mockContainerService.Object,
+                                            mockMessageFactory.Object);
+
+            control.Execute(null, "1", "1");
+
+            mockMessageService.Verify(i => i.Send(probe, $"{probe.Object.Name} static analysis results. result2"));
+
 
         }
     }
