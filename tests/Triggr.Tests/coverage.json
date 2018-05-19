@@ -4,15 +4,15 @@
    "Triggr.Container": {
     "System.Void Triggr.Container::.ctor()": {
      "12": {
-      "Hits": 5,
+      "Hits": 7,
       "IsBranchPoint": false
      },
      "13": {
-      "Hits": 5,
+      "Hits": 7,
       "IsBranchPoint": false
      },
      "15": {
-      "Hits": 5,
+      "Hits": 7,
       "IsBranchPoint": false
      }
     },
@@ -208,23 +208,63 @@
     }
    }
   },
+  "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/EmailConfig.cs": {
+   "Triggr.EmailConfig": {
+    "System.String Triggr.EmailConfig::get_SmtpServer()": {
+     "5": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String Triggr.EmailConfig::get_Username()": {
+     "6": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String Triggr.EmailConfig::get_Password()": {
+     "7": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String Triggr.EmailConfig::get_From()": {
+     "8": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Int32 Triggr.EmailConfig::get_Port()": {
+     "9": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Boolean Triggr.EmailConfig::get_Ssl()": {
+     "10": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    }
+   }
+  },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Probe.cs": {
    "Triggr.Probe": {
     "System.String Triggr.Probe::get_Id()": {
      "8": {
-      "Hits": 16,
+      "Hits": 20,
       "IsBranchPoint": false
      }
     },
     "Triggr.ProbeType Triggr.Probe::get_ProbeType()": {
      "9": {
-      "Hits": 6,
+      "Hits": 10,
       "IsBranchPoint": false
      }
     },
     "Triggr.ObjectInformation Triggr.Probe::get_Object()": {
      "10": {
-      "Hits": 37,
+      "Hits": 78,
       "IsBranchPoint": false
      }
     },
@@ -248,7 +288,7 @@
     },
     "System.Collections.Generic.List`1<Triggr.Actuator> Triggr.Probe::get_Actuators()": {
      "14": {
-      "Hits": 2,
+      "Hits": 5,
       "IsBranchPoint": false
      }
     }
@@ -256,19 +296,19 @@
    "Triggr.ObjectInformation": {
     "System.String Triggr.ObjectInformation::get_Name()": {
      "19": {
-      "Hits": 9,
+      "Hits": 22,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.ObjectInformation::get_Path()": {
      "20": {
-      "Hits": 20,
+      "Hits": 40,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.ObjectInformation::get_Type()": {
      "21": {
-      "Hits": 6,
+      "Hits": 14,
       "IsBranchPoint": false
      }
     }
@@ -290,7 +330,7 @@
    "Triggr.Actuator": {
     "Triggr.ActuatorType Triggr.Actuator::get_Type()": {
      "32": {
-      "Hits": 4,
+      "Hits": 15,
       "IsBranchPoint": false
      }
     },
@@ -312,255 +352,255 @@
    "Triggr.ProbeControl": {
     "System.Void Triggr.ProbeControl::.ctor(Triggr.Providers.IProviderFactory,Triggr.Services.ILanguageService,Triggr.Infrastructure.IScriptExecutor,Triggr.Data.TriggrContext,Triggr.Services.IContainerService,Triggr.Services.IMessageFactory)": {
      "24": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "25": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "26": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "27": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "28": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "29": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "30": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "31": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "32": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "33": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "34": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "35": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "36": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      }
     },
     "System.Void Triggr.ProbeControl::Execute(Hangfire.Server.PerformContext,System.String,System.String)": {
      "94": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "95": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "96": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "97": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "98": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "101": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "102": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": false
      },
      "104": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "105": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "107": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "109": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "111": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "113": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "114": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "115": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "117": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "120": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "122": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "124": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "127": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "128": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "130": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "132": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "134": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "136": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "137": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "138": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "139": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "140": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "141": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      }
     },
     "System.Void Triggr.ProbeControl::Control(Hangfire.Server.PerformContext,Triggr.Probe,System.String,System.String,System.String)": {
      "144": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "145": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "149": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "150": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "152": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "153": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "155": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "156": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "158": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "159": {
-      "Hits": 1,
+      "Hits": 2,
       "IsBranchPoint": false
      },
      "160": {
-      "Hits": 1,
+      "Hits": 2,
       "IsBranchPoint": false
      },
      "161": {
-      "Hits": 5,
+      "Hits": 12,
       "IsBranchPoint": true
      },
      "162": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "163": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "164": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "165": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "167": {
-      "Hits": 1,
+      "Hits": 2,
       "IsBranchPoint": true
      },
      "169": {
-      "Hits": 0,
-      "IsBranchPoint": false
+      "Hits": 1,
+      "IsBranchPoint": true
      },
      "171": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "174": {
@@ -712,37 +752,37 @@
       "IsBranchPoint": false
      },
      "228": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": true
      },
      "229": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      },
      "230": {
-      "Hits": 1,
+      "Hits": 3,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.ProbeControl::WriteToTemp(System.String)": {
      "233": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": false
      },
      "234": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": false
      },
      "236": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": false
      },
      "238": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": false
      },
      "239": {
-      "Hits": 2,
+      "Hits": 6,
       "IsBranchPoint": true
      }
     }
@@ -1118,18 +1158,84 @@
   },
   "/Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr/src/Triggr/Services/EmailService.cs": {
    "Triggr.Services.EmailService": {
+    "System.Void Triggr.Services.EmailService::.ctor(Microsoft.Extensions.Options.IOptions`1<Triggr.EmailConfig>)": {
+     "11": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "12": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "13": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "14": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     }
+    },
     "Triggr.ActuatorType Triggr.Services.EmailService::get_MessageType()": {
-     "5": {
+     "16": {
       "Hits": 4,
       "IsBranchPoint": false
      }
     },
-    "System.Void Triggr.Services.EmailService::Send(Triggr.Probe,System.String)": {
-     "8": {
+    "System.Void Triggr.Services.EmailService::Send(Triggr.Actuator,System.String)": {
+     "19": {
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "10": {
+     "20": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "22": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "23": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "25": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "26": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "28": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "29": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "31": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "32": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "34": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "35": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "37": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "38": {
       "Hits": 0,
       "IsBranchPoint": false
      }
@@ -1591,29 +1697,21 @@
       "Hits": 1,
       "IsBranchPoint": false
      },
-     "47": {
+     "49": {
       "Hits": 1,
       "IsBranchPoint": false
      },
-     "48": {
+     "50": {
       "Hits": 1,
       "IsBranchPoint": true
      }
     },
     "System.Boolean Triggr.Providers.GitProvider::Exist(Triggr.Data.Repository)": {
-     "51": {
+     "53": {
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "52": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
-     "55": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
-     "56": {
+     "54": {
       "Hits": 0,
       "IsBranchPoint": false
      },
@@ -1625,25 +1723,29 @@
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "61": {
+     "59": {
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "62": {
+     "60": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "63": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "64": {
       "Hits": 0,
       "IsBranchPoint": false
      }
     },
     "System.Boolean Triggr.Providers.GitProvider::IsValid(System.String)": {
-     "65": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
-     "66": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
      "67": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "68": {
       "Hits": 0,
       "IsBranchPoint": false
      },
@@ -1651,17 +1753,17 @@
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "70": {
+     "71": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "72": {
       "Hits": 0,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.Providers.GitProvider::Update(Triggr.Data.Repository)": {
-     "74": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
-     "75": {
+     "76": {
       "Hits": 0,
       "IsBranchPoint": false
      },
@@ -1677,17 +1779,17 @@
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "82": {
+     "83": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "84": {
       "Hits": 0,
       "IsBranchPoint": false
      }
     },
     "System.Boolean Triggr.Providers.GitProvider::Restore(Triggr.Data.Repository,System.String,System.Boolean)": {
-     "85": {
-      "Hits": 0,
-      "IsBranchPoint": false
-     },
-     "86": {
+     "87": {
       "Hits": 0,
       "IsBranchPoint": false
      },
@@ -1699,11 +1801,11 @@
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "93": {
+     "92": {
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "96": {
+     "95": {
       "Hits": 0,
       "IsBranchPoint": false
      },
@@ -1711,7 +1813,11 @@
       "Hits": 0,
       "IsBranchPoint": false
      },
-     "99": {
+     "100": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "101": {
       "Hits": 0,
       "IsBranchPoint": false
      }
@@ -1876,13 +1982,13 @@
    "Triggr.Infrastructure.LanguageProperties": {
     "System.String Triggr.Infrastructure.LanguageProperties::get_FolderName()": {
      "5": {
-      "Hits": 27,
+      "Hits": 39,
       "IsBranchPoint": false
      }
     },
     "System.Boolean Triggr.Infrastructure.LanguageProperties::get_FullProject()": {
      "6": {
-      "Hits": 13,
+      "Hits": 15,
       "IsBranchPoint": false
      }
     }
@@ -2460,13 +2566,13 @@
    "Triggr.Data.Repository": {
     "System.String Triggr.Data.Repository::get_Id()": {
      "7": {
-      "Hits": 45,
+      "Hits": 47,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.Data.Repository::get_Provider()": {
      "8": {
-      "Hits": 35,
+      "Hits": 43,
       "IsBranchPoint": false
      }
     },
@@ -2490,13 +2596,13 @@
     },
     "System.String Triggr.Data.Repository::get_OwnerName()": {
      "12": {
-      "Hits": 12,
+      "Hits": 14,
       "IsBranchPoint": false
      }
     },
     "System.String Triggr.Data.Repository::get_Name()": {
      "13": {
-      "Hits": 19,
+      "Hits": 21,
       "IsBranchPoint": false
      }
     },
@@ -2524,15 +2630,15 @@
    "Triggr.Data.TriggrContext": {
     "System.Void Triggr.Data.TriggrContext::.ctor()": {
      "7": {
-      "Hits": 11,
+      "Hits": 13,
       "IsBranchPoint": false
      },
      "8": {
-      "Hits": 11,
+      "Hits": 13,
       "IsBranchPoint": false
      },
      "10": {
-      "Hits": 11,
+      "Hits": 13,
       "IsBranchPoint": false
      }
     },

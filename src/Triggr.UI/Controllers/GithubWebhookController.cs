@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebHooks;
 using Newtonsoft.Json.Linq;
 using Triggr.UI.Models;
 using Microsoft.Extensions.Primitives;

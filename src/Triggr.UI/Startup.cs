@@ -40,9 +40,9 @@ namespace Triggr.UI
             });
 
 
-            services.AddMvc()
-                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                    .AddGitHubWebHooks();
+            services.AddMvc();
+                    //.SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                    //.AddGitHubWebHooks();
 
             services.AddHangfire(i =>
             {
@@ -72,7 +72,7 @@ namespace Triggr.UI
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
+                //app.UseHsts();
             }
             
             app.UseStaticFiles();

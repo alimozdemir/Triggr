@@ -104,7 +104,7 @@ namespace Triggr
                 if (probe != null)
                 {
 
-                    hangfireContext?.WriteLine($"{probe.Object.Path} is found.");
+                    hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"{probe.Object.Path} is found.");
                     // define the language
                     var language = _languageService.Define(probe.Object.Path);
                     // get the provider
@@ -112,14 +112,14 @@ namespace Triggr
                     // restore to previous file
                     if (provider.Restore(repository, probe.Object.Path, true))
                     {
-                        hangfireContext?.WriteLine($"{probe.Object.Path} is restored to old.");
+                        hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"{probe.Object.Path} is restored to old.");
                         // get the file path
                         var objectPath = Path.Combine(container.Folder, probe.Object.Path);
 
                         // look for the object
                         var ast1 = _scriptExecutor.Execute("AST", language.FolderName, objectPath, probe.Object.Type, probe.Object.Name);
 
-                        hangfireContext?.WriteLine($"{probe.Object.Path} old version is loaded.");
+                        hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"{probe.Object.Path} old version is loaded.");
 
                         var temp1 = WriteToTemp(ast1);
 
@@ -131,7 +131,7 @@ namespace Triggr
 
                             var temp2 = WriteToTemp(ast2);
 
-                            hangfireContext?.WriteLine($"{probe.Object.Path} new version is loaded.");
+                            hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"{probe.Object.Path} new version is loaded.");
 
                             Control(hangfireContext, probe, temp1, temp2, language.FolderName);
                         }
@@ -145,31 +145,38 @@ namespace Triggr
             switch (probe.ProbeType)
             {
                 case ProbeType.CodeChanges:
+
+                    hangfireContext?.WriteLine(ConsoleTextColor.Green, "CodeChanges probe is activated.");
                     // load file1, and file2 for comparison
                     var file1 = File.ReadAllText(temp1);
                     var file2 = File.ReadAllText(temp2);
 
-                    hangfireContext?.WriteLine("Old version");
+                    hangfireContext?.WriteLine(ConsoleTextColor.Gray, "Old version");
                     hangfireContext?.WriteLine(file1);
 
-                    hangfireContext?.WriteLine("New version");
+                    hangfireContext?.WriteLine(ConsoleTextColor.Gray, "New version");
                     hangfireContext?.WriteLine(file2);
 
                     if (!file1.Equals(file2))
                     {
-                        hangfireContext?.WriteLine($"{probe.Object.Name} is changed.");
+                        hangfireContext?.WriteLine(ConsoleTextColor.Red, $"{probe.Object.Name} is changed.");
                         foreach (var act in probe.Actuators)
                         {
                             var service = _messageFactory.GetMessageService(act.Type);
                             service.Send(act, $"{probe.Object.Name} is changed.");
+
+                            ActuatorPrint(hangfireContext, act);
                         }
 
                     }
                     else
-                        hangfireContext?.WriteLine($"{probe.Object.Name} isn't changed.");
+                        hangfireContext?.WriteLine(ConsoleTextColor.Red, $"{probe.Object.Name} isn't changed.");
 
                     break;
                 case ProbeType.StaticAnalysis:
+                    hangfireContext?.WriteLine(ConsoleTextColor.Green, "StaticAnalysis probe is activated.");
+                    hangfireContext?.WriteLine($"Strategy of the probe is {probe.Metrics.Strategy}.");
+
                     // collect the parameters
                     List<string> parameters = new List<string>();
 
@@ -191,14 +198,16 @@ namespace Triggr
                     // report the results upon strategy
                     if (probe.Metrics.Strategy == ReportType.Always)
                     {
-                        if (string.IsNullOrEmpty(result2))
-                            hangfireContext?.WriteLine("No result.");
+                        if (string.IsNullOrEmpty(result2) || result2.Equals("-1"))
+                            hangfireContext?.WriteLine(ConsoleTextColor.Red, "No result.");
                         else
                         {
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
                                 service.Send(act, $"{probe.Object.Name} static analysis results. {result2}");
+
+                                ActuatorPrint(hangfireContext, act);
                             }
                             hangfireContext?.WriteLine(result2);
                         }
@@ -217,6 +226,9 @@ namespace Triggr
                                 service.Send(act, $"{probe.Object.Name} has different static analysis results between two commits." +
                                 "Old" + Environment.NewLine +
                                       result1 + Environment.NewLine + "**************" + Environment.NewLine + result2);
+
+
+                                ActuatorPrint(hangfireContext, act);
                             }
                         }
                     }
@@ -227,6 +239,16 @@ namespace Triggr
             // delete temporary files
             File.Delete(temp1);
             File.Delete(temp2);
+        }
+
+        private void ActuatorPrint(PerformContext hangfireContext, Actuator act)
+        {
+            hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"An actuator found, {act.Type}");
+            if (act.Type == ActuatorType.Email)
+            {
+                foreach (var mail in act.Emails)
+                    hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"Email:{mail}");
+            }
         }
 
         private string WriteToTemp(string data)

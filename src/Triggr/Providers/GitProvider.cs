@@ -18,7 +18,7 @@ namespace Triggr.Providers
 
         public GitProvider()
         {
-            
+
         }
         public GitProvider(RepositoryStorage storage, IScriptExecutor scriptExecutor, LibGit2SharpWrapper git)
         {
@@ -45,13 +45,14 @@ namespace Triggr.Providers
             var cloneResult = _git.Clone(data.Url, path);
             // hotfix: it was returning a path with .git (e.g. 'repositories/1/.git')
             // but we need absolute path of the repository, so I changed it to path from cloneResult
-            return path;
+
+            return string.IsNullOrEmpty(cloneResult) ? "" : path;
         }
 
         public bool Exist(Data.Repository data)
         {
             var path = _storage.Combine(data.Id);
-            
+
             // ensure the directory is created
             if (!Directory.Exists(path))
             {
@@ -76,7 +77,7 @@ namespace Triggr.Providers
             bool result = false;
 
             var path = _storage.Combine(data.Id);
-            
+
             result = _git.Update(path);
 
             return result ? path : string.Empty;
