@@ -1,8 +1,11 @@
-# triggr
+# Triggr
 
-ITU Graduation project
+This is my ITU graduation project.
 
-## How to run
+Triggr allows  software  developers  define  probes  as
+JSON files for monitoring code changes over the main shared codebase (e.g. Git) or calculating metrics for a selected piece of code. It also supports sending customized feedback to the developers  through  pre-specified  channels.  The  user-defined probes  are  triggered  through  continuous  monitoring  of  the shared code repository rather than being dependent on a build pipeline of a CI server.
+
+## How to ?
 
 You have to download .NET Core from [download](https://www.microsoft.com/net/download/)
 
@@ -12,7 +15,7 @@ Follow the instructions
 ```
 git clone https://github.com/lyzerk/Triggr.git
 cd Triggr
-dotnet restore src/Triggr.UI/Triggr.UI.csproj
+dotnet restore
 ```
 
 If you do have VSCode.

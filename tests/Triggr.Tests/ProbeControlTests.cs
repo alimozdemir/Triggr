@@ -40,7 +40,7 @@ namespace Triggr.Tests
                 FolderName = "JavaScript",
                 FullProject = false
             };
-            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var act1 = new Actuator() { Type = ActuatorType.Email, Emails = new List<string>() };
             var actuators = new List<Actuator>()
             {
                 act1
@@ -132,7 +132,7 @@ namespace Triggr.Tests
                 FolderName = "JavaScript",
                 FullProject = false
             };
-            var act1 = new Actuator() { Type = ActuatorType.Email };
+            var act1 = new Actuator() { Type = ActuatorType.Email, Emails = new List<string>() };
             var act2 = new Actuator() { Type = ActuatorType.GitHubIssue };
             var actuators = new List<Actuator>()
             {
