@@ -4,6 +4,8 @@ namespace Triggr.Infrastructure
 {
     public class UnixExecutor : IShellExecutor
     {
+        public string Extension => ".sh";
+
         public string Execute(string cmd)
         {
             // reference : https://loune.net/2017/06/running-shell-bash-commands-in-net-core/

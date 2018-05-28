@@ -27,9 +27,9 @@ namespace Triggr.Infrastructure
             string result = "-1";
 
             var path = _storage.Combine(folder, language);
-            if (File.Exists(Path.Combine(path, "run.sh")))
+            if (File.Exists(Path.Combine(path, $"run{_shellExecutor.Extension}")))
             {
-                var command = $"cd {path} && ./run.sh";
+                var command = $"cd {path} && ./run{_shellExecutor.Extension}";
 
                 if(folder.Equals("AST"))
                     ArgumentCheck(3, arg);
@@ -46,7 +46,7 @@ namespace Triggr.Infrastructure
             string result = "-1";
             var path = _storage.Combine("Common");
 
-            var command = $"cd {path} && ./{type}.sh";
+            var command = $"cd {path} && ./{type}{_shellExecutor.Extension}";
             command = command + " " + string.Join(" ", arg);
             //todo: more consistent way
             result = _shellExecutor.Execute(command);
