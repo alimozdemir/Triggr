@@ -1,7 +1,38 @@
-﻿@{
+﻿@model Dictionary<string, Triggr.Infrastructure.LanguageProperties>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="row" style="margin-top:30px;">
-    <div class="col-md-12"></div>
+    <div class="col-md-12">
+        <h2>Welcome to Triggr</h2>
+
+        You can add manage your repositories from <a asp-action="Index" asp-controller="Repository">here.</a> Also, you can monitor all activities from <a href="/hangfire">Hangfire Dashboard</a>.
+
+    </div>
+
+</div>
+<div class="row" style="margin-top:30px">
+        <div class="col-md-12">
+            
+        <p>Following table shows supported programming languages in the system.</p>
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Extension</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Value.FolderName</td>
+                        <td>@item.Key</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

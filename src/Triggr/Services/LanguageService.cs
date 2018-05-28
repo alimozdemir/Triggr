@@ -32,6 +32,7 @@ namespace Triggr.Services
             }
         }
 
+        public Dictionary<string, LanguageProperties> Languages => _languages;
 
         public LanguageProperties Define(string path)
         {

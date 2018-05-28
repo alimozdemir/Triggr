@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll",
+            "program": "${workspaceFolder}/src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/Triggr.UI",
             "stopAtEntry": false,

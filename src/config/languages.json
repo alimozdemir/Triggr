@@ -6,9 +6,5 @@
     ".js": {
         "FolderName": "JavaScript",
         "FullProject": false
-    },
-    ".cs": {
-        "FolderName": "CSharp",
-        "FullProject": true
     }
 }
