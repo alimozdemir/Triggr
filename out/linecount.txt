@@ -1,0 +1,66 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-05-29 21:50:30
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 54
+total code lines : 1673
+total comment lines : 247
+total blank lines : 324
+
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 43, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 94, comment is 1, blank is 12.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/Probe.cs, code is 47, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 26, comment is 0, blank is 6.
+===============================================================================
