@@ -33,11 +33,15 @@ namespace Triggr.UI.Controllers
                                             .SelectMany(c => c.Modified)
                                             .Distinct()
                                             .ToList();
-                                            
+
                             var owner = model.Repository.Owner.Name;
                             var repoName = model.Repository.Name;
                             _jobClient.Enqueue<TController>(i => i.Trigger(null, repoName, owner, changedFiles));
-                            
+
+                            return Ok();
+                        }
+                        else if (eventName.Equals("ping"))
+                        {
                             return Ok();
                         }
                     }

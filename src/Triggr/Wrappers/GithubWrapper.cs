@@ -26,6 +26,7 @@ namespace Triggr.Wrappers
             cfg.Add("content_type", "json");
 
             var info = new NewRepositoryHook("web", cfg);
+            info.Active = true;
             return _client.Repository.Hooks.Create(ownerName, repoName, info);
         }
     }

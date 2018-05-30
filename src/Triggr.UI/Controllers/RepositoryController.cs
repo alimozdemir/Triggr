@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Triggr.Data;
 using Triggr.Providers;
 using Triggr.Services;
+using Triggr.UI.Models;
 
 namespace Triggr.UI.Controllers
 {
@@ -59,7 +60,7 @@ namespace Triggr.UI.Controllers
 
                     if (dbRecord == null)
                     {
-                        Repository repository = new Repository();
+                        Data.Repository repository = new Data.Repository();
                         repository.Provider = providerType;
                         repository.UpdatedTime = DateTimeOffset.Now;
                         repository.Url = model.Url;
@@ -85,7 +86,7 @@ namespace Triggr.UI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RemoveRepository([FromBody]Models.IdFormViewModel model)
+        public async Task<IActionResult> RemoveRepository([FromBody]IdStringFormViewModel model) //[FromBody]Models.IdFormViewModel
         {
             bool result = false;
 
