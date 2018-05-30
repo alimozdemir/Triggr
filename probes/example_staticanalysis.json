@@ -1,0 +1,23 @@
+{
+    "Id": "1",
+    "ProbeType": "StaticAnalysis",
+    "Object": {
+        "Name": "foo",
+        "Path": "path",
+        "Type": "function"
+    },
+    "Actuators": [
+        {
+            "Type": "Email",
+            "Emails": [
+                "john.doe@gmail.com"
+            ]
+        }
+    ],
+    "Metrics": {
+        "Strategy": "Always",
+        "Arguments": [
+        ]
+    },
+    "Modifiers": null
+}

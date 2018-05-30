@@ -9,7 +9,6 @@ namespace Triggr
         public ProbeType ProbeType { get; set; }
         public ObjectInformation Object { get; set; }
         public string Modifiers { get; set; }
-        public DateTimeOffset CreationDate { get; set; }
         public Metrics Metrics { get; set; }
         public List<Actuator> Actuators { get; set; }
     }
