@@ -81,6 +81,7 @@
                     <td v-text="item.provider"></td>
                     <td>{{item.updatedTime | duration}}</td>
                     <td>
+                        <a href="javascript:;" v-on:click="probesRepository(item.id)" class="btn btn-info">Information</a>
                         <a href="javascript:;" v-on:click="removeRepository(item.id)" class="btn btn-warning">Delete</a>
                     </td>
                 </tr>

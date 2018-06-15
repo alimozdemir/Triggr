@@ -98,6 +98,9 @@ var app = new Vue({
                 this.model.valid = false;
                 this.model.webhook = false;
             }
+        },
+        probesRepository(id) {
+            window.location.href = '/Repository/Container/' + id;
         }
     }
 })

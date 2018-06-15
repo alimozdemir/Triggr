@@ -2,16 +2,76 @@
 EXTENSION NAME : linecount
 EXTENSION VERSION : 0.1.7
 -------------------------------------------------------------------------------
-count time : 2018-05-29 21:50:30
+count time : 2018-06-03 13:47:53
 count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
-total files : 54
-total code lines : 1673
-total comment lines : 247
-total blank lines : 324
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
 
-src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 43, comment is 0, blank is 8.
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .sln|             71|              0|              0|   0.13|
+   |            .md|             36|              3|             15|  0.067|
+   |               |            111|             42|             26|   0.21|
+   |          .json|          34788|              5|            459|     64|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.030|
+   |         .props|             36|              0|              0|  0.067|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
 src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
-src/Triggr.UI/Controllers/RepositoryController.cs, code is 94, comment is 1, blank is 12.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
 src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
 src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
 src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
@@ -22,11 +82,84 @@ src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
 src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
 src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
 src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
 src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
 src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
 src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
 src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
 src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
 src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
 src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
 src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
@@ -41,7 +174,17 @@ src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6
 src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
 src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
 src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
-src/Triggr/Probe.cs, code is 47, comment is 0, blank is 6.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
 src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
 src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
 src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
@@ -61,6 +204,2110 @@ src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
 src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
 src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
 src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
 src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
-src/Triggr/Wrappers/GithubWrapper.cs, code is 26, comment is 0, blank is 6.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 13:51:54
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.21|
+   |            .md|             36|              3|             15|  0.067|
+   |          .json|          34788|              5|            459|     64|
+   |           .sln|             71|              0|              0|   0.13|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .props|             36|              0|              0|  0.067|
+   |         .cache|             16|              0|              0|  0.030|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |           .xml|             38|              0|              0|  0.070|
+   |           .txt|             63|              2|              8|   0.12|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .css|           7398|             41|             22|     14|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   |            .sh|             36|              5|              0|  0.067|
+   |            .py|             36|              2|             20|  0.067|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:03:32
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.21|
+   |           .sln|             71|              0|              0|   0.13|
+   |          .json|          34788|              5|            459|     64|
+   |            .md|             36|              3|             15|  0.067|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .props|             36|              0|              0|  0.067|
+   |         .cache|             16|              0|              0|  0.030|
+   |           .xml|             38|              0|              0|  0.070|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .txt|             63|              2|              8|   0.12|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:07:13
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .sln|             71|              0|              0|   0.13|
+   |            .md|             36|              3|             15|  0.067|
+   |               |            111|             42|             26|   0.21|
+   |          .json|          34788|              5|            459|     64|
+   |        .csproj|             33|              0|              7|  0.061|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |            .cs|           1678|            248|            324|    3.1|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.030|
+   |         .props|             36|              0|              0|  0.067|
+   |           .xml|             38|              0|              0|  0.070|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:07:22
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |            .md|             36|              3|             15|  0.067|
+   |           .sln|             71|              0|              0|   0.13|
+   |               |            111|             42|             26|   0.21|
+   |          .json|          34788|              5|            459|     64|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.030|
+   |         .props|             36|              0|              0|  0.067|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |           .css|           7398|             41|             22|     14|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:08:04
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .sln|             71|              0|              0|   0.13|
+   |            .md|             36|              3|             15|  0.067|
+   |               |            111|             42|             26|   0.21|
+   |          .json|          34788|              5|            459|     64|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.030|
+   |         .props|             36|              0|              0|  0.067|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .css|           7398|             41|             22|     14|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:10:54
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 177
+total code lines : 54107
+total comment lines : 2396
+total blank lines : 3499
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.21|
+   |            .md|             36|              3|             15|  0.067|
+   |           .sln|             71|              0|              0|   0.13|
+   |          .json|          34788|              5|            459|     64|
+   |           .xml|             38|              0|              0|  0.070|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.030|
+   |         .props|             36|              0|              0|  0.067|
+   |            .sh|             36|              5|              0|  0.067|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.067|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:16:45
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 178
+total code lines : 54298
+total comment lines : 2396
+total blank lines : 3507
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.20|
+   |            .md|            227|              3|             23|   0.42|
+   |          .json|          34788|              5|            459|     64|
+   |           .sln|             71|              0|              0|   0.13|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |         .props|             36|              0|              0|  0.066|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .cache|             16|              0|              0|  0.029|
+   |            .sh|             36|              5|              0|  0.066|
+   |            .py|             36|              2|             20|  0.066|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+out/linecount.md, code is 191, comment is 0, blank is 8.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:17:52
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 178
+total code lines : 54299
+total comment lines : 2396
+total blank lines : 3507
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.20|
+   |          .json|          34788|              5|            459|     64|
+   |            .md|            228|              3|             23|   0.42|
+   |           .sln|             71|              0|              0|   0.13|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |       .targets|             71|              0|              0|   0.13|
+   |         .props|             36|              0|              0|  0.066|
+   |         .cache|             16|              0|              0|  0.029|
+   |            .sh|             36|              5|              0|  0.066|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.066|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+out/linecount.md, code is 192, comment is 0, blank is 8.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 14:23:20
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 178
+total code lines : 54299
+total comment lines : 2396
+total blank lines : 3507
+
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            111|             42|             26|   0.20|
+   |           .sln|             71|              0|              0|   0.13|
+   |            .md|            228|              3|             23|   0.42|
+   |          .json|          34788|              5|            459|     64|
+   |     .userprefs|             13|              0|              0|  0.024|
+   |        .csproj|             33|              0|              7|  0.061|
+   |            .cs|           1678|            248|            324|    3.1|
+   |           .xml|             38|              0|              0|  0.070|
+   |         .cache|             16|              0|              0|  0.029|
+   |         .props|             36|              0|              0|  0.066|
+   |       .targets|             71|              0|              0|   0.13|
+   |            .sh|             36|              5|              0|  0.066|
+   |        .cshtml|            275|              0|             27|   0.51|
+   |            .py|             36|              2|             20|  0.066|
+   |            .js|           9111|           2048|           2591|     17|
+   |           .css|           7398|             41|             22|     14|
+   |           .svg|            292|              0|              0|   0.54|
+   |           .txt|             63|              2|              8|   0.12|
+   |  .CopyComplete|              0|              0|              0|    0.0|
+   |           .map|              5|              0|              0| 0.0092|
+   -------------------------------------------------------------------------
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+out/linecount.md, code is 192, comment is 0, blank is 8.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-06-03 18:05:57
+count workspace : /Users/alimozdemir/Documents/CourseProjects/Graduation/Triggr
+total files : 178
+total code lines : 54323
+total comment lines : 2396
+total blank lines : 3511
+
+.gitignore, code is 94, comment is 42, blank is 22.
+.vs/Triggr/xs/UserPrefs.xml, code is 38, comment is 0, blank is 0.
+out/linecount.md, code is 216, comment is 0, blank is 12.
+probes/example_codechanges.json, code is 17, comment is 0, blank is 1.
+probes/example_staticanalysis.json, code is 22, comment is 0, blank is 1.
+README.md, code is 18, comment is 3, blank is 11.
+src/config/languages.json, code is 10, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/index.js, code is 35, comment is 8, blank is 12.
+src/Scripts/AST/JavaScript/package-lock.json, code is 39, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/package.json, code is 15, comment is 0, blank is 0.
+src/Scripts/AST/JavaScript/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/main.py, code is 27, comment is 2, blank is 13.
+src/Scripts/AST/Python/run.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/AST/Python/test.py, code is 9, comment is 0, blank is 7.
+src/Scripts/Common/LastUpdatedFiles.sh, code is 9, comment is 2, blank is 0.
+src/Scripts/Common/Restore.sh, code is 1, comment is 1, blank is 0.
+src/Scripts/StaticAnalysis/JavaScript/run.sh, code is 11, comment is 0, blank is 0.
+src/Scripts/StaticAnalysis/Python/run.sh, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/app.db, it is a binary file.
+src/Triggr.UI/appsettings.Development.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/appsettings.json, code is 16, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.deps.json, code is 6373, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.0/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.deps.json, code is 6449, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.dev.json, code is 8, comment is 0, blank is 1.
+src/Triggr.UI/bin/Debug/netcoreapp2.1/Triggr.UI.runtimeconfig.json, code is 12, comment is 0, blank is 0.
+src/Triggr.UI/bundleconfig.json, code is 18, comment is 5, blank is 2.
+src/Triggr.UI/Controllers/GithubWebhookController.cs, code is 47, comment is 0, blank is 8.
+src/Triggr.UI/Controllers/HomeController.cs, code is 30, comment is 0, blank is 3.
+src/Triggr.UI/Controllers/RepositoryController.cs, code is 95, comment is 2, blank is 12.
+src/Triggr.UI/emailsettings.json, code is 10, comment is 0, blank is 0.
+src/Triggr.UI/hangfire.db, it is a binary file.
+src/Triggr.UI/Migrations/20180206135434_initial.cs, code is 31, comment is 0, blank is 2.
+src/Triggr.UI/Migrations/20180206135434_initial.Designer.cs, code is 35, comment is 1, blank is 8.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.cs, code is 51, comment is 0, blank is 10.
+src/Triggr.UI/Migrations/20180305152716_webhook_info.Designer.cs, code is 41, comment is 1, blank is 13.
+src/Triggr.UI/Migrations/TriggrContextModelSnapshot.cs, code is 40, comment is 1, blank is 13.
+src/Triggr.UI/Models/AddRepositoryViewModel.cs, code is 12, comment is 0, blank is 1.
+src/Triggr.UI/Models/ErrorViewModel.cs, code is 9, comment is 0, blank is 2.
+src/Triggr.UI/Models/GithubPushModel.cs, code is 26, comment is 0, blank is 6.
+src/Triggr.UI/Models/IdFormViewModel.cs, code is 14, comment is 0, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.csproj.FileListAbsolute.txt, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.0/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfo.cs, code is 9, comment is 10, blank is 4.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CopyComplete, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csproj.FileListAbsolute.txt, code is 14, comment is 0, blank is 0.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.csprojResolveAssemblyReference.cache, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.dll, it is a binary file.
+src/Triggr.UI/obj/Debug/netcoreapp2.1/Triggr.UI.pdb, it is a binary file.
+src/Triggr.UI/obj/project.assets.json, code is 12967, comment is 0, blank is 315.
+src/Triggr.UI/obj/Triggr.UI.csproj.EntityFrameworkCore.targets, code is 25, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/obj/Triggr.UI.csproj.nuget.g.targets, code is 13, comment is 0, blank is 0.
+src/Triggr.UI/Program.cs, code is 23, comment is 0, blank is 3.
+src/Triggr.UI/Services/HangfireActivator.cs, code is 18, comment is 0, blank is 3.
+src/Triggr.UI/Services/TriggrExtension.cs, code is 48, comment is 3, blank is 12.
+src/Triggr.UI/Startup.cs, code is 74, comment is 6, blank is 15.
+src/Triggr.UI/Triggr.UI.csproj, code is 20, comment is 0, blank is 5.
+src/Triggr.UI/Views/_ViewImports.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/_ViewStart.cshtml, code is 3, comment is 0, blank is 0.
+src/Triggr.UI/Views/Home/Index.cshtml, code is 32, comment is 0, blank is 6.
+src/Triggr.UI/Views/Repository/Index.cshtml, code is 131, comment is 0, blank is 14.
+src/Triggr.UI/Views/Shared/_Layout.cshtml, code is 69, comment is 0, blank is 4.
+src/Triggr.UI/Views/Shared/_ValidationScriptsPartial.cshtml, code is 18, comment is 0, blank is 0.
+src/Triggr.UI/Views/Shared/Error.cshtml, code is 19, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/css/modal.css, code is 49, comment is 8, blank is 10.
+src/Triggr.UI/wwwroot/css/site.css, code is 23, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/css/site.min.css, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/favicon.ico, it is a binary file.
+src/Triggr.UI/wwwroot/images/banner1.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner2.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner3.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/images/banner4.svg, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/moment.min.js, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/js/repository.js, code is 94, comment is 0, blank is 9.
+src/Triggr.UI/wwwroot/js/site.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/js/site.min.js, code is 0, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/.bower.json, code is 42, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css, code is 581, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css, code is 6742, comment is 8, blank is 7.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css, code is 1, comment is 6, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg, code is 288, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2, it is a binary file.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.js, code is 1597, comment is 226, blank is 582.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js, code is 2, comment is 5, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/dist/js/npm.js, code is 12, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/bootstrap/LICENSE, code is 17, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/.bower.json, code is 40, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js, code is 15, comment is 7, blank is 5.
+src/Triggr.UI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, code is 1, comment is 4, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/.bower.json, code is 37, comment is 0, blank is 3.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.js, code is 70, comment is 64, blank is 17.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.js, code is 931, comment is 116, blank is 139.
+src/Triggr.UI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery-validation/LICENSE.md, code is 18, comment is 0, blank is 4.
+src/Triggr.UI/wwwroot/lib/jquery/.bower.json, code is 23, comment is 0, blank is 2.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.js, code is 6349, comment is 1609, blank is 1827.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.js, code is 1, comment is 1, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/dist/jquery.min.map, code is 1, comment is 0, blank is 0.
+src/Triggr.UI/wwwroot/lib/jquery/LICENSE.txt, code is 28, comment is 2, blank is 8.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.deps.json, code is 2167, comment is 0, blank is 0.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/bin/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/Container.cs, code is 65, comment is 1, blank is 15.
+src/Triggr/Data/Repository.cs, code is 17, comment is 0, blank is 1.
+src/Triggr/Data/TriggrContext.cs, code is 15, comment is 0, blank is 4.
+src/Triggr/EmailConfig.cs, code is 12, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IScriptExecutor.cs, code is 9, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IShellExecutor.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/IStorage.cs, code is 13, comment is 18, blank is 0.
+src/Triggr/Infrastructure/LanguageProperties.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Infrastructure/RepositoryStorage.cs, code is 47, comment is 0, blank is 4.
+src/Triggr/Infrastructure/ScriptExecutor.cs, code is 50, comment is 1, blank is 12.
+src/Triggr/Infrastructure/ScriptStorage.cs, code is 47, comment is 1, blank is 6.
+src/Triggr/Infrastructure/UnixExecutor.cs, code is 30, comment is 1, blank is 7.
+src/Triggr/Infrastructure/WindowsExecutor.cs, code is 11, comment is 0, blank is 1.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfo.cs, code is 9, comment is 5, blank is 2.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.AssemblyInfoInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.CoreCompileInputs.cache, code is 1, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.csproj.FileListAbsolute.txt, code is 8, comment is 0, blank is 0.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.dll, it is a binary file.
+src/Triggr/obj/Debug/netstandard2.0/Triggr.pdb, it is a binary file.
+src/Triggr/obj/project.assets.json, code is 6493, comment is 0, blank is 123.
+src/Triggr/obj/Triggr.csproj.EntityFrameworkCore.targets, code is 24, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.cache, code is 5, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.props, code is 18, comment is 0, blank is 0.
+src/Triggr/obj/Triggr.csproj.nuget.g.targets, code is 9, comment is 0, blank is 0.
+src/Triggr/Probe.cs, code is 46, comment is 0, blank is 6.
+src/Triggr/ProbeControl.cs, code is 154, comment is 75, blank is 36.
+src/Triggr/Providers/GitProvider.cs, code is 74, comment is 6, blank is 23.
+src/Triggr/Providers/IProvider.cs, code is 15, comment is 28, blank is 2.
+src/Triggr/Providers/IProviderFactory.cs, code is 9, comment is 10, blank is 1.
+src/Triggr/Providers/LibGit2SharpWrapper.cs, code is 26, comment is 1, blank is 5.
+src/Triggr/Providers/ProviderFactory.cs, code is 29, comment is 0, blank is 5.
+src/Triggr/Services/ContainerService.cs, code is 63, comment is 0, blank is 15.
+src/Triggr/Services/EmailService.cs, code is 30, comment is 0, blank is 10.
+src/Triggr/Services/IContainerService.cs, code is 12, comment is 0, blank is 2.
+src/Triggr/Services/ILanguageService.cs, code is 10, comment is 5, blank is 2.
+src/Triggr/Services/IMessageFactory.cs, code is 7, comment is 0, blank is 0.
+src/Triggr/Services/IMessageService.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Services/IWebhookFactory.cs, code is 9, comment is 0, blank is 1.
+src/Triggr/Services/IWebhookService.cs, code is 10, comment is 0, blank is 1.
+src/Triggr/Services/LanguageService.cs, code is 40, comment is 0, blank is 8.
+src/Triggr/Services/MessageFactory.cs, code is 23, comment is 0, blank is 6.
+src/Triggr/Services/WebhookFactory.cs, code is 23, comment is 0, blank is 4.
+src/Triggr/Services/WebhookService.cs, code is 56, comment is 0, blank is 11.
+src/Triggr/TController.cs, code is 46, comment is 67, blank is 9.
+src/Triggr/Triggr.csproj, code is 13, comment is 0, blank is 2.
+src/Triggr/Triggr.userprefs, code is 13, comment is 0, blank is 0.
+src/Triggr/TriggrConfig.cs, code is 8, comment is 0, blank is 0.
+src/Triggr/Wrappers/GithubWrapper.cs, code is 27, comment is 0, blank is 6.
+Triggr.sln, code is 71, comment is 0, blank is 0.
 ===============================================================================

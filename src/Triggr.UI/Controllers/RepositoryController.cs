@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Hangfire;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Triggr.Data;
 using Triggr.Providers;
 using Triggr.Services;
@@ -18,12 +19,16 @@ namespace Triggr.UI.Controllers
         private readonly TriggrContext _context;
         private readonly IProviderFactory _providerFactory;
         private readonly IWebhookFactory _webhookFactory;
+        private readonly IBackgroundJobClient _jobClient;
+        private readonly IContainerService _containerService;
 
-        public RepositoryController(TriggrContext context, IProviderFactory providerFactory, IWebhookFactory webhookFactory)
+        public RepositoryController(TriggrContext context, IProviderFactory providerFactory, IWebhookFactory webhookFactory, IBackgroundJobClient jobClient, IContainerService containerService)
         {
             _context = context;
             _providerFactory = providerFactory;
             _webhookFactory = webhookFactory;
+            _jobClient = jobClient;
+            _containerService = containerService;
         }
         public IActionResult Index()
         {
@@ -55,7 +60,7 @@ namespace Triggr.UI.Controllers
                 var service = _webhookFactory.GetService(model.Url);
                 if (service != null)
                 {
-                    var dbRecord = await _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name) 
+                    var dbRecord = await _context.Repositories.FirstOrDefaultAsync(i => i.Name.Equals(model.Name)
                         && i.OwnerName.Equals(model.Owner));
 
                     if (dbRecord == null)
@@ -103,6 +108,38 @@ namespace Triggr.UI.Controllers
 
             return Json(result);
         }
+        public IActionResult Container(string Id)
+        {
+            if (string.IsNullOrEmpty(Id))
+                return RedirectToAction("Index");
 
+            var container = _containerService.GetContainer(Id);
+
+            return View(container);
+        }
+
+        public IActionResult ProbeActivation(string repoId, string probeId)
+        {
+            var id = _jobClient.Enqueue<ProbeControl>(i => i.Execute(null, probeId, repoId));
+            return Json(id);
+        }
+        public IActionResult ProbeRawJson(string repoId, string probeId)
+        {
+            var container = _containerService.GetContainer(repoId);
+            if (container != null)
+            {
+                var probes = container.CheckForProbes();
+                var probe = probes.FirstOrDefault(i => i.Id.Equals(probeId));
+
+                if (probe != null)
+                {
+                    var json = JsonConvert.SerializeObject(probe, Formatting.Indented, new Newtonsoft.Json.Converters.StringEnumConverter());
+                    return Json(json);
+                }
+            }
+
+            return Json(-1);
+
+        }
     }
 }

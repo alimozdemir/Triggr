@@ -1,0 +1,77 @@
+@model Triggr.Container
+@{
+    var probes = Model.CheckForProbes();
+    ViewBag.Title = "Container";
+}
+<div>
+    <h2>@Model.Name</h2>
+    <ul class="breadcrumb">
+        <li><a href="/Repository">Repositories</a></li>
+        <li class="active">@Model.Name</li>
+    </ul>
+
+    <hr>
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>@Model.Repository.Name</td>
+            </tr>
+            <tr>
+                <th>Provider</th>
+                <td>@Model.Repository.Provider</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>@Model.Repository.Url</td>
+            </tr>
+            <tr>
+                <th>Owner Name</th>
+                <td>@Model.Repository.OwnerName</td>
+            </tr>
+            <tr>
+                <th>Updated Time</th>
+                <td>@Model.UpdatedTime</td>
+            </tr>
+            <tr>
+                <th>Folder</th>
+                <td>@Model.Folder</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Probes</h4>
+
+    <hr>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Object Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in probes)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.ProbeType.ToString()</td>
+                    <td>@item.Object.Name</td>
+                    <td>
+                        <a asp-action="ProbeActivation" asp-route-repoId="@Model.Repository.Id" asp-route-probeId="@item.Id" class="btn btn-success probe">Active</a>
+                        <a asp-action="ProbeRawJson" asp-route-repoId="@Model.Repository.Id" asp-route-probeId="@item.Id" class="btn btn-info probeJson">JSON Raw</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/js/container.js"></script>
+}

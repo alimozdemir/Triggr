@@ -1,13 +1,17 @@
 {
     "python.pythonPath": "/usr/local/bin/python3",
-      "LineCount.includes": [
-            "**/*.cs",
-            "**/**/*.cs"
-        ],
-        "LineCount.excludes": [
-            "**/.vscode/**",
-            "**/node_modules/**",
-            "**/src/repositories/**",
-            "**/tests/Triggr.Tests/**"
-        ]
+    "LineCount.excludes": [
+        "**/.vscode/**",
+        "**/node_modules/**",
+        "**/src/repositories/**",
+        "**/tests/Triggr.Tests/**"
+    ],
+    "LineCount.output": {
+        "txt": true,
+        "json": true,
+        "csv": true,
+        "md": true,
+        "outdir": "out",
+        "languageDetails": false
+    }
 }
