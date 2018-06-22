@@ -133,14 +133,14 @@ namespace Triggr
 
                             hangfireContext?.WriteLine(ConsoleTextColor.Gray, $"{probe.Object.Path} new version is loaded.");
 
-                            Control(hangfireContext, probe, temp1, temp2, language.FolderName);
+                            Control(hangfireContext, probe, repository, temp1, temp2, language.FolderName);
                         }
                     }
                 }
             }
         }
 
-        private void Control(PerformContext hangfireContext, Probe probe, string temp1, string temp2, string language)
+        private void Control(PerformContext hangfireContext, Probe probe, Data.Repository repo, string temp1, string temp2, string language)
         {
             switch (probe.ProbeType)
             {
@@ -163,7 +163,7 @@ namespace Triggr
                         foreach (var act in probe.Actuators)
                         {
                             var service = _messageFactory.GetMessageService(act.Type);
-                            service.Send(act, $"{probe.Object.Name} is changed.");
+                            service.Send(repo, act, $"{probe.Object.Name} is changed.");
 
                             ActuatorPrint(hangfireContext, act);
                         }
@@ -205,7 +205,7 @@ namespace Triggr
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
-                                service.Send(act, $"{probe.Object.Name} static analysis results. {result2}");
+                                service.Send(repo, act, $"{probe.Object.Name} static analysis results. {result2}");
 
                                 ActuatorPrint(hangfireContext, act);
                             }
@@ -223,7 +223,7 @@ namespace Triggr
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
-                                service.Send(act, $"{probe.Object.Name} has different static analysis results between two commits." +
+                                service.Send(repo, act, $"{probe.Object.Name} has different static analysis results between two commits." +
                                 "Old" + Environment.NewLine +
                                       result1 + Environment.NewLine + "**************" + Environment.NewLine + result2);
 

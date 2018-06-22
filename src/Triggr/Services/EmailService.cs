@@ -15,7 +15,7 @@ namespace Triggr.Services
 
         public ActuatorType MessageType => ActuatorType.Email;
 
-        public void Send(Actuator act, string message)
+        public void Send(Data.Repository repository, Actuator act, string message)
         {
             SmtpClient client = new SmtpClient(_emailConfig.SmtpServer, _emailConfig.Port);
 

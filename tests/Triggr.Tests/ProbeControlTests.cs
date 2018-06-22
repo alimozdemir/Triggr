@@ -117,7 +117,7 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(act1, $"{probe.Object.Name} is changed."));
+            mockMessageService.Verify(i => i.Send(It.IsAny<Data.Repository>(), act1, $"{probe.Object.Name} is changed."));
 
 
         }
@@ -212,7 +212,7 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(It.IsAny<Actuator>(), $"{probe.Object.Name} is changed."), Times.Exactly(2));
+            mockMessageService.Verify(i => i.Send(It.IsAny<Data.Repository>(), It.IsAny<Actuator>(), $"{probe.Object.Name} is changed."), Times.Exactly(2));
 
 
         }
@@ -304,7 +304,7 @@ namespace Triggr.Tests
 
             control.Execute(null, "1", "1");
 
-            mockMessageService.Verify(i => i.Send(It.IsAny<Actuator>(), It.IsAny<string>()), Times.Never());
+            mockMessageService.Verify(i => i.Send(It.IsAny<Data.Repository>(), It.IsAny<Actuator>(), It.IsAny<string>()), Times.Never());
         }
 
         /*[Fact]

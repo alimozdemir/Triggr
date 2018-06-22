@@ -10,7 +10,7 @@ namespace Triggr.Wrappers
 
         public GithubWrapper()
         {
-            
+
         }
         public GithubWrapper(GitHubClient client)
         {
@@ -27,7 +27,22 @@ namespace Triggr.Wrappers
 
             var info = new NewRepositoryHook("web", cfg);
             info.Active = true;
+
             return _client.Repository.Hooks.Create(ownerName, repoName, info);
+        }
+
+        public virtual Task<Issue> CreateIssue(Data.Repository repo, string title, string message, string assigns)
+        {
+            _client.Credentials = new Credentials(repo.Token);
+            var issue = new NewIssue(title);
+            issue.Body = message;
+
+            var users = assigns.Split(',');
+
+            foreach (var item in users)
+                issue.Assignees.Add(item);
+                
+            return _client.Issue.Create(repo.OwnerName, repo.Name, issue);
         }
     }
 }

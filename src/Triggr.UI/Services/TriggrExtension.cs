@@ -51,6 +51,7 @@ namespace Triggr.UI.Services
 
             services.AddScoped<IMessageFactory, MessageFactory>();
             services.AddScoped<IMessageService, EmailService>();
+            services.AddScoped<IMessageService, IssueService>();
         }
 
         public static void UseTriggr(this IApplicationBuilder app, bool webHook = false)

@@ -3,6 +3,6 @@ namespace Triggr.Services
     public interface IMessageService
     {
         ActuatorType MessageType { get; }
-        void Send(Actuator act, string message);
+        void Send(Data.Repository repository, Actuator act, string message);
     }
 }
