@@ -13,6 +13,7 @@ using Triggr.UI.Services;
 using Triggr.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace Triggr.UI
 {
@@ -71,10 +72,19 @@ namespace Triggr.UI
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseDeveloperExceptionPage();
+
+                //app.UseExceptionHandler("/Home/Error");
                 //app.UseHsts();
             }
             
+            // for development on Linux Ubuntu 16.04
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>

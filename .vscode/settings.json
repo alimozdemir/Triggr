@@ -8,9 +8,9 @@
     ],
     "LineCount.output": {
         "txt": true,
-        "json": true,
-        "csv": true,
-        "md": true,
+        "json": false,
+        "csv": false,
+        "md": false,
         "outdir": "out",
         "languageDetails": false
     }
