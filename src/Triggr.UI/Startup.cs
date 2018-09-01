@@ -79,10 +79,10 @@ namespace Triggr.UI
             }
             
             // for development on Linux Ubuntu 16.04
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            /*app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
+            });*/
 
 
             app.UseStaticFiles();
