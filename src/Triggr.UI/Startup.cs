@@ -42,8 +42,8 @@ namespace Triggr.UI
 
 
             services.AddMvc();
-                    //.SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                    //.AddGitHubWebHooks();
+            //.SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+            //.AddGitHubWebHooks();
 
             services.AddHangfire(i =>
             {
@@ -52,14 +52,14 @@ namespace Triggr.UI
                 i.UseActivator(new HangfireActivator(services));
                 i.UseConsole();
             });
-            
+
             var config = Configuration.GetSection("TriggrConfig");
             var email = Configuration.GetSection("EmailConfig");
 
             services.Configure<Triggr.TriggrConfig>(config);
 
             services.Configure<Triggr.EmailConfig>(email);
-            
+
             services.AddTriggr();
         }
 
@@ -73,11 +73,16 @@ namespace Triggr.UI
             else
             {
                 app.UseDeveloperExceptionPage();
-
+                var serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+                using (var serviceScope = serviceScopeFactory.CreateScope())
+                {
+                    var dbContext = serviceScope.ServiceProvider.GetService<TriggrContext>();
+                    dbContext.Database.EnsureCreated();
+                }
                 //app.UseExceptionHandler("/Home/Error");
                 //app.UseHsts();
             }
-            
+
             // for development on Linux Ubuntu 16.04
             /*app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
