@@ -18,7 +18,7 @@ namespace Triggr.Services
         public void Send(Data.Repository repository, Actuator act, string message)
         {
             SmtpClient client = new SmtpClient(_emailConfig.SmtpServer, _emailConfig.Port);
-
+            
             client.UseDefaultCredentials = false;
             client.Credentials = new NetworkCredential(_emailConfig.Username, _emailConfig.Password);
 

@@ -195,6 +195,12 @@ namespace Triggr
                     // execute second static analysis script
                     var result2 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
 
+                    if (result2.Contains(probe.Object.Path))
+                        result2 = result2.Replace(temp2, probe.Object.Path);
+                        
+                    if (result1.Contains(probe.Object.Path))
+                        result1 = result1.Replace(temp1, probe.Object.Path);
+
                     // report the results upon strategy
                     if (probe.Metrics.Strategy == ReportType.Always)
                     {
@@ -202,6 +208,8 @@ namespace Triggr
                             hangfireContext?.WriteLine(ConsoleTextColor.Red, "No result.");
                         else
                         {
+
+
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);

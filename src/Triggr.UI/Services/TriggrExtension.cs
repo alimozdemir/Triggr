@@ -41,7 +41,7 @@ namespace Triggr.UI.Services
             services.AddScoped<IWebhookService, WebhookService>();
 
             services.AddScoped<IWebhookFactory, WebhookFactory>();
-
+            // 6bb6d9595f236f3bb4afbf5a42945be9eedb26f9
             //Octokit github client
             services.AddTransient<GitHubClient>(i => new GitHubClient(new ProductHeaderValue("Triggr")));
 

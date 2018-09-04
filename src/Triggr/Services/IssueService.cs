@@ -15,7 +15,8 @@ namespace Triggr.Services
 
         public void Send(Data.Repository repository, Actuator act, string message)
         {
-            _client.CreateIssue(repository, "Issue #test", message, act.Assign);
+            
+            _client.CreateIssue(repository, "Triggr Issue", message, act.Assign);
         }
     }
 }
