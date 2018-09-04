@@ -239,6 +239,9 @@ namespace Triggr
                                 ActuatorPrint(hangfireContext, act);
                             }
                         }
+                        else
+                            hangfireContext?.WriteLine(ConsoleTextColor.Red, "No difference.");
+
                     }
 
                     break;
