@@ -112,10 +112,15 @@ namespace Triggr.UI.Controllers
         {
             if (string.IsNullOrEmpty(Id))
                 return RedirectToAction("Index");
-
-            var container = _containerService.GetContainer(Id);
-
-            return View(container);
+            try
+            {
+                var container = _containerService.GetContainer(Id);
+                return View(container);
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index");
+            }
         }
 
         public IActionResult ProbeActivation(string repoId, string probeId)

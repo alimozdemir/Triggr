@@ -231,7 +231,7 @@ namespace Triggr
                             foreach (var act in probe.Actuators)
                             {
                                 var service = _messageFactory.GetMessageService(act.Type);
-                                service.Send(repo, act, $"{probe.Object.Name} has different static analysis results between two commits." +
+                                service.Send(repo, act, $"{probe.Object.Name} has different static analysis results between two commits. " +
                                 "Old" + Environment.NewLine +
                                       result1 + Environment.NewLine + "**************" + Environment.NewLine + result2);
 

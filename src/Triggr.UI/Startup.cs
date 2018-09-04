@@ -78,7 +78,7 @@ namespace Triggr.UI
                 {
                     var dbContext = serviceScope.ServiceProvider.GetService<TriggrContext>();
                     dbContext.Database.EnsureCreated();
-                } //d0673c66466c4d3fe131d5afda62aecf5f28fdcd
+                } 
                 //app.UseExceptionHandler("/Home/Error");
                 //app.UseHsts();
             }
