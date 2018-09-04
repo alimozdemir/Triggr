@@ -195,10 +195,10 @@ namespace Triggr
                     // execute second static analysis script
                     var result2 = _scriptExecutor.Execute(probe.ProbeType, language, parameters.ToArray());
 
-                    if (result2.Contains(probe.Object.Path))
+                    if (result2.Contains(temp2))
                         result2 = result2.Replace(temp2, probe.Object.Path);
-                        
-                    if (result1.Contains(probe.Object.Path))
+
+                    if (result1.Contains(temp1))
                         result1 = result1.Replace(temp1, probe.Object.Path);
 
                     // report the results upon strategy
